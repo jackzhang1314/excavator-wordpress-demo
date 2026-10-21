@@ -1,6 +1,6 @@
 {
-  "verifiedAt": "2026-10-21T14:20:41.861Z",
-  "testedCodeCommit": "fa4e56e1528b90d1aa54619fcf6fa0eaba656061",
+  "verifiedAt": "2026-10-21T14:57:46+00:00",
+  "testedCodeCommit": "dac4e2d1ba8b13b90edeb2b46e9962c8474303e5",
   "repository": "https://github.com/jackzhang1314/excavator-wordpress-demo",
   "visibility": "public",
   "environment": {
@@ -30,9 +30,10 @@
     "ownedSourceSha256": "f970bf4658acd4ee74015939597702b9f3ab5142cff29bf484998f156fccde1f",
     "originalProtectedFilesChecked": 361,
     "originalProtectedFilesChanged": 0,
-    "readbackValuesCompared": 39977,
+    "readbackValuesCompared": 39980,
     "contentValueDifferences": 0,
-    "normalizedAutoloadPolicyFlags": 5
+    "normalizedAutoloadPolicyFlags": 5,
+    "originalLanguageSettingCount": 14
   },
   "checks": {
     "anonymousClone": "PASS",
@@ -42,8 +43,8 @@
       "expected": 75
     },
     "freshCloneResources": {
-      "passed": 119,
-      "expected": 119
+      "passed": 120,
+      "expected": 120
     },
     "nativeAdminLogin": "PASS",
     "nativeRichTextSaveReopenAndPublicReadback": "PASS",
@@ -67,7 +68,13 @@
     "privatePatternScan": {
       "patterns": 25,
       "matches": 0
-    }
+    },
+    "anonymousZipDownload": "PASS",
+    "cleanZipFirstStartup": "PASS",
+    "zipNativeAdminLogin": "PASS",
+    "originalDesktopAndMobileLanguageSelector": "PASS",
+    "languageOptions": 7,
+    "originalLanguageDefault": "en"
   },
   "exclusions": [
     "original account passwords and sessions",
@@ -80,6 +87,9 @@
   "outboundMail": "blocked in local demo",
   "remaining": [
     "Windows/Linux physical-host verification not performed",
-    "real business branding, product facts and formal public website release are outside this local demo delivery"
-  ]
+    "real business branding, product facts and formal public website release are outside this local demo delivery",
+    "Online translation quality and in-app plugin-catalogue navigation not fully verified; no new plugin installed during that UI probe."
+  ],
+  "releaseVersion": "1.0.1",
+  "previousTestedCodeCommit": "fa4e56e1528b90d1aa54619fcf6fa0eaba656061"
 }
