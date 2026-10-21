@@ -11,6 +11,16 @@ import { bootRequestHandler, bootWordPress } from '@wp-playground/wordpress';
 export const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const defaultPort = 9400;
 
+// Playground's single PHP instance rejects overlap instead of waiting.
+export function serializeRequests(request) {
+  let pending = Promise.resolve();
+  return input => {
+    const result = pending.then(() => request(input));
+    pending = result.catch(() => {});
+    return result;
+  };
+}
+
 export function parsePort(value = defaultPort) {
   if (!/^\d+$/.test(String(value)) || Number(value) < 1024 || Number(value) > 65535) throw new Error('Port must be an integer between 1024 and 65535.');
   return Number(value);
@@ -127,6 +137,7 @@ export async function startDemo({ port = defaultPort, runtimeRoot = join(project
     const php = await handler.getPrimaryPhp();
     const initialized = await php.run({ scriptPath: '/demo-source/bootstrap.php' });
     if (initialized.exitCode !== 0 || initialized.errors) throw new Error('Local content initialization failed: ' + initialized.errors + initialized.text);
+    const requestSerially = serializeRequests(input => handler.request(input));
     server = createServer(async (request, response) => {
       try {
         // Only this loopback origin can use the public demo credentials.
@@ -146,7 +157,7 @@ export async function startDemo({ port = defaultPort, runtimeRoot = join(project
           chunks.push(chunk);
         }
         const headers = Object.fromEntries(Object.entries(request.headers).map(([key, value]) => [key, Array.isArray(value) ? value.join(', ') : value ?? '']));
-        const result = await handler.request({ url: request.url ?? '/', method: request.method, headers, body: chunks.length ? Buffer.concat(chunks) : undefined });
+        const result = await requestSerially({ url: request.url ?? '/', method: request.method, headers, body: chunks.length ? Buffer.concat(chunks) : undefined });
         for (const [key, value] of Object.entries(result.headers)) response.setHeader(key, value);
         response.writeHead(result.httpStatusCode);
         response.end(result.bytes);

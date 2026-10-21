@@ -11,6 +11,19 @@ add_filter('automatic_updater_disabled', '__return_true');
 add_filter('auto_update_plugin', '__return_false');
 add_filter('auto_update_theme', '__return_false');
 add_filter('pre_option_blog_public', static fn() => '0');
+
+// Classic draft previews can select a revision created before ACF was saved.
+// Use the saved draft only when that revision has no ACF snapshot at all.
+// Existing snapshots (including explicit empty values) remain authoritative.
+add_filter('acf/validate_post_id', static function ($post_id) {
+    if (!is_numeric($post_id) || !isset($_GET['preview']) || !is_preview() || !function_exists('acf_get_meta')) return $post_id;
+    $parent = wp_is_post_revision((int) $post_id);
+    if (!$parent || get_queried_object_id() !== $parent || !current_user_can('edit_post', $parent)
+        || !in_array(get_post_status($parent), ['draft', 'pending'], true)
+        || !in_array(get_post_type($parent), ['page', 'post', 'starter_product', 'starter_category', 'starter_industry', 'starter_guide'], true)) return $post_id;
+    return acf_get_meta($post_id) === [] && acf_get_meta($parent) !== [] ? $parent : $post_id;
+}, 20);
+
 // Fluent Forms sends slash-separated calendar dates. MySQL accepts those as
 // DATETIME values; SQLite text comparisons need the stored ISO representation.
 add_action('muplugins_loaded', static function () {

@@ -79,5 +79,12 @@ if (!get_option('excavator_demo_operational_schema')) {
     update_option('excavator_demo_operational_schema', 1, false);
 }
 excavator_demo_relocate(rtrim(WP_HOME, '/'));
+// Rank Math loaded its notice before URLs were relocated. Refresh its native
+// in-memory notice too, including existing copies upgraded on the same port.
+// Keep an already dismissed notice dismissed.
+if (class_exists('RankMath\\Admin\\Watcher') && \RankMath\Helper::has_notification('search_engine_visibility')) {
+    \RankMath\Helper::remove_notification('search_engine_visibility');
+    (new \RankMath\Admin\Watcher())->check_search_engine_visibility(!get_option('blog_public'));
+}
 flush_rewrite_rules(false);
 echo 'Local content ready';
