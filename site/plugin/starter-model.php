@@ -16,6 +16,7 @@ require_once __DIR__ . '/includes/inquiry-product-context.php';
 require_once __DIR__ . '/includes/author-profile.php';
 require_once __DIR__ . '/includes/contact-content.php';
 require_once __DIR__ . '/includes/category-pages.php';
+require_once __DIR__ . '/includes/category-management.php';
 require_once __DIR__ . '/includes/category-fields.php';
 require_once __DIR__ . '/includes/about-content.php';
 require_once __DIR__ . '/includes/company-design-fields.php';
@@ -70,7 +71,7 @@ function register_model(): void {
         'labels' => [
             'name' => _x('Product Categories', 'Taxonomy general name', 'b2b-starter'),
             'singular_name' => _x('Product Category', 'Taxonomy singular name', 'b2b-starter'),
-            'menu_name' => _x('Categories', 'Admin menu name', 'b2b-starter'),
+            'menu_name' => _x('Product Categories', 'Admin menu name', 'b2b-starter'),
             'all_items' => __('All product categories', 'b2b-starter'),
             'edit_item' => __('Edit product category', 'b2b-starter'),
             'view_item' => __('View product category', 'b2b-starter'),
@@ -79,7 +80,7 @@ function register_model(): void {
         ],
         'public' => true, 'publicly_queryable' => true, 'show_ui' => true, 'show_in_nav_menus' => true,
         'show_in_rest' => true, 'rest_base' => 'product-categories', 'hierarchical' => true,
-        'show_admin_column' => true, 'rewrite' => ['slug' => 'product-category', 'with_front' => false],
+        'show_admin_column' => true, 'rewrite' => false,
         'map_meta_cap' => true,
     ]);
 

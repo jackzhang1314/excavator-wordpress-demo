@@ -7,6 +7,7 @@ function register_category_page_type(): void {
         'labels' => content_labels('Product category page', 'Product Category Pages'),
         'public' => true, 'show_in_rest' => true, 'rest_base' => 'product-category-pages',
         'has_archive' => false, 'rewrite' => ['slug' => 'product-category', 'with_front' => false],
+        'show_in_menu' => 'edit.php?post_type=starter_product',
         'menu_icon' => 'dashicons-category', 'menu_position' => 21,
         'map_meta_cap' => true, 'capability_type' => 'post',
         'supports' => ['title', 'editor', 'revisions', 'custom-fields'],
@@ -18,15 +19,12 @@ function register_category_page_type(): void {
 
 /** Query only the small set of pages linked to this classification; no duplicate editable term content. */
 function category_page_for_term(int $term_id, bool $published_only = true): int {
-    $ids = get_posts([
-        'post_type' => 'starter_category', 'post_status' => $published_only ? 'publish' : ['publish', 'draft', 'pending', 'private', 'future'],
-        'posts_per_page' => 1, 'fields' => 'ids', 'orderby' => 'ID', 'order' => 'ASC',
-        'meta_key' => 'category_collection', 'meta_value' => $term_id,
-    ]);
-    return (int) ($ids[0] ?? 0);
+    $ids = category_pages_for_term($term_id);
+    if (count($ids) !== 1 || ($published_only && get_post_status($ids[0]) !== 'publish')) return 0;
+    return $ids[0];
 }
 
-// Unmigrated archives remain readable. A migrated page changed to draft must not expose its old term content.
+// Resolve a historical slug to its classification; the public guard below requires a published content page.
 add_filter('request', static function (array $vars): array {
     $slug = (string) ($vars['starter_category'] ?? '');
     if ($slug === '' || get_page_by_path($slug, OBJECT, ['starter_category'])) return $vars;
@@ -37,10 +35,10 @@ add_filter('request', static function (array $vars): array {
     return $vars;
 });
 
-add_filter('term_link', static function (string $url, \WP_Term $term, string $taxonomy): string {
+add_filter('term_link', static function ($url, \WP_Term $term, string $taxonomy) {
     if ($taxonomy !== 'product_collection') return $url;
-    $id = category_page_for_term((int) $term->term_id);
-    return $id ? (string) get_permalink($id) : $url;
+    $public = category_public_url((int) $term->term_id);
+    return $public ?: (is_admin() ? $url : new \WP_Error('starter_category_not_public', 'This category has no public content page.'));
 }, 10, 3);
 
 // Legacy taxonomy query URLs canonicalize to the content page, including secondary listing pages.
@@ -49,8 +47,7 @@ add_action('template_redirect', static function (): void {
     $term = get_queried_object();
     if (!$term instanceof \WP_Term) return;
     $id = category_page_for_term((int) $term->term_id, false);
-    if (!$id) return;
-    if (get_post_status($id) === 'publish') {
+    if ($id && category_public_url((int) $term->term_id)) {
         $url = (string) get_permalink($id);
         $number = (int) get_query_var('paged');
         if ($number > 1) $url = trailingslashit($url) . 'page/' . $number . '/';
@@ -67,11 +64,11 @@ add_action('template_redirect', static function (): void {
     }
 });
 
-/** Sole Standard editor uses Post Type; Core omits the template control when no alternatives exist. */
+/** Each actual Core template owns one complete editor; canonical fields keep their storage names. */
 function register_category_editors(array $library, callable $field): void {
     acf_add_local_field_group($library);
     acf_add_local_field_group([
-        'key' => 'group_category_page_standard', 'title' => 'Category content', 'position' => 'acf_after_title',
+        'key' => 'group_category_page_standard', 'title' => 'Category overview content', 'position' => 'acf_after_title',
         'label_placement' => 'top', 'instruction_placement' => 'label', 'show_in_rest' => true,
         'fields' => [$field('field_category_standard_editor', 'category_standard_editor', '', 'clone', [
             'clone' => [
@@ -85,8 +82,22 @@ function register_category_editors(array $library, callable $field): void {
         ])],
         'location' => [[
             ['param' => 'post_type', 'operator' => '==', 'value' => 'starter_category'],
+            ['param' => 'post_template', 'operator' => '==', 'value' => 'default'],
         ]],
     ]);
+    $overview = acf_get_local_field_group('group_category_page_standard');
+    $overview['key'] = 'group_category_page_selection';
+    $overview['title'] = 'Product selection content';
+    // Register the complete clone explicitly; do not copy an already registered field key.
+    $overview['fields'] = [$field('field_category_selection_editor', 'category_selection_editor', '', 'clone', [
+        'clone' => ['field_tc_tab_hero', 'field_tc_intro', 'field_tc_hero_image', 'field_tc_card_image', 'field_tc_card_description', 'field_tc_show_products',
+            'field_tc_tab_sections', 'field_tc_content_sections', 'field_tc_tab_guide', 'field_tc_guide_title', 'field_tc_long_description',
+            'field_tc_tab_selection', 'field_tc_spec_items', 'field_tc_attribute_tables', 'field_tc_faq_items',
+            'field_tc_tab_editorial', 'field_tc_cta_title', 'field_tc_cta_text', 'field_tc_cta_button'],
+        'display' => 'seamless', 'prefix_name' => 0, 'prefix_label' => 0,
+    ])];
+    $overview['location'][0][1]['value'] = 'page-templates/category-selection.php';
+    acf_add_local_field_group($overview);
     acf_add_local_field_group([
         'key' => 'group_category_classification', 'title' => 'Product classification', 'position' => 'side',
         'fields' => [$field('field_category_collection', 'category_collection', 'Product category', 'taxonomy', [
@@ -107,8 +118,8 @@ add_filter('acf/validate_value/key=field_category_collection', static function (
     if (!$post_id && isset($_POST['_acf_post_id']) && is_scalar($_POST['_acf_post_id'])) {
         $post_id = absint(wp_unslash((string) $_POST['_acf_post_id']));
     }
-    $existing = category_page_for_term((int) $value, false);
-    return $existing && $existing !== $post_id ? __('This classification already has a category page. Edit that page instead.', 'b2b-starter') : $valid;
+    $result = category_validate_link($post_id, (int) $value);
+    return is_wp_error($result) ? $result->get_error_message() : $valid;
 }, 10, 2);
 
 add_action('product_collection_edit_form', static function (\WP_Term $term): void {

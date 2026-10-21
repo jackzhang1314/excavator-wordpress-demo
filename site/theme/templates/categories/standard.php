@@ -1,23 +1,23 @@
 <?php
-/** Primary and secondary category designs; complete editable guide stays below the range. */
+/** Two approved designs selected by Core template, independently of category depth. */
 $context = get_query_var('category_template_context');
 $product_query = $context['product_query'];
 $category = $context['category'];
 $term = Starter\Theme\category_current_term();
-$secondary = $term && $term->parent > 0;
+$selection = ($context['layout'] ?? 'standard') === 'selection';
 $children = $term ? Starter\Theme\equipment_families((int) $term->term_id) : [];
 $facets = Starter\Theme\equipment_category_filters($term);
 $active = Starter\Theme\equipment_active_filters();
 $guide = Starter\Theme\rich_heading_index($category['long_description'], 'guide-');
 $hero_image = (int) ($category['hero_image']['id'] ?? 0);
 ?>
-<main id="main" class="equipment-main equipment-category category-standard<?php echo $secondary ? ' is-secondary' : ' is-primary'; ?>">
+<main id="main" class="equipment-main equipment-category category-standard<?php echo $selection ? ' is-secondary' : ' is-primary'; ?>" data-category-depth="<?php echo $term ? (int) Starter\Model\category_tree_context($term)['depth'] : 0; ?>">
 <section class="equipment-hero<?php echo $hero_image ? ' has-media' : ''; ?>">
     <?php if ($hero_image) : ?><div class="equipment-hero-photo"><?php echo wp_get_attachment_image($hero_image, 'full', false, ['loading' => 'eager', 'fetchpriority' => 'high', 'sizes' => '(max-width:767px) 100vw, 1440px']); ?></div><?php endif; ?>
     <div class="equipment-shell equipment-hero-inner"><div class="equipment-hero-copy">
         <?php Starter\Theme\breadcrumbs(); ?><h1><?php echo esc_html($category['name']); ?></h1>
         <?php if ($category['intro']) : ?><p><?php echo esc_html($category['intro']); ?></p><?php endif; ?>
-        <?php if (!$secondary) : ?><a class="button" href="<?php echo esc_url($category['cta']['url']); ?>"><?php echo esc_html($category['cta']['button_label']); ?> <span aria-hidden="true">→</span></a><?php endif; ?>
+        <?php if (!$selection) : ?><a class="button" href="<?php echo esc_url($category['cta']['url']); ?>"><?php echo esc_html($category['cta']['button_label']); ?> <span aria-hidden="true">→</span></a><?php endif; ?>
     </div></div>
 </section>
 <?php if ($children && !is_paged()) : ?>
@@ -33,12 +33,12 @@ $hero_image = (int) ($category['hero_image']['id'] ?? 0);
 </section>
 <?php endif; ?>
 <?php if ($category['show_products']) : ?>
-<section id="products" class="equipment-section equipment-shell equipment-listing<?php echo $secondary ? ' with-filters' : ''; ?>">
-    <?php if (!$secondary) : ?><div class="equipment-section-heading"><h2>Find a machine for your site</h2><p>Compare model information and discuss the configuration for your project.</p></div><?php endif; ?>
-    <?php if ($facets) : ?><form class="equipment-filters" action="<?php echo esc_url(get_permalink(get_queried_object_id()) . '#products'); ?>" method="get"<?php echo $secondary ? ' data-equipment-auto-filter' : ''; ?>>
-        <?php if ($secondary) : ?><h2>Filter</h2><?php endif; ?>
+<section id="products" class="equipment-section equipment-shell equipment-listing<?php echo $selection ? ' with-filters' : ''; ?>">
+    <?php if (!$selection) : ?><div class="equipment-section-heading"><h2>Find a machine for your site</h2><p>Compare model information and discuss the configuration for your project.</p></div><?php endif; ?>
+    <?php if ($facets) : ?><form class="equipment-filters" action="<?php echo esc_url(get_permalink(get_queried_object_id()) . '#products'); ?>" method="get"<?php echo $selection ? ' data-equipment-auto-filter' : ''; ?>>
+        <?php if ($selection) : ?><h2>Filter</h2><?php endif; ?>
         <?php foreach ($facets as $key => $facet) : ?>
-        <?php if ($secondary) : ?><details class="equipment-filter equipment-filter-radios" open><summary><?php echo esc_html($facet['label']); ?></summary><fieldset><legend class="screen-reader-text"><?php echo esc_html($facet['label']); ?></legend>
+        <?php if ($selection) : ?><details class="equipment-filter equipment-filter-radios" open><summary><?php echo esc_html($facet['label']); ?></summary><fieldset><legend class="screen-reader-text"><?php echo esc_html($facet['label']); ?></legend>
         <label><input type="radio" name="eq_spec[<?php echo esc_attr($key); ?>]" value="" <?php checked(($active[$key] ?? '') === ''); ?>><span>All</span></label>
         <?php foreach ($facet['values'] as $value) : ?><label><input type="radio" name="eq_spec[<?php echo esc_attr($key); ?>]" value="<?php echo esc_attr($value); ?>" <?php checked(($active[$key] ?? '') === $value); ?>><span data-equipment-option="<?php echo esc_attr($value); ?>"><?php echo esc_html($value); ?></span></label><?php endforeach; ?>
         <?php if (!$facet['values']) : ?><label class="is-unconfirmed"><input type="radio" disabled aria-label="<?php echo esc_attr($facet['label'] . ': data to confirm'); ?>"><span>To confirm</span></label><?php endif; ?>
@@ -50,7 +50,7 @@ $hero_image = (int) ($category['hero_image']['id'] ?? 0);
         <?php if ($active) : ?><a class="equipment-reset" href="<?php echo esc_url(get_permalink(get_queried_object_id())); ?>#products">Reset filters</a><?php endif; ?>
     </form><?php endif; ?>
     <div class="equipment-list-results"><h2 class="screen-reader-text">Available models</h2><div class="equipment-list-toolbar"><p class="equipment-result-count"><?php echo esc_html((string) $product_query->found_posts); ?> <?php echo $product_query->found_posts === 1 ? 'model' : 'models'; ?></p><div class="equipment-selection-tools" data-equipment-tools hidden><div role="group" aria-label="Measurement units"><button type="button" data-unit="metric" aria-pressed="true">Metric</button><button type="button" data-unit="imperial" aria-pressed="false">Imperial</button></div><button type="button" data-compare-open disabled>Compare (0)</button><p class="screen-reader-text" data-compare-status aria-live="polite">Select up to 3 models to compare.</p></div></div>
-    <div class="equipment-model-grid"><?php if ($product_query->have_posts()) : while ($product_query->have_posts()) : $product_query->the_post(); get_template_part('parts/equipment-card', null, ['spec_limit' => $secondary ? 5 : 3, 'spec_fields' => $secondary ? array_slice($facets, 0, 5, true) : null]); endwhile; wp_reset_postdata(); else : ?><p>No matching models. Reset the filters or <a href="<?php echo esc_url($category['cta']['url']); ?>">share your requirements</a>.</p><?php endif; ?></div>
+    <div class="equipment-model-grid"><?php if ($product_query->have_posts()) : while ($product_query->have_posts()) : $product_query->the_post(); get_template_part('parts/equipment-card', null, ['spec_limit' => $selection ? 5 : 3, 'spec_fields' => $selection ? array_slice($facets, 0, 5, true) : null]); endwhile; wp_reset_postdata(); else : ?><p>No matching models. Reset the filters or <a href="<?php echo esc_url($category['cta']['url']); ?>">share your requirements</a>.</p><?php endif; ?></div>
     <?php if ($product_query->max_num_pages > 1) : ?><nav class="navigation pagination" aria-label="Models pagination"><?php echo wp_kses_post(paginate_links(['total' => $product_query->max_num_pages, 'current' => max(1, (int) get_query_var('paged')), 'add_args' => $active ? ['eq_spec' => $active] : [], 'prev_text' => '←', 'next_text' => '→'])); ?></nav><?php endif; ?>
     </div>
 </section>
@@ -70,7 +70,7 @@ $hero_image = (int) ($category['hero_image']['id'] ?? 0);
     </aside>
 </section>
 <?php endif; ?>
-<?php if ($secondary) : $families = Starter\Theme\equipment_families(); if ($families) : ?><section class="equipment-section equipment-shell equipment-related-families"><div class="equipment-section-heading"><h2>Related equipment</h2><a class="equipment-text-link" href="<?php echo esc_url(get_post_type_archive_link('starter_product')); ?>">View all equipment →</a></div><div class="equipment-family-strip"><?php foreach ($families as $family) : ?><a href="<?php echo esc_url($family['url']); ?>"><?php if ($family['image']) echo wp_get_attachment_image($family['image'], 'medium', false, ['loading' => 'lazy']); ?><strong><?php echo esc_html($family['name']); ?></strong><span aria-hidden="true">→</span></a><?php endforeach; ?></div></section><?php endif; endif; ?>
+<?php if ($selection) : $families = Starter\Theme\equipment_families(); if ($families) : ?><section class="equipment-section equipment-shell equipment-related-families"><div class="equipment-section-heading"><h2>Related equipment</h2><a class="equipment-text-link" href="<?php echo esc_url(get_post_type_archive_link('starter_product')); ?>">View all equipment →</a></div><div class="equipment-family-strip"><?php foreach ($families as $family) : ?><a href="<?php echo esc_url($family['url']); ?>"><?php if ($family['image']) echo wp_get_attachment_image($family['image'], 'medium', false, ['loading' => 'lazy']); ?><strong><?php echo esc_html($family['name']); ?></strong><span aria-hidden="true">→</span></a><?php endforeach; ?></div></section><?php endif; endif; ?>
 <?php Starter\Theme\equipment_cta($category['cta']); ?>
 <?php endif; ?>
 </main>

@@ -77,6 +77,9 @@ add_filter('rank_math/frontend/title', static function ($title) {
 });
 
 function render_category_page(string $layout = 'standard'): void {
+    if (post_password_required(get_queried_object_id())) {
+        get_header(); echo '<main id="main" class="shell section">' . get_the_password_form(get_queried_object_id()) . '</main>'; get_footer(); return;
+    }
     if (!category_current_term()) {
         get_header();
         echo '<main id="main" class="shell section"><h1>' . esc_html(get_the_title(get_queried_object_id())) . '</h1><p>' . esc_html__('Select a product classification in this page’s editor.', 'b2b-starter') . '</p></main>';

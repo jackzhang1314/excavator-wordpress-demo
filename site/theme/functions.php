@@ -220,7 +220,7 @@ function breadcrumbs(): void {
             $item = get_term((int) $id, 'product_collection');
             if (!$item instanceof \WP_Term) continue;
             $url = get_term_link($item);
-            if (!is_wp_error($url)) $trail[] = ['label' => $item->name, 'url' => $url];
+            $trail[] = ['label' => $item->name, 'url' => is_wp_error($url) ? '' : $url];
         }
     };
 
@@ -263,7 +263,7 @@ function breadcrumbs(): void {
 
     $html = '<nav class="breadcrumbs" aria-label="Breadcrumb"><ol>';
     foreach ($trail as $crumb) {
-        $html .= '<li><a href="' . esc_url($crumb['url']) . '">' . esc_html($crumb['label']) . '</a></li>';
+        $html .= '<li>' . ($crumb['url'] ? '<a href="' . esc_url($crumb['url']) . '">' . esc_html($crumb['label']) . '</a>' : esc_html($crumb['label'])) . '</li>';
     }
     $html .= '<li aria-current="page">' . esc_html((string) $current) . '</li></ol></nav>';
     echo $html; // phpcs:ignore WordPress.Security.EscapeOutput -- escaped above

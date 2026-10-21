@@ -1,0 +1,212 @@
+{
+  "status": "PASS",
+  "verifiedAt": "2026-10-21T19:25:38.487Z",
+  "version": "1.1.0",
+  "upgradeBaseline": "1.0.3",
+  "scope": "actual WordPress in an isolated newly seeded database; API and HTTP checks, not native browser acceptance",
+  "checks": [
+    {
+      "name": "One-time upgrade preserves old nested layout in trash and later user choices",
+      "status": "PASS"
+    },
+    {
+      "name": "Core taxonomy depth 1/2/3/4 and independent root leaf",
+      "status": "PASS"
+    },
+    {
+      "name": "Created pages are drafts",
+      "status": "PASS"
+    },
+    {
+      "name": "A stale option cache cannot overwrite another owner or release another lease",
+      "status": "PASS"
+    },
+    {
+      "name": "Native admin depth filters preserve all parent choices and preselect in server HTML",
+      "status": "PASS"
+    },
+    {
+      "name": "Repeated creation reuses page IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "A partial create resumes its reserved draft after an expired lock",
+      "status": "PASS"
+    },
+    {
+      "name": "Trash retains category identity",
+      "status": "PASS"
+    },
+    {
+      "name": "All lifecycle states reuse same page",
+      "status": "PASS"
+    },
+    {
+      "name": "Metadata imports cannot create duplicate association",
+      "status": "PASS"
+    },
+    {
+      "name": "REST creation uses idempotent category endpoint; generic create rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "REST and service enforce permissions",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid cycles and wrong-taxonomy parents rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Moving a node preserves template, page ID and flat URL",
+      "status": "PASS"
+    },
+    {
+      "name": "Parent aggregation deduplicates products assigned to two descendant branches",
+      "status": "PASS"
+    },
+    {
+      "name": "Aggregated count is distinct product count",
+      "status": "PASS"
+    },
+    {
+      "name": "Long guide, image and zero value saved",
+      "status": "PASS"
+    },
+    {
+      "name": "Native Core REST autosave remains available without changing publication",
+      "status": "PASS"
+    },
+    {
+      "name": "Published level 1 page renders: root",
+      "status": "PASS"
+    },
+    {
+      "name": "Published level 2 page renders: branch",
+      "status": "PASS"
+    },
+    {
+      "name": "Published level 3 page renders: leaf",
+      "status": "PASS"
+    },
+    {
+      "name": "Published guide includes complete text, image and module",
+      "status": "PASS"
+    },
+    {
+      "name": "Published level 4 page renders: fourth",
+      "status": "PASS"
+    },
+    {
+      "name": "Published level 1 page renders: root-leaf",
+      "status": "PASS"
+    },
+    {
+      "name": "Nested category can use overview, root leaf can use product selection",
+      "status": "PASS"
+    },
+    {
+      "name": "Native template field groups are mutually exclusive",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual layout is selected by template at level 2",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual layout is selected by template at level 1",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual specification filter selects one deduplicated product",
+      "status": "PASS"
+    },
+    {
+      "name": "Same category names in separate branches keep unique stable URLs",
+      "status": "PASS"
+    },
+    {
+      "name": "Real product page 2 has its own canonical",
+      "status": "PASS"
+    },
+    {
+      "name": "Out-of-range product page is 404",
+      "status": "PASS"
+    },
+    {
+      "name": "Withdrawn content and old taxonomy archive isolated: /product-category/qa-leaf/",
+      "status": "PASS"
+    },
+    {
+      "name": "Withdrawn content and old taxonomy archive isolated: /?product_collection=qa-leaf",
+      "status": "PASS"
+    },
+    {
+      "name": "Withdrawn category has no public card or taxonomy link",
+      "status": "PASS"
+    },
+    {
+      "name": "Cleared content does not revive old term data",
+      "status": "PASS"
+    },
+    {
+      "name": "Deleting a classification withdraws its page without deleting content; explicit orphan repair reuses it",
+      "status": "PASS"
+    }
+  ],
+  "nativeBrowser": {
+    "nativeLevels": [
+      {
+        "level": 1,
+        "term": 27,
+        "page": 440
+      },
+      {
+        "level": 2,
+        "term": 28,
+        "page": 441
+      },
+      {
+        "level": 3,
+        "term": 29,
+        "page": 442
+      },
+      {
+        "level": 4,
+        "term": 30,
+        "page": 445
+      }
+    ],
+    "serverParentSelectedWithoutScripts": true,
+    "nativeLevelFourCreatedWithoutScripts": true,
+    "descriptionParagraphs": 24,
+    "savedDescriptionChars": 4499,
+    "actualUploadedImage": "category-ui-upload.png",
+    "savedDraftPreview": {
+      "completeBody": true,
+      "tableZero": true,
+      "imageLoaded": true
+    },
+    "templateSwitching": "PASS: selection -> overview -> selection, saved and reopened with full guide and image",
+    "publishedUnsavedPreview": "PASS: native keyboard edits + blur + Preview Changes; anonymous published guide unchanged",
+    "revisionRestore": "PASS: native revision 444 restored 4499-character guide, uploaded image and table; version B removed",
+    "reparent": "PASS: level 3 -> root -> original parent; same page 442, template and content, stable URL",
+    "depthView": "PASS: 3+ view shows only level 3 and 4; all parent choices remain available",
+    "zeroParameterAndDelete": {
+      "status": "PASS",
+      "zeroSavedAndReopened": true,
+      "removeLastRowSavedAndReopened": true
+    },
+    "trashRestore": {
+      "status": "PASS",
+      "pageId": 442,
+      "trashPublicStatus": 404,
+      "restoredStatus": "draft",
+      "sameDescriptionChars": 4499
+    }
+  },
+  "harnessUsed": false,
+  "freshCodexSessionThisRevision": false,
+  "host": "macOS arm64",
+  "upgrade9400": "pending, to be appended after guarded upgrade"
+}

@@ -5,9 +5,10 @@ defined('ABSPATH') || exit;
 
 function equipment_category_card(\WP_Term $term): array {
     $id = \Starter\Model\category_page_for_term((int) $term->term_id);
-    if (!$id) return [];
+    $url = \Starter\Model\category_public_url((int) $term->term_id);
+    if (!$id || !$url) return [];
     return [
-        'name' => $term->name, 'url' => get_permalink($id), 'id' => $id,
+        'name' => $term->name, 'url' => $url, 'id' => $id,
         'image' => home_v2_image(get_field('category_card_image', $id)),
         'intro' => trim((string) get_field('category_card_description', $id)),
     ];

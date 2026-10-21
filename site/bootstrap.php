@@ -4,6 +4,7 @@ require '/wordpress/wp-load.php';
 require_once '/wordpress/wp-admin/includes/plugin.php';
 require '/demo-source/relocate.php';
 require '/demo-source/user-defaults.php';
+require '/demo-source/category-layouts.php';
 
 global $wpdb;
 if (!get_option('excavator_demo_seed_version')) {
@@ -52,6 +53,7 @@ if (!get_option('excavator_demo_seed_version')) {
 }
 excavator_demo_migrate_toolbar_default();
 excavator_demo_migrate_profile_defaults();
+excavator_demo_migrate_category_layouts();
 
 // Preserve the original header language selector in existing demo copies too.
 // Existing user-edited translation settings take precedence over the seed.

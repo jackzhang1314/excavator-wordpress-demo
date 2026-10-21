@@ -35,13 +35,14 @@ add_filter('default_page_template_title', static function (string $label): strin
     global $post;
     if (!$post instanceof \WP_Post) return $label;
     if ($post->post_type === 'starter_product') return __('Product: Standard', 'b2b-starter');
-    if ($post->post_type === 'starter_category') return __('Category: Standard', 'b2b-starter');
+    if ($post->post_type === 'starter_category') return __('Category: Overview', 'b2b-starter');
     return $label;
 });
 
 function category_templates(): array {
     return [
-        'standard' => 'Default product category',
+        'standard' => 'Category overview',
+        'selection' => 'Product selection',
     ];
 }
 
@@ -152,11 +153,12 @@ function render_category_archive(string $template = 'standard'): void {
     $template = normalize_template_choice($template, $allowed, 'standard');
     get_header();
     set_query_var('category_template_context', [
+        'layout' => $template,
         'category' => product_category_data(),
         'product_query' => category_product_query(),
         'factory' => factory_profile_data(),
     ]);
-    get_template_part('templates/categories/' . $template);
+    get_template_part('templates/categories/standard');
     get_footer();
 }
 

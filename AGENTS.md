@@ -21,11 +21,12 @@
 - 密码为专用演示密码。不得索取原站、主机或企业邮箱密钥来启动本地站。
 - 本地询盘存库，发信在 `site/mu-plugins/local-demo.php` 拦截；原企业邮箱、主机及分析 / 聊天账号未携带。正常的 WordPress 插件管理、媒体和原语言控件仍可联网。不要因看到邮件被拦截就连接真实邮箱或“修复”为外发。
 - 产品 `product_details_body` 和类目 `category_long_description` 的完整富文本、媒体工具、保存与清空能力必须保留。
+- 类目结构由 `product_collection` 唯一维护，内容页为 `starter_category`，全状态一对一。统一入口 Products → Product Categories；新建类目内容使用 `category_ensure_page` 或受保护的 category REST 入口，不直接创建重复 CPT。原生 Template 独立于层级，完整说明见 `docs/CATEGORIES.md`。
 - 不自动购买主机、初始化其他网站、公开端口、开启索引或部署公网。若用户之后另行要求部署，再准备新账号与真实服务配置。
 - 不删除或重建 `.runtime/` 来解决普通问题。恢复初始演示前必须说明它会替换本机后续内容；先停机并重命名备份原目录。
 
 ## 验证
 
-运行 `npm test`、`npm run lint` 与 `npm run audit:package`；站点启动后运行 `npm run verify -- --url http://127.0.0.1:9400`。后端字段或模板变化要实际保存、重开并查看相应前台。需要样式检查时按变化补齐适当验证，不宣称未运行的检查通过。
+运行 `npm test`、`npm run lint` 与 `npm run audit:package`；类目业务变化另运行 `npm run test:categories`（独立临时库）。站点启动后运行 `npm run verify -- --url http://127.0.0.1:9400`。后端字段或模板变化要实际保存、重开并查看相应前台。需要样式检查时按变化补齐适当验证，不宣称未运行的检查通过。
 
 详细说明：`docs/DEVELOPMENT.md`、`docs/DATA.md`、`docs/TROUBLESHOOTING.md`。处理用户的新需求时先确认相关源码和已有内容，保留无关改动。
