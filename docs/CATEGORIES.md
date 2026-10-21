@@ -19,6 +19,10 @@ Products 下原有 **Product Category Pages** 内容列表继续保留，兼容�
 
 ## 页面样式由原生 Template 决定
 
+这是 WordPress 原生 `page_template` 选择器，保存为 `_wp_page_template`，不是另一套 ACF 模板选择字段。右侧选择模板，主编辑区通过 ACF 原生 Location Rules 显示匹配的完整字段组。当前两套已经完成绑定；以后增加模板仍需同时注册模板与对应编辑组，不会仅凭模板名称自动生成字段。
+
+分类结构由 `product_collection` taxonomy 管理；所有类目内容页始终属于同一个 `starter_category` CPT，保留自己的标题、图片、Description、SEO 与修订。模板不创建另一种内容类型，也不建立第二棵上下级树。
+
 打开内容页，在 **Page Template → Template** 原生面板选择：
 
 | 模板 | 用途 | 与层级的关系 |

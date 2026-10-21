@@ -15,7 +15,7 @@ const checks = [];
 const migration = (await readFile(join(projectRoot, 'site/category-url-migration.php'), 'utf8')).replace(/^<\?php/, '');
 try {
   demo = await startDemo({ port, runtimeRoot });
-  await fetch(demo.origin + '/').then(r => r.text());
+  await get('/');
   const php = await demo.handler.getPrimaryPhp();
   async function run(code) {
     const result = await php.run({ code: `<?php require '/wordpress/wp-load.php';wp_set_current_user(1);${code}` });
@@ -23,7 +23,9 @@ try {
     return JSON.parse(result.text);
   }
   function check(name, actual, expected) { assert.deepEqual(actual, expected, name); checks.push({ name, status: 'PASS' }); }
-  async function get(path) { const r = await fetch(demo.origin + path, { redirect: 'manual' }); return { status: r.status, location: r.headers.get('location'), html: await r.text() }; }
+  // These probes alternate native PHP calls with HTTP in the same event loop.
+  // Use a fresh connection; never retry or hide a failed status/assertion.
+  async function get(path) { const r = await fetch(demo.origin + path, { redirect: 'manual', headers: { connection: 'close' } }); return { status: r.status, location: r.headers.get('location'), html: await r.text() }; }
   const initial = await run(`
     $out=[];foreach(get_posts(['post_type'=>'starter_category','post_status'=>'publish','posts_per_page'=>-1,'orderby'=>'ID','order'=>'ASC']) as $post){
       $url=get_permalink($post);$term=(int)get_post_meta($post->ID,'category_collection',true);
