@@ -2,6 +2,24 @@
 
 已完成原本地站点的独立打包、本机验收和 GitHub 全新下载复验。公开仓库为 [jackzhang1314/excavator-wordpress-demo](https://github.com/jackzhang1314/excavator-wordpress-demo)。
 
+## 1.2.0：类目根路径与原生编辑回归
+
+2026-10-22：15个类目改为 `/{内容页-slug}/`，旧前缀对应路径一次301到新址，原分类树、模板、记录和完整正文保留。产品、行业、Page、文章、CMS、REST及媒体保留现有路由。见[网址规则](URLS.md)及[机器检查](url-verification.json)。
+
+本轮为同一macOS/同一Codex会话的隔离新库、原生浏览器和原9400升级，结论 **PASS_BOUNDED**，没有宣称新的独立会话或所有平台通过。
+
+- 路由专项42项通过：15原ID的根路径/原生解析/term_link、15旧址301、canonical、实际Rank Math XML、普通访问不刷新rewrite、Page/文章/产品/行业身份、保留系统入口、原生sample/草稿预览、有效分页/筛选/UTM、越界/缺失404、根命名空间冲突、slug历史、撤回与回收站、序列化/JSON及外站链接保护、迁移冲突先停止、后续编辑不被启动覆盖。另以部分ACF修订夹具验证“可变内容取预览，分类身份取原页”。
+- 当前demo仍强制noindex，Rank Math因此省略普通canonical。只在自己的隔离loopback库添加临时MU输出fixture验证正常可索引输出，finally移除并回读noindex；不是修改用户站点或Google收录验收。
+- 类目业务38项（原37项加根路径/旧前缀撤回覆盖）、9项运行回归、23JS/98PHP语法通过。隔离9405与原9400的75页面/120资源分别通过；9400另逐一核对15个旧址301和两个代表HEAD请求。
+- 原9400保护：198条原内容记录和15类目ID/slug/模板不变，8616条受保护meta仅4条URL变化，36条正文、分类/关系、239运行媒体及236种子媒体保持。3条ACF Link正确重算序列化长度，另1条菜单保留`#products`；没有重导种子、改GUID或历史询盘。
+- 独立研究复测发现1.1.0在特定编辑流程有两项缺陷：未保存输入后切换完整模板组会丢数据；发布后隐藏身份字段的部分预览可能丢分类上下文。本轮原生复现并修正：有未保存字段时保持原模板并提示先保存；预览身份从canonical原页读取，可变图文仍按原生修订。原生键盘输入和完整24段正文/图片/表格0的切换保护通过；保存后概览→选型仍保留值；ACF异步刷新不重新显示身份选择器。
+- 在自己的9405原生创建term27/page440，发布根路径，再原生移到Construction Digger下。实际键盘追加未保存intro、点击Preview Changes后，预览显示追加文字、完整24段/图片/表格及正确面包屑；图片加载成功。匿名公开页仍只有已保存intro，原文/图片保留。随后恢复测试基准，仅在QA库保留，不进入初始演示。
+- 9400原生新址SmallDigger仍对应原编辑页#21，显示原选型模板和完整字段；前台管理条可用，1440与390无横向溢出。[后台短网址实拍](screenshots/1.2.0/short-url-editor.png)、[前台实拍](screenshots/1.2.0/small-digger.png)。
+
+初期测试保留失败：使用了WP_Rewrite不存在的category_base/tag_base属性导致隔离首次激活告警，已改读原生options；以p查询的分页404被Core canonical重导，改为CPT原生query_var并复验；Core旧slug查找不检查发布状态，现由类目受控别名处理；JSON转义斜杠导致早期快筛漏迁，已修正并测试。无Node启动与测试并行曾碰上依赖重装，后按入口完成后顺序启动，没有改环境；sample token初次断言忽略Core转成`%pagename%`，按实际接口修正测试。失败没有用此前通过覆盖。
+
+共享Harness只读审查及V2 root routePrefix纯函数探针通过，未改其源码；原9478、原客户theme/plugin和Hostinger未更新。原客户源码仍由其旧路由/规划匹配维护；此公开仓库是9400的完整独立源码，不把其SHA当作原客户Git已推送。物理Windows/Linux、MySQL/Hostinger、子目录、多语言全组合、长期并发和所有ACF排列未覆盖，后续独立会话复验另记。
+
 ## 1.1.0：多层类目管理与独立模板
 
 2026-10-22，发布本地演示版 1.1.0。原先同一类目模板按“是否有父类”输出两套布局，现在由原生 Page Template 明确选择 Category: Overview / Category: Product selection。保留原来的两套设计，层级调整不再改变已选样式。分类树仍是 taxonomy，内容仍是全状态一对一的 CPT，没有复制页面父子树。使用方法见 [类目管理](CATEGORIES.md)。

@@ -173,7 +173,7 @@
       "status": "PASS"
     }
   ],
-  "verifiedAtLocal": "2026-10-22T04:44:40.887338+08:00",
+  "verifiedAtLocal": "2026-10-22T04:53:29.906096+08:00",
   "baselineCommit": "dd5e6d988bb67ca732cce5df33dcd7dd2ce22d1b",
   "nativeBrowser": {
     "nativeCategoryId": 440,
@@ -203,6 +203,11 @@
       "pages": 75,
       "resources": 120,
       "failures": 0
+    },
+    "main9400": {
+      "pages": 75,
+      "resources": 120,
+      "failures": 0
     }
   },
   "harnessReadOnlyProbe": {
@@ -216,7 +221,125 @@
   "harnessSourceWritten": false,
   "hostingerWritten": false,
   "original9478Written": false,
-  "main9400Upgrade": "pending final readback",
+  "main9400Upgrade": {
+    "status": "PASS",
+    "at": "2026-10-22T04:48:49.986582+08:00",
+    "postsUnchanged": 198,
+    "metadataRowsChecked": 8616,
+    "metadataRowsChanged": [
+      {
+        "metaId": 3658,
+        "postId": 6,
+        "key": "equipment_task_cards_0_link",
+        "before": "a:3:{s:5:\"title\";s:25:\"Explore digging equipment\";s:3:\"url\";s:59:\"http://127.0.0.1:9400/product-category/construction-digger/\";s:6:\"target\";s:0:\"\";}",
+        "after": "a:3:{s:5:\"title\";s:25:\"Explore digging equipment\";s:3:\"url\";s:42:\"http://127.0.0.1:9400/construction-digger/\";s:6:\"target\";s:0:\"\";}"
+      },
+      {
+        "metaId": 3666,
+        "postId": 6,
+        "key": "equipment_task_cards_1_link",
+        "before": "a:3:{s:5:\"title\";s:15:\"Explore loaders\";s:3:\"url\";s:52:\"http://127.0.0.1:9400/product-category/wheel-loader/\";s:6:\"target\";s:0:\"\";}",
+        "after": "a:3:{s:5:\"title\";s:15:\"Explore loaders\";s:3:\"url\";s:35:\"http://127.0.0.1:9400/wheel-loader/\";s:6:\"target\";s:0:\"\";}"
+      },
+      {
+        "metaId": 3674,
+        "postId": 6,
+        "key": "equipment_task_cards_2_link",
+        "before": "a:3:{s:5:\"title\";s:26:\"Explore skid steer loaders\";s:3:\"url\";s:57:\"http://127.0.0.1:9400/product-category/skid-steer-loader/\";s:6:\"target\";s:0:\"\";}",
+        "after": "a:3:{s:5:\"title\";s:26:\"Explore skid steer loaders\";s:3:\"url\";s:40:\"http://127.0.0.1:9400/skid-steer-loader/\";s:6:\"target\";s:0:\"\";}"
+      },
+      {
+        "metaId": 24827,
+        "postId": 437,
+        "key": "_menu_item_url",
+        "before": "http://127.0.0.1:9400/product-category/backhoe-loader/#products",
+        "after": "http://127.0.0.1:9400/backhoe-loader/#products"
+      }
+    ],
+    "serializedLinkLengthsCorrect": true,
+    "allOtherMetadataUnchanged": true,
+    "descriptionRowsUnchanged": 36,
+    "categoryIdsAndTemplatesUnchanged": [
+      {
+        "ID": 19,
+        "post_name": "general-excavator",
+        "template": "default"
+      },
+      {
+        "ID": 20,
+        "post_name": "construction-digger",
+        "template": "default"
+      },
+      {
+        "ID": 21,
+        "post_name": "small-digger",
+        "template": "page-templates/category-selection.php"
+      },
+      {
+        "ID": 22,
+        "post_name": "medium-digger",
+        "template": "page-templates/category-selection.php"
+      },
+      {
+        "ID": 23,
+        "post_name": "large-digger",
+        "template": "page-templates/category-selection.php"
+      },
+      {
+        "ID": 24,
+        "post_name": "wheel-loader",
+        "template": "default"
+      },
+      {
+        "ID": 25,
+        "post_name": "mini-loader",
+        "template": "page-templates/category-selection.php"
+      },
+      {
+        "ID": 26,
+        "post_name": "medium-loader",
+        "template": "page-templates/category-selection.php"
+      },
+      {
+        "ID": 27,
+        "post_name": "large-loader",
+        "template": "page-templates/category-selection.php"
+      },
+      {
+        "ID": 28,
+        "post_name": "backhoe-loader",
+        "template": "default"
+      },
+      {
+        "ID": 29,
+        "post_name": "skid-steer-loader",
+        "template": "default"
+      },
+      {
+        "ID": 30,
+        "post_name": "stand-on",
+        "template": "page-templates/category-selection.php"
+      },
+      {
+        "ID": 31,
+        "post_name": "mini-skid-steer",
+        "template": "page-templates/category-selection.php"
+      },
+      {
+        "ID": 32,
+        "post_name": "small-skid-steer",
+        "template": "page-templates/category-selection.php"
+      },
+      {
+        "ID": 33,
+        "post_name": "large-skid-steer",
+        "template": "page-templates/category-selection.php"
+      }
+    ],
+    "termsRelationshipsUnchanged": true,
+    "runtimeMediaUnchanged": 239,
+    "seedContentUnchanged": true
+  },
   "limitations": [
     "same macOS host and same Codex session; independent session follow-up separate",
     "temporary indexable-output fixture in own loopback test only; removed in finally; actual demo forced noindex preserved",
@@ -224,5 +347,99 @@
     "native editor guards cover actual keyboard intro and complete guide/image/table; not every ACF field combination"
   ],
   "testedSourceSha256": "7030d28d99e279cdea742d85601d1acd2cf96a76f284ee3cb284bca6991d7734",
-  "fingerprintRecipe": "sorted path + file SHA256 for package/lock, scripts, site PHP and owned theme/plugin JS/CSS"
+  "fingerprintRecipe": "sorted path + file SHA256 for package/lock, scripts, site PHP and owned theme/plugin JS/CSS",
+  "testedCodeCommit": "7b51f4761e4eef311557b0e306ab2d04cf29b8bb",
+  "main9400Redirects": {
+    "status": "PASS",
+    "routes": [
+      {
+        "old": "/product-category/general-excavator/",
+        "new": "http://127.0.0.1:9400/general-excavator/",
+        "status": 301
+      },
+      {
+        "old": "/product-category/construction-digger/",
+        "new": "http://127.0.0.1:9400/construction-digger/",
+        "status": 301
+      },
+      {
+        "old": "/product-category/small-digger/",
+        "new": "http://127.0.0.1:9400/small-digger/",
+        "status": 301
+      },
+      {
+        "old": "/product-category/medium-digger/",
+        "new": "http://127.0.0.1:9400/medium-digger/",
+        "status": 301
+      },
+      {
+        "old": "/product-category/large-digger/",
+        "new": "http://127.0.0.1:9400/large-digger/",
+        "status": 301
+      },
+      {
+        "old": "/product-category/wheel-loader/",
+        "new": "http://127.0.0.1:9400/wheel-loader/",
+        "status": 301
+      },
+      {
+        "old": "/product-category/mini-loader/",
+        "new": "http://127.0.0.1:9400/mini-loader/",
+        "status": 301
+      },
+      {
+        "old": "/product-category/medium-loader/",
+        "new": "http://127.0.0.1:9400/medium-loader/",
+        "status": 301
+      },
+      {
+        "old": "/product-category/large-loader/",
+        "new": "http://127.0.0.1:9400/large-loader/",
+        "status": 301
+      },
+      {
+        "old": "/product-category/backhoe-loader/",
+        "new": "http://127.0.0.1:9400/backhoe-loader/",
+        "status": 301
+      },
+      {
+        "old": "/product-category/skid-steer-loader/",
+        "new": "http://127.0.0.1:9400/skid-steer-loader/",
+        "status": 301
+      },
+      {
+        "old": "/product-category/stand-on/",
+        "new": "http://127.0.0.1:9400/stand-on/",
+        "status": 301
+      },
+      {
+        "old": "/product-category/mini-skid-steer/",
+        "new": "http://127.0.0.1:9400/mini-skid-steer/",
+        "status": 301
+      },
+      {
+        "old": "/product-category/small-skid-steer/",
+        "new": "http://127.0.0.1:9400/small-skid-steer/",
+        "status": 301
+      },
+      {
+        "old": "/product-category/large-skid-steer/",
+        "new": "http://127.0.0.1:9400/large-skid-steer/",
+        "status": 301
+      }
+    ],
+    "headRepresentatives": 2
+  },
+  "mainNativeReadback": {
+    "root": "/small-digger/",
+    "originalCategoryId": 21,
+    "template": "page-templates/category-selection.php",
+    "editToolbarSameId": true,
+    "classificationSelectorHidden": true,
+    "guardLoaded": true,
+    "noOverflowWidths": [
+      1440,
+      390
+    ]
+  }
 }

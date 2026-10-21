@@ -1,5 +1,5 @@
 {
-  "verifiedAt": "2026-10-22T03:37:52.077541+08:00",
+  "verifiedAt": "2026-10-22T04:53:29.906096+08:00",
   "repository": "https://github.com/jackzhang1314/excavator-wordpress-demo",
   "visibility": "public",
   "environment": {
@@ -90,7 +90,7 @@
     "real business branding, product facts and formal public website release are outside this local demo delivery",
     "Online translation quality and in-app plugin-catalogue navigation not fully verified; no new plugin installed during that UI probe."
   ],
-  "releaseVersion": "1.1.0",
+  "releaseVersion": "1.2.0",
   "previousTestedCodeCommit": "dac4e2d1ba8b13b90edeb2b46e9962c8474303e5",
   "independentNewSession": {
     "initialCommit": "2a53ab73faa190c6a0db5a74a21f7cdbb84e1efb",
@@ -214,7 +214,7 @@
   },
   "checksVersion": "1.0.2 (historical independent-session evidence)",
   "previousIndependentTestedCodeCommit": "bf38dd6584cb83723dd6be30e798ee9c9f64ddf0",
-  "testedSourceSha256": "6ed111ed9b17b8f52800dc126daca95c7c4d0094bb493f971047212191503377",
+  "testedSourceSha256": "7030d28d99e279cdea742d85601d1acd2cf96a76f284ee3cb284bca6991d7734",
   "categoryManagement110": {
     "status": "PASS_BOUNDED",
     "report": "category-verification.json",
@@ -244,6 +244,39 @@
     "freshCodexSessionThisRevision": false,
     "harnessUsed": false,
     "hostingerDeployed": false,
+    "original9478Written": false
+  },
+  "rootCategoryUrls120": {
+    "status": "PASS_BOUNDED",
+    "testedCodeCommit": "7b51f4761e4eef311557b0e306ab2d04cf29b8bb",
+    "report": "url-verification.json",
+    "rootCategoryUrls": 15,
+    "legacy301": 15,
+    "headRepresentatives": 2,
+    "routeChecks": 42,
+    "categoryChecks": 38,
+    "runtimeTests": 9,
+    "syntax": {
+      "javascriptFiles": 23,
+      "phpFiles": 98
+    },
+    "routes": {
+      "pages": 75,
+      "resources": 120,
+      "failures": 0
+    },
+    "preserved": {
+      "posts": 198,
+      "metadataRowsChecked": 8616,
+      "onlyUrlMetadataRowsChanged": 4,
+      "descriptionRows": 36,
+      "runtimeMedia": 239
+    },
+    "nativeUnsavedTemplateGuard": "PASS intro and rich guide/image/table",
+    "nativePartialPreviewIdentity": "PASS after native reparent; saved public unchanged",
+    "freshCodexSessionThisRevision": false,
+    "harnessSourceWritten": false,
+    "hostingerWritten": false,
     "original9478Written": false
   }
 }
