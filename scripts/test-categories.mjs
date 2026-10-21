@@ -125,7 +125,7 @@ try {
     echo wp_json_encode([$response->get_status()>=200&&$response->get_status()<300,(int)wp_is_post_autosave((int)($data['id']??0))===${ids[2]},get_post_status(${ids[2]}),get_the_title(${ids[2]})]);
   `),[true,true,'publish','QA leaf']);
   for (const i of [0, 1, 2, 3, 5]) {
-    const response = await fetch(demo.origin + '/product-category/qa-' + tree[i].name + '/');
+    const response = await fetch(demo.origin + '/qa-' + tree[i].name + '/');
     const html = await response.text();
     check('Published level ' + tree[i].depth + ' page renders: ' + tree[i].name, [response.status, html.includes(`data-category-depth="${tree[i].depth}"`)], [200, true]);
     if (i === 2) check('Published guide includes complete text, image and module', [html.includes('QA complete guide'), html.includes('QA media'), html.includes('QA module body')], [true, true, true]);
@@ -139,10 +139,10 @@ try {
     echo wp_json_encode([$a['location'][0][1]['value'],$b['location'][0][1]['value']]);
   `), ['default', 'page-templates/category-selection.php']);
   for (const [index, style] of [[1,'is-primary'],[5,'is-secondary']]) {
-    const r=await fetch(demo.origin+'/product-category/qa-'+tree[index].name+'/'); const html=await r.text();
+    const r=await fetch(demo.origin+'/qa-'+tree[index].name+'/'); const html=await r.text();
     check('Actual layout is selected by template at level '+tree[index].depth,[r.status,html.includes('category-standard '+style)],[200,true]);
   }
-  const filtered = await fetch(demo.origin + '/product-category/qa-root/?eq_spec%5Boperating-weight%5D=2%20t');
+  const filtered = await fetch(demo.origin + '/qa-root/?eq_spec%5Boperating-weight%5D=2%20t');
   const filteredHtml = await filtered.text();
   check('Actual specification filter selects one deduplicated product', [filtered.status,filteredHtml.includes('1 model'),filteredHtml.includes('QA cross branch product'),filteredHtml.includes('QA deep product')],[200,true,true,false]);
   check('Same category names in separate branches keep unique stable URLs', await run(`
@@ -150,13 +150,13 @@ try {
     echo wp_json_encode(count(array_unique($urls))===2);
   `),true);
   await run(`update_option('posts_per_page',1);echo '{}';`);
-  const page2 = await fetch(demo.origin + '/product-category/qa-root/page/2/');
+  const page2 = await fetch(demo.origin + '/qa-root/page/2/');
   const html2 = await page2.text();
-  check('Real product page 2 has its own canonical', [page2.status, html2.includes(demo.origin + '/product-category/qa-root/page/2/'), /<title>[^<]*Page 2/.test(html2)], [200, true, true]);
-  const page3 = await fetch(demo.origin + '/product-category/qa-root/page/3/'); await page3.text();
+  check('Real product page 2 has its own canonical', [page2.status, html2.includes(demo.origin + '/qa-root/page/2/'), /<title>[^<]*Page 2/.test(html2)], [200, true, true]);
+  const page3 = await fetch(demo.origin + '/qa-root/page/3/'); await page3.text();
   check('Out-of-range product page is 404', page3.status, 404);
   await run(`update_option('posts_per_page',10);update_term_meta(${terms[2]},'category_long_description','QA OLD TAXONOMY LEAK');wp_update_post(['ID'=>${ids[2]},'post_status'=>'draft']);echo '{}';`);
-  for (const path of ['/product-category/qa-leaf/', '/?product_collection=qa-leaf']) {
+  for (const path of ['/qa-leaf/', '/product-category/qa-leaf/', '/?product_collection=qa-leaf']) {
     const r = await fetch(demo.origin + path, { redirect: 'manual' }); const html = await r.text();
     check('Withdrawn content and old taxonomy archive isolated: ' + path, [r.status, html.includes('QA OLD TAXONOMY LEAK'), html.includes('QA complete guide')], [404, false, false]);
   }

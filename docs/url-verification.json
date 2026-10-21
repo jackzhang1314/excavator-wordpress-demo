@@ -1,0 +1,228 @@
+{
+  "status": "PASS_BOUNDED",
+  "verifiedAt": "2026-10-21T20:42:37.027Z",
+  "version": "1.2.0",
+  "scope": "isolated new WordPress database, actual Core/Rank Math/HTTP checks; not native browser or Google indexing acceptance",
+  "checks": [
+    {
+      "name": "15 original category IDs resolve from native root permalinks and taxonomy links",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing content upgrade changes only four known URL metadata rows",
+      "status": "PASS"
+    },
+    {
+      "name": "Demo preview retains its noindex state",
+      "status": "PASS"
+    },
+    {
+      "name": "Isolated test fixture exposes native indexable output",
+      "status": "PASS"
+    },
+    {
+      "name": "Every new original category returns 200",
+      "status": "PASS"
+    },
+    {
+      "name": "Every original prefixed URL redirects once directly to its root URL",
+      "status": "PASS"
+    },
+    {
+      "name": "All original category canonicals point to their root URL",
+      "status": "PASS"
+    },
+    {
+      "name": "Rendered original category internal href/src values contain no old category prefix",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual Rank Math category sitemap is XML and contains all new URLs only",
+      "status": "PASS"
+    },
+    {
+      "name": "Native sitemap index exposes the content sitemap and no taxonomy duplicate",
+      "status": "PASS"
+    },
+    {
+      "name": "Custom navigation canonicalizes local category links with query/fragment and leaves foreign URLs alone",
+      "status": "PASS"
+    },
+    {
+      "name": "Normal page requests do not regenerate stored rewrite rules",
+      "status": "PASS"
+    },
+    {
+      "name": "Home, root Page, blog, product archive, product and industry routes keep their owners",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing reserved route remains available: /about/",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing reserved route remains available: /blog/",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing reserved route remains available: /products/",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing reserved route remains available: /wp-json/",
+      "status": "PASS"
+    },
+    {
+      "name": "Native sample permalink and plain draft preview use the correct Core contracts",
+      "status": "PASS"
+    },
+    {
+      "name": "New root category pagination returns its own canonical and Page 2 title",
+      "status": "PASS"
+    },
+    {
+      "name": "Old pagination preserves page, UTM and filter query in one same-origin 301",
+      "status": "PASS"
+    },
+    {
+      "name": "Native URL resolver understands the root category second page",
+      "status": "PASS"
+    },
+    {
+      "name": "Missing category or out-of-range pagination stays 404: /qa-url-root/page/3/",
+      "status": "PASS"
+    },
+    {
+      "name": "Missing category or out-of-range pagination stays 404: /product-category/qa-url-root/page/3/",
+      "status": "PASS"
+    },
+    {
+      "name": "Missing category or out-of-range pagination stays 404: /product-category/definitely-missing/",
+      "status": "PASS"
+    },
+    {
+      "name": "Missing category or out-of-range pagination stays 404: /definitely-missing-root-qa/",
+      "status": "PASS"
+    },
+    {
+      "name": "Moving a classification retains root URL, ID, native template and complete guide",
+      "status": "PASS"
+    },
+    {
+      "name": "A partial ACF preview snapshot keeps canonical category identity while exposing changed editorial fields",
+      "status": "PASS"
+    },
+    {
+      "name": "New category drafts and reserved names never shadow existing root owners",
+      "status": "PASS"
+    },
+    {
+      "name": "Creating Page/article drafts cannot steal a published category root; nested Pages and prefixed products stay independent",
+      "status": "PASS"
+    },
+    {
+      "name": "Native slug history redirects straight to the current category: /qa-url-root/",
+      "status": "PASS"
+    },
+    {
+      "name": "Native slug history redirects straight to the current category: /product-category/qa-url-root/",
+      "status": "PASS"
+    },
+    {
+      "name": "Old category root remains reserved against new Page/article ownership",
+      "status": "PASS"
+    },
+    {
+      "name": "Withdrawn current and historical routes expose no content: /qa-url-renamed/",
+      "status": "PASS"
+    },
+    {
+      "name": "Withdrawn current and historical routes expose no content: /qa-url-root/",
+      "status": "PASS"
+    },
+    {
+      "name": "Withdrawn current and historical routes expose no content: /product-category/qa-url-root/",
+      "status": "PASS"
+    },
+    {
+      "name": "Withdrawn current and historical routes expose no content: /product-category/qa-url-renamed/",
+      "status": "PASS"
+    },
+    {
+      "name": "Trashed root does not expose content",
+      "status": "PASS"
+    },
+    {
+      "name": "Restore and publish recovers the same root page ID and content",
+      "status": "PASS"
+    },
+    {
+      "name": "Exact URL replacement preserves serialized/JSON structures, query strings, foreign hosts and partial names",
+      "status": "PASS"
+    },
+    {
+      "name": "A second startup migration preserves newer edits and does not reseed content",
+      "status": "PASS"
+    },
+    {
+      "name": "A pre-existing root conflict stops migration before rewriting content or claiming the URL",
+      "status": "PASS"
+    },
+    {
+      "name": "Remove the test override and restore native demo noindex",
+      "status": "PASS"
+    }
+  ],
+  "verifiedAtLocal": "2026-10-22T04:44:40.887338+08:00",
+  "baselineCommit": "dd5e6d988bb67ca732cce5df33dcd7dd2ce22d1b",
+  "nativeBrowser": {
+    "nativeCategoryId": 440,
+    "termId": 27,
+    "createdFromNativeTermsScreen": true,
+    "publishedRoot": "/qa-short-url/",
+    "nativeReparent": "root -> Construction Digger; URL/template/guide retained",
+    "savedTemplate": "page-templates/category-selection.php",
+    "guideParagraphs": 24,
+    "guideImageLoaded": true,
+    "guideZeroValue": true,
+    "nativeTypedPreview": "PASS: real keyboard intro Z, Preview Changes, classification retained and unpublished intro visible",
+    "anonymousPublishedControl": "PASS: 200; saved intro visible; unsaved Z absent; 24 guide paragraphs and image retained",
+    "unsavedTemplateGuard": "PASS: native typed intro; complete rich text/image/table; selection blocked with inline save-first notice; active values retained",
+    "savedTemplateSwitch": "PASS: overview -> selection, saved 24 paragraphs/image/table0; identity selector remains absent after native ACF AJAX",
+    "version": "1.2.0",
+    "scope": "same-session own isolated 9405 browser, not new independent Codex session"
+  },
+  "categoryRegressionChecks": 38,
+  "runtimeTests": 9,
+  "syntax": {
+    "javascriptFiles": 23,
+    "phpFiles": 98
+  },
+  "routes": {
+    "isolated9405": {
+      "pages": 75,
+      "resources": 120,
+      "failures": 0
+    }
+  },
+  "harnessReadOnlyProbe": {
+    "version2RootPrefixSupported": true,
+    "routes": [
+      "/construction-digger/",
+      "/small-digger/"
+    ],
+    "gaps": 0
+  },
+  "harnessSourceWritten": false,
+  "hostingerWritten": false,
+  "original9478Written": false,
+  "main9400Upgrade": "pending final readback",
+  "limitations": [
+    "same macOS host and same Codex session; independent session follow-up separate",
+    "temporary indexable-output fixture in own loopback test only; removed in finally; actual demo forced noindex preserved",
+    "no real Google indexing, MySQL/Hostinger run, physical Windows/Linux, subdirectory or multilingual routing matrix",
+    "native editor guards cover actual keyboard intro and complete guide/image/table; not every ACF field combination"
+  ],
+  "testedSourceSha256": "7030d28d99e279cdea742d85601d1acd2cf96a76f284ee3cb284bca6991d7734",
+  "fingerprintRecipe": "sorted path + file SHA256 for package/lock, scripts, site PHP and owned theme/plugin JS/CSS"
+}

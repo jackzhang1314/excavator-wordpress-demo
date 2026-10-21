@@ -3,6 +3,13 @@
 namespace Starter\Model;
 defined('ABSPATH') || exit;
 
+add_action('admin_enqueue_scripts', static function (): void {
+    $screen = get_current_screen();
+    if (!$screen || $screen->base !== 'post' || $screen->post_type !== 'starter_category') return;
+    $file = dirname(__DIR__) . '/assets/js/category-template-guard.js';
+    wp_enqueue_script('starter-category-template-guard', plugins_url('assets/js/category-template-guard.js', dirname(__DIR__) . '/starter-model.php'), ['acf-input'], (string) filemtime($file), true);
+});
+
 function category_admin_url(array $args = []): string {
     return add_query_arg($args, admin_url('edit-tags.php?taxonomy=product_collection&post_type=starter_product'));
 }
@@ -167,3 +174,9 @@ add_filter('acf/prepare_field/key=field_category_collection', static function ($
     $id = isset($_GET['post']) ? absint($_GET['post']) : 0;
     return $id && get_term((int) get_post_meta($id, 'category_collection', true), 'product_collection') instanceof \WP_Term ? false : $field;
 });
+// ACF's native screen AJAX has post_id in its location context, not in GET['post'].
+add_filter('acf/location/rule_match/post_type', static function (bool $match, array $rule, array $screen, array $group): bool {
+    if (!$match || ($group['key'] ?? '') !== 'group_category_classification') return $match;
+    $id = (int) ($screen['post_id'] ?? 0);
+    return !$id || !get_term((int) get_post_meta($id, 'category_collection', true), 'product_collection') instanceof \WP_Term;
+}, 10, 4);

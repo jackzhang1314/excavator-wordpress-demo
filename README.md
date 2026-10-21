@@ -62,6 +62,7 @@ npm start
 - 每个产品和类目原有的完整富文本 Description；图片、图库、参数、FAQ、关联内容与页面模板绑定一起保留。
 - 原生 WordPress 后台，支持编辑内容、上传图片、修改菜单和查看本地询盘。
 - **1.1.0 类目管理**：Products → Product Categories 统一查看完整路径、层级、内容状态和模板；可新增任意层级类目及其内容草稿。“概览”与“产品选型”由原生 Template 明确选择，调整类目层级保留原样式和内容。见 [类目使用说明](docs/CATEGORIES.md)。
+- **1.2.0 短网址**：类目直接使用 `/construction-digger/`、`/small-digger/`，所有旧 `/product-category/…` 对应地址保留301；新增类目也采用根路径。重名、迁移与编辑预览见[网址规则](docs/URLS.md)。
 
 这是已完成页面结构和样式的演示内容，仍包含 YOUR BRAND、待确认型号参数和 AI 概念图片。它们是原站已有的展示资料，不能当作真实制造商资质或产品承诺。
 
@@ -80,7 +81,7 @@ npm start
 
 可以直接告诉 Codex：“基于这个项目修改首页 / 增加产品字段 / 调整某个模板，保留现有内容。”本仓库有独立的源代码、固定版本依赖和开发说明，**不依赖 WordPress Build Skill / Harness**。
 
-先阅读 [开发说明](docs/DEVELOPMENT.md)、[数据与备份](docs/DATA.md)、[类目管理](docs/CATEGORIES.md) 和 [常见问题](docs/TROUBLESHOOTING.md)。启动后可运行 `npm run verify` 检查页面；`npm test` 检查运行入口的关键保护逻辑，`npm run test:categories` 在新库检查类目服务与页面。
+先阅读 [开发说明](docs/DEVELOPMENT.md)、[数据与备份](docs/DATA.md)、[类目管理](docs/CATEGORIES.md)、[网址规则](docs/URLS.md) 和 [常见问题](docs/TROUBLESHOOTING.md)。启动后用 `npm run verify` 检查页面；`npm test` 检查运行入口，`npm run test:categories`、`npm run test:urls` 在新库检查类目和网址。
 
 ## 询盘与账号边界
 

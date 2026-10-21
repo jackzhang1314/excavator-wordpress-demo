@@ -11,6 +11,7 @@
 | `site/uploads/` | 初始媒体，包含 WordPress 的各尺寸图片 |
 | `site/bootstrap.php` | 首次导入和专用演示账号初始化 |
 | `site/category-layouts.php` | 一次性把旧类目布局保存为原生模板选择，保留后续用户选择 |
+| `site/category-url-migration.php` | 预检根路径冲突并只迁移已知类目URL引用，不重导内容 |
 | `site/relocate.php` | 换端口时保留序列化 / JSON 数据并改写本机网址 |
 | `scripts/` | 独立的 Playground 启动与检查代码 |
 | `packages/` | 固定版本 WordPress、SQLite 集成及所需插件包，含 SHA-256 校验清单 |
@@ -39,6 +40,7 @@ npm test
 npm run lint
 npm run audit:package
 npm run test:categories
+npm run test:urls
 npm run verify -- --url http://127.0.0.1:9400
 ```
 

@@ -5,6 +5,7 @@ require_once '/wordpress/wp-admin/includes/plugin.php';
 require '/demo-source/relocate.php';
 require '/demo-source/user-defaults.php';
 require '/demo-source/category-layouts.php';
+require '/demo-source/category-url-migration.php';
 
 global $wpdb;
 if (!get_option('excavator_demo_seed_version')) {
@@ -85,6 +86,7 @@ if (!get_option('excavator_demo_operational_schema')) {
     update_option('excavator_demo_operational_schema', 1, false);
 }
 excavator_demo_relocate(rtrim(WP_HOME, '/'));
+excavator_demo_migrate_category_urls();
 // Rank Math loaded its notice before URLs were relocated. Refresh its native
 // in-memory notice too, including existing copies upgraded on the same port.
 // Keep an already dismissed notice dismissed.

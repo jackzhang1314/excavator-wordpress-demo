@@ -6,7 +6,10 @@ function category_current_term(): ?\WP_Term {
     $object = get_queried_object();
     if ($object instanceof \WP_Term) return $object;
     if (!$object instanceof \WP_Post || $object->post_type !== 'starter_category') return null;
-    $id = (int) get_field('category_collection', $object->ID);
+    // Identity belongs to the canonical page, not a partial ACF autosave snapshot.
+    // Mutable editorial fields still use ACF's native preview/revision behavior.
+    $owner = wp_is_post_revision($object->ID) ?: $object->ID;
+    $id = (int) get_post_meta($owner, 'category_collection', true);
     $term = $id ? get_term($id, 'product_collection') : null;
     return $term instanceof \WP_Term ? $term : null;
 }

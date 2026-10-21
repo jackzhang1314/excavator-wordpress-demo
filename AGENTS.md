@@ -22,6 +22,7 @@
 - 本地询盘存库，发信在 `site/mu-plugins/local-demo.php` 拦截；原企业邮箱、主机及分析 / 聊天账号未携带。正常的 WordPress 插件管理、媒体和原语言控件仍可联网。不要因看到邮件被拦截就连接真实邮箱或“修复”为外发。
 - 产品 `product_details_body` 和类目 `category_long_description` 的完整富文本、媒体工具、保存与清空能力必须保留。
 - 类目结构由 `product_collection` 唯一维护，内容页为 `starter_category`，全状态一对一。统一入口 Products → Product Categories；新建类目内容使用 `category_ensure_page` 或受保护的 category REST 入口，不直接创建重复 CPT。原生 Template 独立于层级，完整说明见 `docs/CATEGORIES.md`。
+- 类目使用根路径，旧前缀保留精确301。保留原生rewrite、url_to_postid、跨根内容的slug保护与旧别名；不要仅改post_type_link或增加吞掉根Page的通配规则。`docs/URLS.md`说明显式升级和验收；不对运行库重导种子或开放索引。
 - 不自动购买主机、初始化其他网站、公开端口、开启索引或部署公网。若用户之后另行要求部署，再准备新账号与真实服务配置。
 - 不删除或重建 `.runtime/` 来解决普通问题。恢复初始演示前必须说明它会替换本机后续内容；先停机并重命名备份原目录。
 

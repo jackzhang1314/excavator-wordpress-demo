@@ -6,13 +6,13 @@ function register_category_page_type(): void {
     register_post_type('starter_category', [
         'labels' => content_labels('Product category page', 'Product Category Pages'),
         'public' => true, 'show_in_rest' => true, 'rest_base' => 'product-category-pages',
-        'has_archive' => false, 'rewrite' => ['slug' => 'product-category', 'with_front' => false],
+        'has_archive' => false, 'rewrite' => false,
         'show_in_menu' => 'edit.php?post_type=starter_product',
         'menu_icon' => 'dashicons-category', 'menu_position' => 21,
         'map_meta_cap' => true, 'capability_type' => 'post',
         'supports' => ['title', 'editor', 'revisions', 'custom-fields'],
     ]);
-    // One public path. A listing page number belongs to the product query, not paginated post_content.
+    // Historical paths are retained for exact 301 migration, never as a second canonical page.
     add_rewrite_rule('^product-category/([^/]+)/page/([0-9]+)/?$', 'index.php?starter_category=$matches[1]&paged=$matches[2]', 'top');
     add_rewrite_rule('^product-category/([^/]+)/?$', 'index.php?starter_category=$matches[1]', 'top');
 }

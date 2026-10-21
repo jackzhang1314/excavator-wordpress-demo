@@ -17,6 +17,7 @@ require_once __DIR__ . '/includes/author-profile.php';
 require_once __DIR__ . '/includes/contact-content.php';
 require_once __DIR__ . '/includes/category-pages.php';
 require_once __DIR__ . '/includes/category-management.php';
+require_once __DIR__ . '/includes/category-urls.php';
 require_once __DIR__ . '/includes/category-fields.php';
 require_once __DIR__ . '/includes/about-content.php';
 require_once __DIR__ . '/includes/company-design-fields.php';

@@ -25,7 +25,8 @@ function category_pages_for_term(int $term_id): array {
 
 function category_public_url(int $term_id): string {
     $ids = category_pages_for_term($term_id);
-    if (count($ids) !== 1 || get_post_status($ids[0]) !== 'publish' || get_post_field('post_password', $ids[0]) !== '') return '';
+    if (count($ids) !== 1 || get_post_status($ids[0]) !== 'publish' || get_post_field('post_password', $ids[0]) !== ''
+        || category_root_claimed(get_post_field('post_name', $ids[0]), $ids[0])) return '';
     return (string) get_permalink($ids[0]);
 }
 
@@ -203,7 +204,8 @@ add_filter('wp_setup_nav_menu_item', static function ($item) {
     $term_id = 0;
     if ($item->type === 'taxonomy' && $item->object === 'product_collection') $term_id = (int) $item->object_id;
     elseif ($item->type === 'post_type' && $item->object === 'starter_category') $term_id = (int) get_post_meta((int) $item->object_id, 'category_collection', true);
-    elseif (is_string($item->url) && preg_match('~/product-category/([^/]+)/?$~', (string) wp_parse_url($item->url, PHP_URL_PATH), $match)) {
+    elseif (is_string($item->url) && (str_starts_with($item->url, home_url('/')) || !wp_parse_url($item->url, PHP_URL_HOST))
+        && preg_match('~^/(?:product-category/)?([^/]+)/?$~', (string) wp_parse_url($item->url, PHP_URL_PATH), $match)) {
         $page = get_page_by_path(rawurldecode($match[1]), OBJECT, ['starter_category']);
         if ($page) $term_id = (int) get_post_meta($page->ID, 'category_collection', true);
         else {
@@ -212,6 +214,11 @@ add_filter('wp_setup_nav_menu_item', static function ($item) {
         }
     }
     if (($term_id && !category_public_url($term_id)) || is_wp_error($item->url)) { $item->_invalid = true; $item->url = ''; }
+    elseif ($term_id) {
+        $query = $item->type === 'custom' ? wp_parse_url($item->url, PHP_URL_QUERY) : null;
+        $fragment = $item->type === 'custom' ? wp_parse_url($item->url, PHP_URL_FRAGMENT) : null;
+        $item->url = category_public_url($term_id) . ($query ? '?' . $query : '') . ($fragment ? '#' . $fragment : '');
+    }
     return $item;
 });
 

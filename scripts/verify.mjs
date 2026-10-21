@@ -11,7 +11,8 @@ if (args.length) {
 if (!/^http:\/\/127\.0\.0\.1:\d+$/.test(origin)) throw new Error('Verify only a local loopback demo URL.');
 const seed = JSON.parse(await readFile(join(projectRoot, 'site/content.json'), 'utf8'));
 const assets = new Set(); const failures = []; let pages = 0;
-for (const path of seed.routes) {
+for (const originalPath of seed.routes) {
+  const path = originalPath.replace(/^\/product-category\//, '/');
   const response = await fetch(origin + path, { signal: AbortSignal.timeout(30000) });
   const html = await response.text();
   if (!response.ok || !/<h1\b/i.test(html) || /Fatal error|Critical error/i.test(html)) failures.push({ path, status: response.status });
