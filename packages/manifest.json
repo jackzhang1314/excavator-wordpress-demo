@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "file": "advanced-custom-fields-pro.zip",
+      "bytes": 9999625,
+      "sha256": "08772777d8b5a1c72abf54ead52c02f34d78aceff555edd30642731d4bd15bc6"
+    },
+    {
+      "file": "classic-editor.zip",
+      "bytes": 39503,
+      "sha256": "2d7be39ed63cd05b00001efce3ffd1a218637d3821d4154de76be14846c6b4f7"
+    },
+    {
+      "file": "fluentform.zip",
+      "bytes": 10843921,
+      "sha256": "2d45212a38eff7dcaa837093d4b8b53271f8c09c152e569324b4e275de5c0749"
+    },
+    {
+      "file": "seo-by-rank-math.zip",
+      "bytes": 3749820,
+      "sha256": "2ffbc1f5213c9e39691af51c3da2e9333f8e6ca3bf0194cc3de8826056c140e6"
+    },
+    {
+      "file": "sqlite-database-integration.zip",
+      "bytes": 230051,
+      "sha256": "690f8521a351bf86b3e1516b3af1ab8191ac386e3233b04e4a043f826f961e83"
+    },
+    {
+      "file": "wordpress-6.9.10.zip",
+      "bytes": 28694357,
+      "sha256": "4f18b9e25bd253b0c39009eafb651911e8de29465d6f62397369ff75a36fdb0e"
+    }
+  ]
+}

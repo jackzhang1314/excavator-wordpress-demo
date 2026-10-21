@@ -1,0 +1,22 @@
+{
+  "name": "excavator-wordpress-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A complete local WordPress equipment B2B demo with editable admin content.",
+  "license": "GPL-2.0-or-later",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "start": "node scripts/start.mjs",
+    "lint": "node scripts/lint.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "verify": "node scripts/verify.mjs",
+    "audit:package": "node scripts/audit-package.mjs"
+  },
+  "dependencies": {
+    "@php-wasm/node": "3.1.52",
+    "@php-wasm/universal": "3.1.52",
+    "@wp-playground/wordpress": "3.1.52",
+    "fflate": "0.8.3"
+  }
+}

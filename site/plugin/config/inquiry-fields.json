@@ -1,0 +1,1345 @@
+[
+  {
+    "element": "input_hidden",
+    "uniqElKey": "eq_rfq_inquiry_type",
+    "attributes": {
+      "type": "hidden",
+      "name": "eq_inquiry_type",
+      "value": "general",
+      "class": ""
+    },
+    "settings": {
+      "admin_field_label": "Inquiry type"
+    },
+    "editor_options": {
+      "title": "Hidden Field",
+      "icon_class": "ff-edit-hidden-field",
+      "template": "inputHidden"
+    }
+  },
+  {
+    "element": "input_text",
+    "attributes": {
+      "name": "full_name",
+      "type": "text",
+      "class": "",
+      "placeholder": "",
+      "maxlength": ""
+    },
+    "settings": {
+      "label": "Your name",
+      "admin_field_label": "Full name",
+      "validation_rules": {
+        "required": {
+          "value": true,
+          "message": "This field is required.",
+          "global": false,
+          "global_message": "This field is required"
+        }
+      },
+      "conditional_logic": [],
+      "is_unique": "no",
+      "unique_validation_message": "This field value need to be unique.",
+      "prefix_label": "",
+      "suffix_label": "",
+      "container_class": "eq-field-name"
+    },
+    "editor_options": {
+      "title": "Full name",
+      "icon_class": "ff-edit-text",
+      "template": "inputText"
+    },
+    "uniqElKey": "starter_rfq_full_name"
+  },
+  {
+    "element": "input_email",
+    "attributes": {
+      "name": "email",
+      "type": "email",
+      "class": "",
+      "placeholder": ""
+    },
+    "settings": {
+      "label": "Business email",
+      "admin_field_label": "Work email",
+      "validation_rules": {
+        "required": {
+          "value": true,
+          "message": "This field is required.",
+          "global": false,
+          "global_message": "This field is required"
+        }
+      },
+      "conditional_logic": [],
+      "is_unique": "no",
+      "unique_validation_message": "Email address need to be unique.",
+      "prefix_label": "",
+      "suffix_label": "",
+      "container_class": "eq-field-email"
+    },
+    "editor_options": {
+      "title": "Work email",
+      "icon_class": "ff-edit-text",
+      "template": "inputText"
+    },
+    "uniqElKey": "starter_rfq_email"
+  },
+  {
+    "element": "select_country",
+    "attributes": {
+      "name": "country",
+      "value": "",
+      "id": "",
+      "class": "",
+      "placeholder": "Please select"
+    },
+    "settings": {
+      "label": "Country / region",
+      "admin_field_label": "Country / region",
+      "validation_rules": [],
+      "conditional_logic": [],
+      "is_unique": "no",
+      "unique_validation_message": "This field value need to be unique.",
+      "prefix_label": "",
+      "suffix_label": "",
+      "container_class": "eq-field-country",
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "general",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "contact",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "dealer",
+            "operator": "="
+          }
+        ]
+      },
+      "country_list": {
+        "active_list": "all",
+        "visible_list": [],
+        "hidden_list": []
+      },
+      "enable_select_2": "no",
+      "advanced_options": [],
+      "enable_image_input": false,
+      "calc_value_status": false,
+      "dynamic_default_value": ""
+    },
+    "editor_options": {
+      "title": "Country List",
+      "element": "country-list",
+      "icon_class": "ff-edit-country",
+      "template": "selectCountry"
+    },
+    "uniqElKey": "starter_rfq_country"
+  },
+  {
+    "element": "input_text",
+    "attributes": {
+      "name": "company",
+      "type": "text",
+      "class": "",
+      "placeholder": "",
+      "maxlength": ""
+    },
+    "settings": {
+      "label": "Company",
+      "admin_field_label": "Company",
+      "validation_rules": [],
+      "conditional_logic": [],
+      "is_unique": "no",
+      "unique_validation_message": "This field value need to be unique.",
+      "prefix_label": "",
+      "suffix_label": "",
+      "container_class": "eq-field-company",
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "general",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "contact",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "dealer",
+            "operator": "="
+          }
+        ]
+      }
+    },
+    "editor_options": {
+      "title": "Company",
+      "icon_class": "ff-edit-text",
+      "template": "inputText"
+    },
+    "uniqElKey": "starter_rfq_company"
+  },
+  {
+    "index": 2,
+    "element": "input_text",
+    "attributes": {
+      "type": "tel",
+      "name": "phone",
+      "value": "",
+      "class": "",
+      "placeholder": "Phone (optional)",
+      "maxlength": "80"
+    },
+    "settings": {
+      "container_class": "eq-field-phone",
+      "label": "Phone (optional)",
+      "label_placement": "",
+      "admin_field_label": "Phone (optional)",
+      "help_message": "",
+      "prefix_label": "",
+      "suffix_label": "",
+      "validation_rules": {
+        "required": {
+          "value": false,
+          "message": "This field is required",
+          "global_message": "This field is required",
+          "global": true
+        }
+      },
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "general",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "contact",
+            "operator": "="
+          }
+        ]
+      },
+      "is_unique": "no",
+      "unique_validation_message": "This value need to be unique."
+    },
+    "editor_options": {
+      "title": "Simple Text",
+      "icon_class": "ff-edit-text",
+      "template": "inputText"
+    },
+    "uniqElKey": "eq_rfq_phone"
+  },
+  {
+    "index": 2,
+    "element": "select",
+    "attributes": {
+      "name": "document_type",
+      "value": "",
+      "class": "",
+      "placeholder": "",
+      "maxlength": ""
+    },
+    "settings": {
+      "container_class": "eq-field-document-type",
+      "label": "Document type",
+      "label_placement": "",
+      "admin_field_label": "Document type",
+      "help_message": "",
+      "prefix_label": "",
+      "suffix_label": "",
+      "validation_rules": [],
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "documents",
+            "operator": "="
+          }
+        ]
+      },
+      "is_unique": "no",
+      "unique_validation_message": "This value need to be unique.",
+      "placeholder": "Please select",
+      "advanced_options": [
+        {
+          "label": "Product compliance document",
+          "value": "Product compliance document",
+          "calc_value": ""
+        },
+        {
+          "label": "Technical specification sheet",
+          "value": "Technical specification sheet",
+          "calc_value": ""
+        },
+        {
+          "label": "Safety information",
+          "value": "Safety information",
+          "calc_value": ""
+        },
+        {
+          "label": "Environmental information",
+          "value": "Environmental information",
+          "calc_value": ""
+        },
+        {
+          "label": "Quality management document",
+          "value": "Quality management document",
+          "calc_value": ""
+        },
+        {
+          "label": "Other supporting document",
+          "value": "Other supporting document",
+          "calc_value": ""
+        }
+      ],
+      "enable_select_2": "no",
+      "enable_option_groups": "no",
+      "dynamic_default_value": "",
+      "randomize_options": "no",
+      "values_visible": false
+    },
+    "editor_options": {
+      "title": "Dropdown",
+      "icon_class": "ff-edit-dropdown",
+      "element": "select",
+      "template": "select"
+    },
+    "uniqElKey": "eq_rfq_document_type"
+  },
+  {
+    "index": 2,
+    "element": "select",
+    "attributes": {
+      "name": "product_family",
+      "value": "",
+      "class": "",
+      "placeholder": "",
+      "maxlength": ""
+    },
+    "settings": {
+      "container_class": "eq-field-product-family",
+      "label": "Product family",
+      "label_placement": "",
+      "admin_field_label": "Product family",
+      "help_message": "",
+      "prefix_label": "",
+      "suffix_label": "",
+      "validation_rules": [],
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "documents",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "oem",
+            "operator": "="
+          }
+        ]
+      },
+      "is_unique": "no",
+      "unique_validation_message": "This value need to be unique.",
+      "placeholder": "Please select",
+      "advanced_options": [
+        {
+          "label": "General Excavator",
+          "value": "General Excavator",
+          "calc_value": ""
+        },
+        {
+          "label": "Construction Digger",
+          "value": "Construction Digger",
+          "calc_value": ""
+        },
+        {
+          "label": "Wheel Loader",
+          "value": "Wheel Loader",
+          "calc_value": ""
+        },
+        {
+          "label": "Backhoe Loader",
+          "value": "Backhoe Loader",
+          "calc_value": ""
+        },
+        {
+          "label": "Skid Steer Loader",
+          "value": "Skid Steer Loader",
+          "calc_value": ""
+        }
+      ],
+      "enable_select_2": "no",
+      "enable_option_groups": "no",
+      "dynamic_default_value": "",
+      "randomize_options": "no",
+      "values_visible": false
+    },
+    "editor_options": {
+      "title": "Dropdown",
+      "icon_class": "ff-edit-dropdown",
+      "element": "select",
+      "template": "select"
+    },
+    "uniqElKey": "eq_rfq_product_family"
+  },
+  {
+    "index": 2,
+    "element": "input_text",
+    "attributes": {
+      "type": "text",
+      "name": "applicable_models",
+      "value": "",
+      "class": "",
+      "placeholder": "",
+      "maxlength": ""
+    },
+    "settings": {
+      "container_class": "eq-field-applicable-models",
+      "label": "Applicable models",
+      "label_placement": "",
+      "admin_field_label": "Applicable models",
+      "help_message": "",
+      "prefix_label": "",
+      "suffix_label": "",
+      "validation_rules": [],
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "documents",
+            "operator": "="
+          }
+        ]
+      },
+      "is_unique": "no",
+      "unique_validation_message": "This value need to be unique."
+    },
+    "editor_options": {
+      "title": "Simple Text",
+      "icon_class": "ff-edit-text",
+      "template": "inputText"
+    },
+    "uniqElKey": "eq_rfq_applicable_models"
+  },
+  {
+    "index": 2,
+    "element": "select",
+    "attributes": {
+      "name": "target_market",
+      "value": "",
+      "class": "",
+      "placeholder": "",
+      "maxlength": ""
+    },
+    "settings": {
+      "container_class": "eq-field-target-market",
+      "label": "Target market",
+      "label_placement": "",
+      "admin_field_label": "Target market",
+      "help_message": "",
+      "prefix_label": "",
+      "suffix_label": "",
+      "validation_rules": [],
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "documents",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "oem",
+            "operator": "="
+          }
+        ]
+      },
+      "is_unique": "no",
+      "unique_validation_message": "This value need to be unique.",
+      "placeholder": "Please select",
+      "advanced_options": [
+        {
+          "label": "North America",
+          "value": "North America",
+          "calc_value": ""
+        },
+        {
+          "label": "Latin America",
+          "value": "Latin America",
+          "calc_value": ""
+        },
+        {
+          "label": "Europe",
+          "value": "Europe",
+          "calc_value": ""
+        },
+        {
+          "label": "Middle East",
+          "value": "Middle East",
+          "calc_value": ""
+        },
+        {
+          "label": "Africa",
+          "value": "Africa",
+          "calc_value": ""
+        },
+        {
+          "label": "Asia Pacific",
+          "value": "Asia Pacific",
+          "calc_value": ""
+        },
+        {
+          "label": "Other / to discuss",
+          "value": "Other / to discuss",
+          "calc_value": ""
+        }
+      ],
+      "enable_select_2": "no",
+      "enable_option_groups": "no",
+      "dynamic_default_value": "",
+      "randomize_options": "no",
+      "values_visible": false
+    },
+    "editor_options": {
+      "title": "Dropdown",
+      "icon_class": "ff-edit-dropdown",
+      "element": "select",
+      "template": "select"
+    },
+    "uniqElKey": "eq_rfq_target_market"
+  },
+  {
+    "index": 2,
+    "element": "select",
+    "attributes": {
+      "name": "quantity_range",
+      "value": "",
+      "class": "",
+      "placeholder": "",
+      "maxlength": ""
+    },
+    "settings": {
+      "container_class": "eq-field-quantity-range",
+      "label": "Quantity range (optional)",
+      "label_placement": "",
+      "admin_field_label": "Quantity range (optional)",
+      "help_message": "",
+      "prefix_label": "",
+      "suffix_label": "",
+      "validation_rules": [],
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "oem",
+            "operator": "="
+          }
+        ]
+      },
+      "is_unique": "no",
+      "unique_validation_message": "This value need to be unique.",
+      "placeholder": "Please select",
+      "advanced_options": [
+        {
+          "label": "1 unit",
+          "value": "1 unit",
+          "calc_value": ""
+        },
+        {
+          "label": "2–5 units",
+          "value": "2–5 units",
+          "calc_value": ""
+        },
+        {
+          "label": "6–10 units",
+          "value": "6–10 units",
+          "calc_value": ""
+        },
+        {
+          "label": "More than 10 units",
+          "value": "More than 10 units",
+          "calc_value": ""
+        },
+        {
+          "label": "To discuss",
+          "value": "To discuss",
+          "calc_value": ""
+        }
+      ],
+      "enable_select_2": "no",
+      "enable_option_groups": "no",
+      "dynamic_default_value": "",
+      "randomize_options": "no",
+      "values_visible": false
+    },
+    "editor_options": {
+      "title": "Dropdown",
+      "icon_class": "ff-edit-dropdown",
+      "element": "select",
+      "template": "select"
+    },
+    "uniqElKey": "eq_rfq_quantity_range"
+  },
+  {
+    "index": 2,
+    "element": "select",
+    "attributes": {
+      "name": "equipment_interests",
+      "value": "",
+      "class": "",
+      "placeholder": "",
+      "maxlength": ""
+    },
+    "settings": {
+      "container_class": "eq-field-equipment-interests",
+      "label": "Equipment interests",
+      "label_placement": "",
+      "admin_field_label": "Equipment interests",
+      "help_message": "",
+      "prefix_label": "",
+      "suffix_label": "",
+      "validation_rules": [],
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "dealer",
+            "operator": "="
+          }
+        ]
+      },
+      "is_unique": "no",
+      "unique_validation_message": "This value need to be unique.",
+      "placeholder": "Please select",
+      "advanced_options": [
+        {
+          "label": "General Excavator",
+          "value": "General Excavator",
+          "calc_value": ""
+        },
+        {
+          "label": "Construction Digger",
+          "value": "Construction Digger",
+          "calc_value": ""
+        },
+        {
+          "label": "Wheel Loader",
+          "value": "Wheel Loader",
+          "calc_value": ""
+        },
+        {
+          "label": "Backhoe Loader",
+          "value": "Backhoe Loader",
+          "calc_value": ""
+        },
+        {
+          "label": "Skid Steer Loader",
+          "value": "Skid Steer Loader",
+          "calc_value": ""
+        }
+      ],
+      "enable_select_2": "no",
+      "enable_option_groups": "no",
+      "dynamic_default_value": "",
+      "randomize_options": "no",
+      "values_visible": false
+    },
+    "editor_options": {
+      "title": "Dropdown",
+      "icon_class": "ff-edit-dropdown",
+      "element": "select",
+      "template": "select"
+    },
+    "uniqElKey": "eq_rfq_equipment_interests"
+  },
+  {
+    "index": 2,
+    "element": "select",
+    "attributes": {
+      "name": "equipment_type",
+      "value": "",
+      "class": "",
+      "placeholder": "",
+      "maxlength": ""
+    },
+    "settings": {
+      "container_class": "eq-field-equipment-type",
+      "label": "Equipment type",
+      "label_placement": "",
+      "admin_field_label": "Equipment type",
+      "help_message": "",
+      "prefix_label": "",
+      "suffix_label": "",
+      "validation_rules": [],
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "parts",
+            "operator": "="
+          }
+        ]
+      },
+      "is_unique": "no",
+      "unique_validation_message": "This value need to be unique.",
+      "placeholder": "Please select",
+      "advanced_options": [
+        {
+          "label": "General Excavator",
+          "value": "General Excavator",
+          "calc_value": ""
+        },
+        {
+          "label": "Construction Digger",
+          "value": "Construction Digger",
+          "calc_value": ""
+        },
+        {
+          "label": "Wheel Loader",
+          "value": "Wheel Loader",
+          "calc_value": ""
+        },
+        {
+          "label": "Backhoe Loader",
+          "value": "Backhoe Loader",
+          "calc_value": ""
+        },
+        {
+          "label": "Skid Steer Loader",
+          "value": "Skid Steer Loader",
+          "calc_value": ""
+        }
+      ],
+      "enable_select_2": "no",
+      "enable_option_groups": "no",
+      "dynamic_default_value": "",
+      "randomize_options": "no",
+      "values_visible": false
+    },
+    "editor_options": {
+      "title": "Dropdown",
+      "icon_class": "ff-edit-dropdown",
+      "element": "select",
+      "template": "select"
+    },
+    "uniqElKey": "eq_rfq_equipment_type"
+  },
+  {
+    "index": 2,
+    "element": "input_text",
+    "attributes": {
+      "type": "text",
+      "name": "machine_model",
+      "value": "",
+      "class": "",
+      "placeholder": "",
+      "maxlength": ""
+    },
+    "settings": {
+      "container_class": "eq-field-machine-model",
+      "label": "Machine model",
+      "label_placement": "",
+      "admin_field_label": "Machine model",
+      "help_message": "",
+      "prefix_label": "",
+      "suffix_label": "",
+      "validation_rules": [],
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "parts",
+            "operator": "="
+          }
+        ]
+      },
+      "is_unique": "no",
+      "unique_validation_message": "This value need to be unique."
+    },
+    "editor_options": {
+      "title": "Simple Text",
+      "icon_class": "ff-edit-text",
+      "template": "inputText"
+    },
+    "uniqElKey": "eq_rfq_machine_model"
+  },
+  {
+    "index": 2,
+    "element": "input_text",
+    "attributes": {
+      "type": "text",
+      "name": "serial_number",
+      "value": "",
+      "class": "",
+      "placeholder": "",
+      "maxlength": ""
+    },
+    "settings": {
+      "container_class": "eq-field-serial-number",
+      "label": "Serial number",
+      "label_placement": "",
+      "admin_field_label": "Serial number",
+      "help_message": "",
+      "prefix_label": "",
+      "suffix_label": "",
+      "validation_rules": [],
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "parts",
+            "operator": "="
+          }
+        ]
+      },
+      "is_unique": "no",
+      "unique_validation_message": "This value need to be unique."
+    },
+    "editor_options": {
+      "title": "Simple Text",
+      "icon_class": "ff-edit-text",
+      "template": "inputText"
+    },
+    "uniqElKey": "eq_rfq_serial_number"
+  },
+  {
+    "index": 2,
+    "element": "input_text",
+    "attributes": {
+      "type": "text",
+      "name": "part_reference",
+      "value": "",
+      "class": "",
+      "placeholder": "",
+      "maxlength": ""
+    },
+    "settings": {
+      "container_class": "eq-field-part-reference",
+      "label": "Part reference",
+      "label_placement": "",
+      "admin_field_label": "Part reference",
+      "help_message": "",
+      "prefix_label": "",
+      "suffix_label": "",
+      "validation_rules": [],
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "parts",
+            "operator": "="
+          }
+        ]
+      },
+      "is_unique": "no",
+      "unique_validation_message": "This value need to be unique."
+    },
+    "editor_options": {
+      "title": "Simple Text",
+      "icon_class": "ff-edit-text",
+      "template": "inputText"
+    },
+    "uniqElKey": "eq_rfq_part_reference"
+  },
+  {
+    "index": 2,
+    "element": "select",
+    "attributes": {
+      "name": "access_width",
+      "value": "",
+      "class": "",
+      "placeholder": "",
+      "maxlength": ""
+    },
+    "settings": {
+      "container_class": "eq-field-access-width",
+      "label": "Access width",
+      "label_placement": "",
+      "admin_field_label": "Access width",
+      "help_message": "",
+      "prefix_label": "",
+      "suffix_label": "",
+      "validation_rules": [],
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "site",
+            "operator": "="
+          }
+        ]
+      },
+      "is_unique": "no",
+      "unique_validation_message": "This value need to be unique.",
+      "placeholder": "Please select",
+      "advanced_options": [
+        {
+          "label": "Under 1 m",
+          "value": "Under 1 m",
+          "calc_value": ""
+        },
+        {
+          "label": "1–2 m",
+          "value": "1–2 m",
+          "calc_value": ""
+        },
+        {
+          "label": "2–3 m",
+          "value": "2–3 m",
+          "calc_value": ""
+        },
+        {
+          "label": "Over 3 m",
+          "value": "Over 3 m",
+          "calc_value": ""
+        },
+        {
+          "label": "To confirm",
+          "value": "To confirm",
+          "calc_value": ""
+        }
+      ],
+      "enable_select_2": "no",
+      "enable_option_groups": "no",
+      "dynamic_default_value": "",
+      "randomize_options": "no",
+      "values_visible": false
+    },
+    "editor_options": {
+      "title": "Dropdown",
+      "icon_class": "ff-edit-dropdown",
+      "element": "select",
+      "template": "select"
+    },
+    "uniqElKey": "eq_rfq_access_width"
+  },
+  {
+    "index": 2,
+    "element": "select",
+    "attributes": {
+      "name": "ground_conditions",
+      "value": "",
+      "class": "",
+      "placeholder": "",
+      "maxlength": ""
+    },
+    "settings": {
+      "container_class": "eq-field-ground-conditions",
+      "label": "Ground conditions",
+      "label_placement": "",
+      "admin_field_label": "Ground conditions",
+      "help_message": "",
+      "prefix_label": "",
+      "suffix_label": "",
+      "validation_rules": [],
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "site",
+            "operator": "="
+          }
+        ]
+      },
+      "is_unique": "no",
+      "unique_validation_message": "This value need to be unique.",
+      "placeholder": "Please select",
+      "advanced_options": [
+        {
+          "label": "Soft or uneven ground",
+          "value": "Soft or uneven ground",
+          "calc_value": ""
+        },
+        {
+          "label": "Firm ground",
+          "value": "Firm ground",
+          "calc_value": ""
+        },
+        {
+          "label": "Slopes or restricted access",
+          "value": "Slopes or restricted access",
+          "calc_value": ""
+        },
+        {
+          "label": "Mixed conditions",
+          "value": "Mixed conditions",
+          "calc_value": ""
+        },
+        {
+          "label": "To confirm",
+          "value": "To confirm",
+          "calc_value": ""
+        }
+      ],
+      "enable_select_2": "no",
+      "enable_option_groups": "no",
+      "dynamic_default_value": "",
+      "randomize_options": "no",
+      "values_visible": false
+    },
+    "editor_options": {
+      "title": "Dropdown",
+      "icon_class": "ff-edit-dropdown",
+      "element": "select",
+      "template": "select"
+    },
+    "uniqElKey": "eq_rfq_ground_conditions"
+  },
+  {
+    "index": 2,
+    "element": "input_text",
+    "attributes": {
+      "type": "text",
+      "name": "product",
+      "value": "",
+      "class": "",
+      "placeholder": "Model or equipment family",
+      "maxlength": ""
+    },
+    "settings": {
+      "container_class": "eq-field-product",
+      "label": "Product or model",
+      "label_placement": "",
+      "admin_field_label": "Product or model",
+      "help_message": "",
+      "prefix_label": "",
+      "suffix_label": "",
+      "validation_rules": {
+        "required": {
+          "value": false,
+          "message": "This field is required",
+          "global_message": "This field is required",
+          "global": true
+        }
+      },
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "general",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "product",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "contact",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "product-compact",
+            "operator": "="
+          }
+        ]
+      },
+      "is_unique": "no",
+      "unique_validation_message": "This value need to be unique."
+    },
+    "editor_options": {
+      "title": "Simple Text",
+      "icon_class": "ff-edit-text",
+      "template": "inputText"
+    },
+    "uniqElKey": "el_179238337606796"
+  },
+  {
+    "element": "textarea",
+    "attributes": {
+      "name": "message",
+      "type": "textarea",
+      "class": "",
+      "placeholder": "",
+      "maxlength": ""
+    },
+    "settings": {
+      "label": "Your requirements",
+      "admin_field_label": "Requirements",
+      "validation_rules": {
+        "required": {
+          "value": true,
+          "message": "This field is required.",
+          "global": false,
+          "global_message": "This field is required"
+        }
+      },
+      "conditional_logic": [],
+      "prefix_label": "",
+      "suffix_label": "",
+      "container_class": "eq-field-message",
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "general",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "product",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "contact",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "documents",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "parts",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "oem",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "dealer",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "site",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "product-compact",
+            "operator": "="
+          }
+        ]
+      }
+    },
+    "editor_options": {
+      "title": "Requirements",
+      "icon_class": "ff-edit-text",
+      "template": "inputTextarea"
+    },
+    "uniqElKey": "starter_rfq_message"
+  },
+  {
+    "index": 9,
+    "element": "input_checkbox",
+    "attributes": {
+      "type": "checkbox",
+      "name": "marketing_updates",
+      "value": []
+    },
+    "settings": {
+      "dynamic_default_value": "",
+      "container_class": "eq-field-marketing",
+      "label": "",
+      "admin_field_label": "Marketing updates consent",
+      "label_placement": "",
+      "display_type": "",
+      "help_message": "",
+      "advanced_options": [
+        {
+          "label": "I would like to receive product updates and industry insights (optional).",
+          "value": "yes",
+          "calc_value": "",
+          "image": ""
+        }
+      ],
+      "calc_value_status": false,
+      "enable_image_input": false,
+      "values_visible": false,
+      "randomize_options": "no",
+      "enable_other_option": "no",
+      "validation_rules": {
+        "required": {
+          "value": false,
+          "message": "This field is required",
+          "global": true,
+          "global_message": "This field is required"
+        },
+        "max_selection": {
+          "value": "",
+          "message": "You have selected more options than allowed",
+          "global_message": "You have selected more options than allowed",
+          "global": true
+        },
+        "min_selection": {
+          "value": "",
+          "message": "Please select at least the minimum number of options",
+          "global_message": "Please select at least the minimum number of options",
+          "global": true
+        }
+      },
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "contact",
+            "operator": "="
+          }
+        ]
+      },
+      "layout_class": ""
+    },
+    "editor_options": {
+      "title": "Checkbox",
+      "icon_class": "ff-edit-checkbox-1",
+      "template": "inputCheckable"
+    },
+    "uniqElKey": "eq_rfq_marketing_updates"
+  },
+  {
+    "index": 25,
+    "element": "wb_inquiry_files",
+    "attributes": {
+      "name": "inquiry_attachments",
+      "type": "text",
+      "value": "",
+      "class": "",
+      "placeholder": ""
+    },
+    "settings": {
+      "label": "Attachments (optional)",
+      "admin_field_label": "Attachments",
+      "label_placement": "",
+      "help_message": "",
+      "container_class": "eq-field-files",
+      "validation_rules": [],
+      "conditional_logics": {
+        "status": true,
+        "type": "any",
+        "conditions": [
+          {
+            "field": "eq_inquiry_type",
+            "value": "general",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "product",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "contact",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "documents",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "parts",
+            "operator": "="
+          },
+          {
+            "field": "eq_inquiry_type",
+            "value": "oem",
+            "operator": "="
+          }
+        ]
+      }
+    },
+    "editor_options": {
+      "title": "Inquiry attachments",
+      "icon_class": "el-icon-paperclip",
+      "template": "inputText"
+    },
+    "uniqElKey": "starter_rfq_inquiry_attachments"
+  },
+  {
+    "element": "custom_html",
+    "attributes": {
+      "name": "gdpr_note",
+      "type": "",
+      "class": "",
+      "placeholder": ""
+    },
+    "settings": {
+      "label": "",
+      "admin_field_label": "",
+      "validation_rules": [],
+      "conditional_logic": [],
+      "html_codes": "<p>By submitting this form you agree to be contacted about your enquiry.</p>",
+      "container_class": "eq-field-note"
+    },
+    "editor_options": {
+      "title": "",
+      "icon_class": "ff-edit-text",
+      "template": "customHTML"
+    },
+    "uniqElKey": "starter_rfq_gdpr_note"
+  },
+  {
+    "element": "input_hidden",
+    "uniqElKey": "eq_rfq_product_id",
+    "attributes": {
+      "type": "hidden",
+      "name": "eq_product_id",
+      "value": "",
+      "class": "eq-product-context"
+    },
+    "settings": {
+      "admin_field_label": "Source product ID"
+    },
+    "editor_options": {
+      "title": "Hidden Field",
+      "icon_class": "ff-edit-hidden-field",
+      "template": "inputHidden"
+    }
+  }
+]

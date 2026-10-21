@@ -1,0 +1,1182 @@
+[
+  {
+    "path": "2026/10/about-project-team-v1-1024x683.png",
+    "bytes": 1167922,
+    "sha256": "62697061e3863396cff488545e616af71a0c10ed6689da73dab63c66e5140bcf"
+  },
+  {
+    "path": "2026/10/about-project-team-v1-150x150.png",
+    "bytes": 51851,
+    "sha256": "d2af8ec449bab6446f003c383d09d99c8d20c5b38fb7088bb5408376e276d251"
+  },
+  {
+    "path": "2026/10/about-project-team-v1-300x200.png",
+    "bytes": 131250,
+    "sha256": "76da69dc707dff388edf80e3234661aa913b79f879139b9910f6f3b1c0b7fe9c"
+  },
+  {
+    "path": "2026/10/about-project-team-v1-768x512.png",
+    "bytes": 719721,
+    "sha256": "581cb68e185d263972bd44fb2ff700df46a8732d896c16e62ab3bc5c389f8ef9"
+  },
+  {
+    "path": "2026/10/about-project-team-v1.png",
+    "bytes": 2413836,
+    "sha256": "789ddab28e6689d0a9ef745c671f932b4d19aadd61ce912dc300ac6c5d1267d1"
+  },
+  {
+    "path": "2026/10/attachment-digging-bucket-v1-1024x768.png",
+    "bytes": 794505,
+    "sha256": "87a126022d5bc28117eab35b0f91c5f4c7f6711649ba1cd37d715b9fdf1f1263"
+  },
+  {
+    "path": "2026/10/attachment-digging-bucket-v1-150x150.png",
+    "bytes": 28321,
+    "sha256": "ed20b99ab064088417fd58316f3bdfe31d642ebbfc6feee8b392e2fad6fb511a"
+  },
+  {
+    "path": "2026/10/attachment-digging-bucket-v1-300x225.png",
+    "bytes": 70041,
+    "sha256": "3f7caa66a249f8b0ee81289223e7cdcf54ccf89a1ce7f7ac6fb6fe71ef6f9c53"
+  },
+  {
+    "path": "2026/10/attachment-digging-bucket-v1-768x576.png",
+    "bytes": 463456,
+    "sha256": "a8979c83b49858efe46bad798874d28e36bec9be417523e68b3c0ecbf68c2ef7"
+  },
+  {
+    "path": "2026/10/attachment-digging-bucket-v1.png",
+    "bytes": 1676591,
+    "sha256": "10134de9f0cb02639eafd03bc4e52d1ad13055b7ec2a7293f0845588689db470"
+  },
+  {
+    "path": "2026/10/attachment-earth-auger-v1-1024x768.png",
+    "bytes": 754112,
+    "sha256": "5f6c5c90157dfac1ccfdd81df9d55d3c4d5138e13368d9cdbefd0a35ed03c082"
+  },
+  {
+    "path": "2026/10/attachment-earth-auger-v1-150x150.png",
+    "bytes": 21108,
+    "sha256": "1022fe8be7b360e96f55f2c90addb5231d634a0c458d71a36267d9591f379d72"
+  },
+  {
+    "path": "2026/10/attachment-earth-auger-v1-300x225.png",
+    "bytes": 60025,
+    "sha256": "1f96277aaae67b34cd4488fd3206dd6bcb264bd5965d314184a04d9b129942bb"
+  },
+  {
+    "path": "2026/10/attachment-earth-auger-v1-768x576.png",
+    "bytes": 435295,
+    "sha256": "7f1af52b03382b387d3b8284a4d8276fc5c3c89abec9a95f42deef03307d7e61"
+  },
+  {
+    "path": "2026/10/attachment-earth-auger-v1.png",
+    "bytes": 1575080,
+    "sha256": "2e74e66ee352cc4ca3d73773bc7c5e99d5c3cbe274bbd5dc6efb12d2ad06139d"
+  },
+  {
+    "path": "2026/10/attachment-grapple-bucket-v1-1024x768.png",
+    "bytes": 945606,
+    "sha256": "5984cdfc08e1a11c6e5bd4425e4066013ec6a313121561cc77f28ad513369dc4"
+  },
+  {
+    "path": "2026/10/attachment-grapple-bucket-v1-150x150.png",
+    "bytes": 29473,
+    "sha256": "838808912d56f229836d54126d858d3a6d163e68aa8dcbe5553edb8f5fa83697"
+  },
+  {
+    "path": "2026/10/attachment-grapple-bucket-v1-300x225.png",
+    "bytes": 78733,
+    "sha256": "df2f1bcd448fe393cd6ae651bb9c0227fe3bd5dc5a4d8a7a1bb689af92e2b67d"
+  },
+  {
+    "path": "2026/10/attachment-grapple-bucket-v1-768x576.png",
+    "bytes": 538329,
+    "sha256": "541646ecf693301fad6c8b1fdd452f251473ee17417de3cffac89f3d0b18f86c"
+  },
+  {
+    "path": "2026/10/attachment-grapple-bucket-v1.png",
+    "bytes": 2016402,
+    "sha256": "dd1947dfafeadbf5dfa7e38f01d676bbaff6738392814cde10bbbf7e489a6daf"
+  },
+  {
+    "path": "2026/10/attachment-grapple-v1-1024x768.png",
+    "bytes": 863483,
+    "sha256": "a33d2aa517119718d3dbc256502763d8c832689e60226d266bf05666539ee509"
+  },
+  {
+    "path": "2026/10/attachment-grapple-v1-150x150.png",
+    "bytes": 31419,
+    "sha256": "c0785b0c9aec3f2ac2fcc4c00e9bdd9ee158dc412adb1c176281041db3c954f3"
+  },
+  {
+    "path": "2026/10/attachment-grapple-v1-300x225.png",
+    "bytes": 80673,
+    "sha256": "c5bb084d19f930336da5775d3a795389d2bdd35c9215e5869284bd793f26ab6d"
+  },
+  {
+    "path": "2026/10/attachment-grapple-v1-768x576.png",
+    "bytes": 502357,
+    "sha256": "a5499b051c90e2d1fc8cbe2141de2aeffe2799c987de190223108d78e9414dce"
+  },
+  {
+    "path": "2026/10/attachment-grapple-v1.png",
+    "bytes": 1765200,
+    "sha256": "8ffec63ebac2d1e71b5c65d59d97621c94910e6ba30c5f02d70ccf6005658679"
+  },
+  {
+    "path": "2026/10/attachment-hydraulic-breaker-v1-1024x768.png",
+    "bytes": 620396,
+    "sha256": "0ab6f9ce5c14055763f0c38d28de3ed7022e31dbf8a728202c879dff7db0d630"
+  },
+  {
+    "path": "2026/10/attachment-hydraulic-breaker-v1-150x150.png",
+    "bytes": 17092,
+    "sha256": "c680696cba615cbfe06513f7685494e1edf200e6c4204fb978334a8d015d034a"
+  },
+  {
+    "path": "2026/10/attachment-hydraulic-breaker-v1-300x225.png",
+    "bytes": 52509,
+    "sha256": "23dc7ffcfd4b80b7afbf7b50b63ca9c2f25c9ccb3cb3698c2277f5a1a71c1349"
+  },
+  {
+    "path": "2026/10/attachment-hydraulic-breaker-v1-768x576.png",
+    "bytes": 371623,
+    "sha256": "8c518b25aef6e258d1227ec2006f692489801b1adef90e5efec097db14884582"
+  },
+  {
+    "path": "2026/10/attachment-hydraulic-breaker-v1.png",
+    "bytes": 1250244,
+    "sha256": "5926f0299119b2633d4620c6314ed8e06b8a9f2cda92cf01e70492a5dc6eb999"
+  },
+  {
+    "path": "2026/10/attachment-loader-bucket-v1-1024x768.png",
+    "bytes": 813543,
+    "sha256": "90df4570b6faf3fedf2fc792ceb7cacc1e74c9ccda7e5f5f490e742025735d11"
+  },
+  {
+    "path": "2026/10/attachment-loader-bucket-v1-150x150.png",
+    "bytes": 23922,
+    "sha256": "8a4667241bce1880b32b422d36e169cd96951754389d5d934eafd1ce3faa538c"
+  },
+  {
+    "path": "2026/10/attachment-loader-bucket-v1-300x225.png",
+    "bytes": 68473,
+    "sha256": "65e2351427b59bd0592cb7ce61ce804b4f4fdb0bf8339f010dbfd3a88adda5d9"
+  },
+  {
+    "path": "2026/10/attachment-loader-bucket-v1-768x576.png",
+    "bytes": 469277,
+    "sha256": "6018f3852ad35c398a65b8988ca97cc9d64f0e670e6c4514386da9aa5cac68e5"
+  },
+  {
+    "path": "2026/10/attachment-loader-bucket-v1.png",
+    "bytes": 1717858,
+    "sha256": "76c260659eb2f6579e5bd05e18da4771b1ccac114115b6927754b467d6bcf762"
+  },
+  {
+    "path": "2026/10/attachment-pallet-forks-v1-1024x768.png",
+    "bytes": 802011,
+    "sha256": "4d14a87bef7e31977474d2e1bb7f668ee8c4fc7357e2dff7f65419286b6ce8f1"
+  },
+  {
+    "path": "2026/10/attachment-pallet-forks-v1-150x150.png",
+    "bytes": 24447,
+    "sha256": "d5fa68e30a8a49d795b06db4101eccad6fb42494ae9c86e362e7ac71df37159b"
+  },
+  {
+    "path": "2026/10/attachment-pallet-forks-v1-300x225.png",
+    "bytes": 68545,
+    "sha256": "926bfda7f36b293541d2e15b0ac39ed11c0c9a2dda02eec82fcbdd3ad4581624"
+  },
+  {
+    "path": "2026/10/attachment-pallet-forks-v1-768x576.png",
+    "bytes": 464056,
+    "sha256": "418138fdf8b05a1ef28c57ba0953efe515f08ac3fb35d4e84a5e0c35d7d983a7"
+  },
+  {
+    "path": "2026/10/attachment-pallet-forks-v1.png",
+    "bytes": 1660842,
+    "sha256": "4b62626ac8e4c50b87c22e872ab80847c18f2e69b0111f377d8f7f65d8b84b45"
+  },
+  {
+    "path": "2026/10/backhoe-loader-v1-1024x768.png",
+    "bytes": 950701,
+    "sha256": "832122bed698c881e0215965e8e310193927ccb3e853311f681a3bfa3e6ab90a"
+  },
+  {
+    "path": "2026/10/backhoe-loader-v1-150x150.png",
+    "bytes": 34021,
+    "sha256": "4720e1a3cb6ed3f91be959f1952eb6b8edc42f203330318ae009c5c357f0d6ac"
+  },
+  {
+    "path": "2026/10/backhoe-loader-v1-300x225.png",
+    "bytes": 92182,
+    "sha256": "c901603a86bdd8751ca5b6b55821ae678f51fd1caba2214de695ff3f5a59cc8f"
+  },
+  {
+    "path": "2026/10/backhoe-loader-v1-768x576.png",
+    "bytes": 561452,
+    "sha256": "eba3db704628992fb4c322f5e3f05aad715436f9726c7e857df23d3eadea3133"
+  },
+  {
+    "path": "2026/10/backhoe-loader-v1.png",
+    "bytes": 1838697,
+    "sha256": "5ca201317ebedf92b020e40fb909f0eede99cc7a999d9d8622d87a574966bb69"
+  },
+  {
+    "path": "2026/10/cms-qa-1019-document.pdf",
+    "bytes": 698,
+    "sha256": "e708d016b81a0cb5594c13d9d2827e8f8dcd222574a755a92466fdb26ecadc73"
+  },
+  {
+    "path": "2026/10/cms-qa-1019-gallery-equipment-1024x768.png",
+    "bytes": 900109,
+    "sha256": "4e5a7bf3f8588e3982e31036919eb02a2bbd19dc1a585f476f2da721d7bace62"
+  },
+  {
+    "path": "2026/10/cms-qa-1019-gallery-equipment-150x150.png",
+    "bytes": 34086,
+    "sha256": "a9cda184177862903a8f4c3992ac23d4adc2142b1ae234d9676cb90ae09bbf2a"
+  },
+  {
+    "path": "2026/10/cms-qa-1019-gallery-equipment-300x225.png",
+    "bytes": 92088,
+    "sha256": "55a841a74dfb59761f446128877c0f82cf85a1ac927e63118b4b22a6dc4cff48"
+  },
+  {
+    "path": "2026/10/cms-qa-1019-gallery-equipment-768x576.png",
+    "bytes": 537419,
+    "sha256": "589fc2b27991ee025cef2bde7673a92f5b81576643ab42b03a1dc20c779e0876"
+  },
+  {
+    "path": "2026/10/cms-qa-1019-gallery-equipment.png",
+    "bytes": 1713509,
+    "sha256": "6029d084ac253b2064f2ceb9bb6d90a26e3389b55b02cd5e8aba25c8d42d2080"
+  },
+  {
+    "path": "2026/10/cms-qa-1019-gallery-team-1024x683.png",
+    "bytes": 1167922,
+    "sha256": "62697061e3863396cff488545e616af71a0c10ed6689da73dab63c66e5140bcf"
+  },
+  {
+    "path": "2026/10/cms-qa-1019-gallery-team-150x150.png",
+    "bytes": 51851,
+    "sha256": "d2af8ec449bab6446f003c383d09d99c8d20c5b38fb7088bb5408376e276d251"
+  },
+  {
+    "path": "2026/10/cms-qa-1019-gallery-team-300x200.png",
+    "bytes": 131250,
+    "sha256": "76da69dc707dff388edf80e3234661aa913b79f879139b9910f6f3b1c0b7fe9c"
+  },
+  {
+    "path": "2026/10/cms-qa-1019-gallery-team-768x512.png",
+    "bytes": 719721,
+    "sha256": "581cb68e185d263972bd44fb2ff700df46a8732d896c16e62ab3bc5c389f8ef9"
+  },
+  {
+    "path": "2026/10/cms-qa-1019-gallery-team.png",
+    "bytes": 2413836,
+    "sha256": "789ddab28e6689d0a9ef745c671f932b4d19aadd61ce912dc300ac6c5d1267d1"
+  },
+  {
+    "path": "2026/10/company-planning-team-v1-1024x576.png",
+    "bytes": 853886,
+    "sha256": "e209fff18e5538fe2f403ac7d2a7a694a9d3307aed1172bcbc26039adea9b0d2"
+  },
+  {
+    "path": "2026/10/company-planning-team-v1-150x150.png",
+    "bytes": 46447,
+    "sha256": "f713ff0fe665af99c56abe85506626123694555b4ac93d74d28b1cc7cf302213"
+  },
+  {
+    "path": "2026/10/company-planning-team-v1-1536x864.png",
+    "bytes": 1739181,
+    "sha256": "aa7e6da16ecb3053435d367157b5bd7c56d39a14a56f5c444f2040a0c29ecb9b"
+  },
+  {
+    "path": "2026/10/company-planning-team-v1-300x169.png",
+    "bytes": 97160,
+    "sha256": "3bed7228bb2ec3e31ee4d829285399038f9931d05b6266a501cc3e855f28faf6"
+  },
+  {
+    "path": "2026/10/company-planning-team-v1-768x432.png",
+    "bytes": 510155,
+    "sha256": "902548a3f13e480f6198fb2090b97ea4851b5ed9e97f0696d80593feb7a3ef88"
+  },
+  {
+    "path": "2026/10/company-planning-team-v1.png",
+    "bytes": 2045373,
+    "sha256": "28c58a0605ba9afa9a3f5ba7e2c407564f15e58d6068795ff3e8379e74cc5390"
+  },
+  {
+    "path": "2026/10/component-electrical-v1-1024x768.png",
+    "bytes": 1051737,
+    "sha256": "99a1914197c70c397c5dfa6a4d10363ada6cf653f06a3311f4a5b2163c8bcbce"
+  },
+  {
+    "path": "2026/10/component-electrical-v1-150x150.png",
+    "bytes": 38350,
+    "sha256": "aff921030d5ed3f498cb0cb801c3afd2ebb39eda2eed892ed1fc000e4309db00"
+  },
+  {
+    "path": "2026/10/component-electrical-v1-300x225.png",
+    "bytes": 100349,
+    "sha256": "41ae502fc6bb1671d8965773c0ba13a7b269f1a81947907ff3594c385fb7dbc5"
+  },
+  {
+    "path": "2026/10/component-electrical-v1-768x576.png",
+    "bytes": 615529,
+    "sha256": "1127f20d67091736a70b026c9d0f78bda89a38400b736fbdd061845ff78bd125"
+  },
+  {
+    "path": "2026/10/component-electrical-v1.png",
+    "bytes": 2123513,
+    "sha256": "ea277c1c7ca53dec20f6fd01be2e5187c3a904a0bfac1fb094743d4ee7c604a9"
+  },
+  {
+    "path": "2026/10/component-engine-v1-1024x768.png",
+    "bytes": 1120139,
+    "sha256": "70491c22aa55b968673535357173a3f0055a347623aaabcc63d549b321dad198"
+  },
+  {
+    "path": "2026/10/component-engine-v1-150x150.png",
+    "bytes": 43653,
+    "sha256": "6db390976cf27e9b8ede9379c9341537cb0eab3033cc6d4b033d5053bd9db457"
+  },
+  {
+    "path": "2026/10/component-engine-v1-300x225.png",
+    "bytes": 105955,
+    "sha256": "52065690d67db1def540f50071981eaa8a4cfaa4bc3acaaef2f4c88499f58f99"
+  },
+  {
+    "path": "2026/10/component-engine-v1-768x576.png",
+    "bytes": 649681,
+    "sha256": "a3221ee12821c776f06ac46faf32e151e7e77614cd30fac1437ada24fd03f5fd"
+  },
+  {
+    "path": "2026/10/component-engine-v1.png",
+    "bytes": 2254410,
+    "sha256": "2cb9989b8a6b0314c897e7b2561cfc2d5d3211deade8462060193282ba6faf01"
+  },
+  {
+    "path": "2026/10/component-filters-v1-1024x768.png",
+    "bytes": 929116,
+    "sha256": "f74b38681908bf1c5df5778994bf612acb3601c4d9c4b096070eb139d58b6e22"
+  },
+  {
+    "path": "2026/10/component-filters-v1-150x150.png",
+    "bytes": 33628,
+    "sha256": "a7ca90c49a463676c0d609d9ac0a11ea491563599a71a7d8bf4d2df74ffc7611"
+  },
+  {
+    "path": "2026/10/component-filters-v1-300x225.png",
+    "bytes": 87122,
+    "sha256": "f237d9941422c7f9f99c2d98a61cd5b656a9db5c94626be6e5be4ee5902d3513"
+  },
+  {
+    "path": "2026/10/component-filters-v1-768x576.png",
+    "bytes": 546061,
+    "sha256": "65d3e9f43169510126f3b280a8db336c7269f8c24ee979a037942f9cfed1e971"
+  },
+  {
+    "path": "2026/10/component-filters-v1.png",
+    "bytes": 1818065,
+    "sha256": "04c7949ea5da72e6d9711e5de425c23f6f5f3383ede31790368d7f04a4fe57c3"
+  },
+  {
+    "path": "2026/10/component-hydraulic-pump-v1-1024x768.png",
+    "bytes": 932290,
+    "sha256": "27d89f51ed3298ea6c697b0f3a8c62da90fa302557ad1307ebf3946bb64c2464"
+  },
+  {
+    "path": "2026/10/component-hydraulic-pump-v1-150x150.png",
+    "bytes": 36398,
+    "sha256": "9b29ce29e480a48a11cbd5a284874d26ccb476ec6b984135cd5955fec4ff361e"
+  },
+  {
+    "path": "2026/10/component-hydraulic-pump-v1-300x225.png",
+    "bytes": 84333,
+    "sha256": "01285b8df7bf9f7ad63f9d0496e0a8ed0d2eaaebe7c7172a87c341cfacae3ea1"
+  },
+  {
+    "path": "2026/10/component-hydraulic-pump-v1-768x576.png",
+    "bytes": 543012,
+    "sha256": "0077b3a766695e0034d4002aad09d2369f88a7db6ba4af09f1fd5238f6c02254"
+  },
+  {
+    "path": "2026/10/component-hydraulic-pump-v1.png",
+    "bytes": 1987539,
+    "sha256": "ad6f2a1b635678f4ecb5688bb199d6bb1551d16e8ee4f700c025b78cb8b04638"
+  },
+  {
+    "path": "2026/10/component-undercarriage-v1-1024x768.png",
+    "bytes": 1020545,
+    "sha256": "7cbbeb014bf3d6573d0d3232e35c00ab5fdf053d11438948590afba5b9a4b78e"
+  },
+  {
+    "path": "2026/10/component-undercarriage-v1-150x150.png",
+    "bytes": 33696,
+    "sha256": "01f0c91ec3a207658c134e1c95fada964343006e956d58581e3315d129e64db4"
+  },
+  {
+    "path": "2026/10/component-undercarriage-v1-300x225.png",
+    "bytes": 90433,
+    "sha256": "469c418b98ba71cc06706225d673dee6b5d2a21f0e6c07d4cddf07e522f06ee0"
+  },
+  {
+    "path": "2026/10/component-undercarriage-v1-768x576.png",
+    "bytes": 585759,
+    "sha256": "114516ef256dfdab093d76f78d437f5c294457c7719fade8552ab7b4871deb58"
+  },
+  {
+    "path": "2026/10/component-undercarriage-v1.png",
+    "bytes": 2148208,
+    "sha256": "f29c4e8e593645d758a77850cdec69d82487368886da4c61dc35b081c73f4dd6"
+  },
+  {
+    "path": "2026/10/construction-digger-v1-1024x768.png",
+    "bytes": 971812,
+    "sha256": "c5123eb2b5fa594c7ec3316d9a8bf75af3d0658000b52a3a759d3b91047b50ac"
+  },
+  {
+    "path": "2026/10/construction-digger-v1-150x150.png",
+    "bytes": 37304,
+    "sha256": "9995fc5281586c2f2ebfa0459b95bb9ba04111b72ef6436e5a542ccf2c1ff2d6"
+  },
+  {
+    "path": "2026/10/construction-digger-v1-300x225.png",
+    "bytes": 100016,
+    "sha256": "0fc46b7b738bd932595f266a3c9abec6b902814fac4f4eb5e4726d8c3cc340cf"
+  },
+  {
+    "path": "2026/10/construction-digger-v1-768x576.png",
+    "bytes": 581094,
+    "sha256": "e718fc499bbaf6041cbbf0aa7a510531c11bc6039680d97d16d3e323ce31f4b2"
+  },
+  {
+    "path": "2026/10/construction-digger-v1.png",
+    "bytes": 1815517,
+    "sha256": "d25a9e5936ac69fd3da18496d28744d354b8dd43071c519430cde9d374c6d869"
+  },
+  {
+    "path": "2026/10/dealer-equipment-fleet-v1-1024x576.png",
+    "bytes": 965057,
+    "sha256": "506ec990ef91488823f2f70157d88841aff75386e8ea7c41828741ba53102778"
+  },
+  {
+    "path": "2026/10/dealer-equipment-fleet-v1-150x150.png",
+    "bytes": 38773,
+    "sha256": "cb49d8916c8c484281e8c9ffba1cf9e94e565a0b4fc8fc366469f0c6a0190cbc"
+  },
+  {
+    "path": "2026/10/dealer-equipment-fleet-v1-1536x864.png",
+    "bytes": 2023252,
+    "sha256": "9051baec9417c2b1b2ab2bf5ee9a1dc22848a976a2096d39abcba85d8f81811f"
+  },
+  {
+    "path": "2026/10/dealer-equipment-fleet-v1-300x169.png",
+    "bytes": 92586,
+    "sha256": "7813beb5445fe7ac495290861fbac1de441f1ad127a8be8426d85b553b51899d"
+  },
+  {
+    "path": "2026/10/dealer-equipment-fleet-v1-768x432.png",
+    "bytes": 560035,
+    "sha256": "8299e85f6108e7956e2fbb7e45c0d968e103dd05a0d5bb1b796de647d386a106"
+  },
+  {
+    "path": "2026/10/dealer-equipment-fleet-v1.png",
+    "bytes": 2447687,
+    "sha256": "285ec90bbfbcc7fe382083448290666595fcc40a389281ecb8e8d5c38744fbf7"
+  },
+  {
+    "path": "2026/10/delivery-container-loading-v1-1024x576.png",
+    "bytes": 1056442,
+    "sha256": "c31279eedc8dab5b2d0d3a570564e0501e2a10886e25138d736330caaa11e4cb"
+  },
+  {
+    "path": "2026/10/delivery-container-loading-v1-150x150.png",
+    "bytes": 52623,
+    "sha256": "b281c7e7092baea52781d2172b9594fb410891c94269df032b4cbee72271550c"
+  },
+  {
+    "path": "2026/10/delivery-container-loading-v1-1536x864.png",
+    "bytes": 2146186,
+    "sha256": "641407dea91ffd7acbb7b37c0a6cdb6ae1ac1ae557470fbf49804eef2497eb80"
+  },
+  {
+    "path": "2026/10/delivery-container-loading-v1-300x169.png",
+    "bytes": 113954,
+    "sha256": "46e14b38e6a0d5d3ad54f6eee1a9f96245408b5e909e0574a49f7d99d71f30cb"
+  },
+  {
+    "path": "2026/10/delivery-container-loading-v1-768x432.png",
+    "bytes": 631724,
+    "sha256": "8c98a20965a8dd6c1f0891939ab1bfa027f8afbe6ee721805d75093792a4ba38"
+  },
+  {
+    "path": "2026/10/delivery-container-loading-v1.png",
+    "bytes": 2409591,
+    "sha256": "93b57f8a54ef4af79c07df2a051cb80b1c3ae0bd6d60fd1491032a24d9d25518"
+  },
+  {
+    "path": "2026/10/equipment-catalogue-dual-machine-v1-1024x576.png",
+    "bytes": 1145629,
+    "sha256": "fdf2dea065b315ba3fecf163edae11180309ade80699e8009cbd6583c829adbc"
+  },
+  {
+    "path": "2026/10/equipment-catalogue-dual-machine-v1-150x150.png",
+    "bytes": 51434,
+    "sha256": "91e9964b3e79f47b50755b174ef207af13761e010387ae958a18e303bcef341f"
+  },
+  {
+    "path": "2026/10/equipment-catalogue-dual-machine-v1-1536x864.png",
+    "bytes": 2371688,
+    "sha256": "e4f4a323bb3c9798783fd9f2168ad9993b7e52381ec8fdca10297f21de3dbadc"
+  },
+  {
+    "path": "2026/10/equipment-catalogue-dual-machine-v1-300x169.png",
+    "bytes": 113790,
+    "sha256": "664627a72231b83cb063ff244c7ad55279e5226e44fd60d3406916f21c6c08ab"
+  },
+  {
+    "path": "2026/10/equipment-catalogue-dual-machine-v1-768x432.png",
+    "bytes": 672126,
+    "sha256": "58b480dfb552eefd9e7e7d0f9e535475890a736a3ecc9f490b5e5522746c98db"
+  },
+  {
+    "path": "2026/10/equipment-catalogue-dual-machine-v1.png",
+    "bytes": 2857656,
+    "sha256": "762da8c23622d037bfed822957d2eda3b02805c67e73e0dc15f9888884b2a755"
+  },
+  {
+    "path": "2026/10/excavator-control-cab-v1-1024x576.png",
+    "bytes": 1051383,
+    "sha256": "771a9fc300cf6d528fa1609d2ff043c26b6552d346f7f9ba30f38d7d4d3813a3"
+  },
+  {
+    "path": "2026/10/excavator-control-cab-v1-150x150.png",
+    "bytes": 54618,
+    "sha256": "93b04cc349e8ac02626df740cfea376c05707c9a9149cca757cbc36490899be8"
+  },
+  {
+    "path": "2026/10/excavator-control-cab-v1-1536x864.png",
+    "bytes": 2119580,
+    "sha256": "d013df285f599c36dd7e010baf5e454af9ec2bee066e378227f377e69c162783"
+  },
+  {
+    "path": "2026/10/excavator-control-cab-v1-300x169.png",
+    "bytes": 119549,
+    "sha256": "8c139f2ff684e5188ee57c478eda4f2a6c446b76228f6e29239cbfcf79cdf78c"
+  },
+  {
+    "path": "2026/10/excavator-control-cab-v1-768x432.png",
+    "bytes": 633347,
+    "sha256": "53e2f0d5867a01d91ddb55276fba70eb515da817e22a9b0f0abd703a51b1a4a0"
+  },
+  {
+    "path": "2026/10/excavator-control-cab-v1.png",
+    "bytes": 2461885,
+    "sha256": "2fff812156b1266f0b293a5873aacf6729ed97e5d1fb7c5b08e9f059ab3f1629"
+  },
+  {
+    "path": "2026/10/general-excavator-rear-v1-1024x768.png",
+    "bytes": 1010490,
+    "sha256": "e8defc8f3b914cc08768341b0e26f85bd11e8c6e5972a5ee41236c2d3134d3af"
+  },
+  {
+    "path": "2026/10/general-excavator-rear-v1-150x150.png",
+    "bytes": 38218,
+    "sha256": "ab1f4d9b3d88990a2de3246f0cd9610bcea06d7472149326b507a25ad6ee81ac"
+  },
+  {
+    "path": "2026/10/general-excavator-rear-v1-300x225.png",
+    "bytes": 98266,
+    "sha256": "0141289a0e7e9eee278ef2def1918c2f2000d90b337e0481a31cc32a6c739a4c"
+  },
+  {
+    "path": "2026/10/general-excavator-rear-v1-768x576.png",
+    "bytes": 589974,
+    "sha256": "299820adc379ca8a3320b225593c4cefa3f8f22f7d18617b491ff4ebdf43f5e5"
+  },
+  {
+    "path": "2026/10/general-excavator-rear-v1.png",
+    "bytes": 1979194,
+    "sha256": "db227d409840a5e11ca540cc628fc0732e2f44dccfcb54c338f773dd79f4b161"
+  },
+  {
+    "path": "2026/10/general-excavator-side-v1-1024x768.png",
+    "bytes": 907026,
+    "sha256": "f8a46ced96044dd84a23e4a6850027e7830e6b40473617c2733d8ae7b79035e1"
+  },
+  {
+    "path": "2026/10/general-excavator-side-v1-150x150.png",
+    "bytes": 31628,
+    "sha256": "a87c7d4afef35a47f9e54f85b43ab84c907bc81318bb07e2441e49aaf74b404b"
+  },
+  {
+    "path": "2026/10/general-excavator-side-v1-300x225.png",
+    "bytes": 87522,
+    "sha256": "056aabd42dc6fa448f0dfb72358380f6ba7a32b9db6fb2026f72dd01351b5656"
+  },
+  {
+    "path": "2026/10/general-excavator-side-v1-768x576.png",
+    "bytes": 530734,
+    "sha256": "d131110ceef4edcb7fc043498d9ec46934ba1e228d3d3ba1bebe3ef599cd0262"
+  },
+  {
+    "path": "2026/10/general-excavator-side-v1.png",
+    "bytes": 1787757,
+    "sha256": "de23a18cd6fd540109d651726786d2b1b3934f2079c06419322105e4635181ab"
+  },
+  {
+    "path": "2026/10/general-excavator-v1-1024x768.png",
+    "bytes": 900109,
+    "sha256": "4e5a7bf3f8588e3982e31036919eb02a2bbd19dc1a585f476f2da721d7bace62"
+  },
+  {
+    "path": "2026/10/general-excavator-v1-150x150.png",
+    "bytes": 34086,
+    "sha256": "a9cda184177862903a8f4c3992ac23d4adc2142b1ae234d9676cb90ae09bbf2a"
+  },
+  {
+    "path": "2026/10/general-excavator-v1-300x225.png",
+    "bytes": 92088,
+    "sha256": "55a841a74dfb59761f446128877c0f82cf85a1ac927e63118b4b22a6dc4cff48"
+  },
+  {
+    "path": "2026/10/general-excavator-v1-768x576.png",
+    "bytes": 537419,
+    "sha256": "589fc2b27991ee025cef2bde7673a92f5b81576643ab42b03a1dc20c779e0876"
+  },
+  {
+    "path": "2026/10/general-excavator-v1.png",
+    "bytes": 1713509,
+    "sha256": "6029d084ac253b2064f2ceb9bb6d90a26e3389b55b02cd5e8aba25c8d42d2080"
+  },
+  {
+    "path": "2026/10/home-hero-v1-1024x394.png",
+    "bytes": 724138,
+    "sha256": "5dca006f5419adf76e296cac6a3da51cb72abdbdabf3dba4ae19c006a66a68e2"
+  },
+  {
+    "path": "2026/10/home-hero-v1-150x150.png",
+    "bytes": 47622,
+    "sha256": "e133becc9370fd48c49accda930bf830a9f62f3e9b0ecef76e70c74f76015f04"
+  },
+  {
+    "path": "2026/10/home-hero-v1-1536x591.png",
+    "bytes": 1513226,
+    "sha256": "377c7495dad252be18e643e90ab2cf91988f3e388eaf3904123fc7cc16181957"
+  },
+  {
+    "path": "2026/10/home-hero-v1-300x115.png",
+    "bytes": 72548,
+    "sha256": "e0d5737d081ed27d3063e9790a5b229620395b2d3ffa3f410409748293564fc8"
+  },
+  {
+    "path": "2026/10/home-hero-v1-768x296.png",
+    "bytes": 425374,
+    "sha256": "7b4f59523c08ad14f73e99812e2bc83b277c5288d766a60d4d7b3f4e2eb0cb51"
+  },
+  {
+    "path": "2026/10/home-hero-v1.png",
+    "bytes": 2470449,
+    "sha256": "3727e35543449bc5cb8c7c131671787715bd93700e17b53b17c285952b211ab1"
+  },
+  {
+    "path": "2026/10/industry-agriculture-v1-1024x768.png",
+    "bytes": 1549343,
+    "sha256": "ff98caed6f6f4df9d1015eeb577111deea7a75fbeb87663105125f14f2ee5b45"
+  },
+  {
+    "path": "2026/10/industry-agriculture-v1-150x150.png",
+    "bytes": 53944,
+    "sha256": "5dd2dcdfdd25cd943457f1506884005ec5cd4e383c4f4553e6a299fd1fde26b2"
+  },
+  {
+    "path": "2026/10/industry-agriculture-v1-300x225.png",
+    "bytes": 155328,
+    "sha256": "6c3bec6cac35db0a702a3309b0788d1fb9279b1db376031df9a850454ef5cb93"
+  },
+  {
+    "path": "2026/10/industry-agriculture-v1-768x576.png",
+    "bytes": 915026,
+    "sha256": "266b7a4de1da62c9d262600bc7b54f84e129a1dfb9d62bb4b26f5c32c84ea583"
+  },
+  {
+    "path": "2026/10/industry-agriculture-v1.png",
+    "bytes": 2931215,
+    "sha256": "c330e84f4bff063ac96209914873f68e788cabd5ce59773885dad0d6bec05abc"
+  },
+  {
+    "path": "2026/10/industry-construction-v1-1024x768.png",
+    "bytes": 1600844,
+    "sha256": "2de02da5b0338b14037dd8594f97a7008ac9546a18b85c25ed46e5d066783c60"
+  },
+  {
+    "path": "2026/10/industry-construction-v1-150x150.png",
+    "bytes": 57332,
+    "sha256": "18d42efb69745ff46fa3eaa24417acb1b63420bbf83d966ee8fc28e83a5b44a8"
+  },
+  {
+    "path": "2026/10/industry-construction-v1-300x225.png",
+    "bytes": 166877,
+    "sha256": "8c38e9e1d97b5552a49e201fdf9cdb1b1c51075994549d970b2079fd77063787"
+  },
+  {
+    "path": "2026/10/industry-construction-v1-768x576.png",
+    "bytes": 954437,
+    "sha256": "53f3f6164976092fe5faa78c43c3b42a360e33faf3d8dfc6c4d6fd796d5e3c11"
+  },
+  {
+    "path": "2026/10/industry-construction-v1.png",
+    "bytes": 2948919,
+    "sha256": "1a40d264b5bb6f38f0487b0bfac69f8e35c8e88d301de34a83f4a7e598c9c895"
+  },
+  {
+    "path": "2026/10/industry-demolition-v1-1024x683.png",
+    "bytes": 1463567,
+    "sha256": "0e7d7f8554ab37cd6c24a54d3f0833cc8bf652e4d65a354b27cadd51b03740ac"
+  },
+  {
+    "path": "2026/10/industry-demolition-v1-150x150.png",
+    "bytes": 52794,
+    "sha256": "2ca42a24e8834b0384dcfa3035abeaf9f9b4b07e9be4d45ca922c71104d2432f"
+  },
+  {
+    "path": "2026/10/industry-demolition-v1-300x200.png",
+    "bytes": 138141,
+    "sha256": "ba809ee5e6524be5b86c438e782384b2dd98ee060544b79122ec7d8716a3d38a"
+  },
+  {
+    "path": "2026/10/industry-demolition-v1-768x512.png",
+    "bytes": 872985,
+    "sha256": "a7bb5a6b1457b01d3d10bbf4d87ee73fa9e0309afa4a0bf4b188b88acbc5fb45"
+  },
+  {
+    "path": "2026/10/industry-demolition-v1.png",
+    "bytes": 3252003,
+    "sha256": "4aca4fddd2cd02f202c6ed8ca84dd19c3381e6f62d7ff27e9d9175a3f892eba8"
+  },
+  {
+    "path": "2026/10/industry-forestry-logging-v1-1024x683.png",
+    "bytes": 1625832,
+    "sha256": "4df630e21c122768a0272fef8661ac1e22ac3121021478e208c8342db7f0b635"
+  },
+  {
+    "path": "2026/10/industry-forestry-logging-v1-150x150.png",
+    "bytes": 63661,
+    "sha256": "bea25903f70155087bb5f3cb4b7483173299918e8a82bbd46d35ab2f7e17a2d6"
+  },
+  {
+    "path": "2026/10/industry-forestry-logging-v1-300x200.png",
+    "bytes": 167700,
+    "sha256": "ec4b65ae70347bb7f3a743d39ec26e6c8ac5ee22049d12f5daff0c2f4630978e"
+  },
+  {
+    "path": "2026/10/industry-forestry-logging-v1-768x512.png",
+    "bytes": 989093,
+    "sha256": "a509a9ce716e054a75901f44b87076d425256c7cccae61ab80184a04b63e9470"
+  },
+  {
+    "path": "2026/10/industry-forestry-logging-v1.png",
+    "bytes": 3380664,
+    "sha256": "70f627b2c9d25586a6eeae2dde7e12fe83a33aacdf6fcf2451ea25b07a060e24"
+  },
+  {
+    "path": "2026/10/industry-landscaping-excavator-v1-1024x576.png",
+    "bytes": 1521802,
+    "sha256": "7c8cd1fe8791c3b3ecfe28ec5e619192fd364a7645ec382fc27474948a4df505"
+  },
+  {
+    "path": "2026/10/industry-landscaping-excavator-v1-150x150.png",
+    "bytes": 67302,
+    "sha256": "b2e796fcd6ebacef38caab67f6885e1a3f45952cf4d7fa5796e2921686c7fc50"
+  },
+  {
+    "path": "2026/10/industry-landscaping-excavator-v1-1536x864.png",
+    "bytes": 3128302,
+    "sha256": "700ab2df6d14c881c00ba1c88650965b7701b40719243d8bb1f44722489832a2"
+  },
+  {
+    "path": "2026/10/industry-landscaping-excavator-v1-300x169.png",
+    "bytes": 148503,
+    "sha256": "5e118c07a6001be40bbbdc64239c19499311464385b22f6dbeeda5b567742a1b"
+  },
+  {
+    "path": "2026/10/industry-landscaping-excavator-v1-768x432.png",
+    "bytes": 898327,
+    "sha256": "e7c87e95e01353f8f80393fcc68f7ecffed2c0c9c21594c778332a8d684c9310"
+  },
+  {
+    "path": "2026/10/industry-landscaping-excavator-v1.png",
+    "bytes": 3664241,
+    "sha256": "3f2e6c90797cd5e9376727c01037be7fbc30cf6535b2cc51d5cf3c102a26e2cc"
+  },
+  {
+    "path": "2026/10/industry-landscaping-v1-1024x768.png",
+    "bytes": 1754859,
+    "sha256": "7b2797a21a4350b772c3f10b21c1fe44e4aab425d24f52a92ecdfc3fec0eb1f1"
+  },
+  {
+    "path": "2026/10/industry-landscaping-v1-150x150.png",
+    "bytes": 64448,
+    "sha256": "e37bbe9c2929e45610acb2ae896001ec1754ae92f5bc44aa88c4f6bf1afa3926"
+  },
+  {
+    "path": "2026/10/industry-landscaping-v1-300x225.png",
+    "bytes": 187453,
+    "sha256": "219f1b433e1e9fd12c411b0697c0361e48d767f60d0894b7365259e69c5644d3"
+  },
+  {
+    "path": "2026/10/industry-landscaping-v1-768x576.png",
+    "bytes": 1056529,
+    "sha256": "eb21fdf6608faef6a37703c2a645d5673e447817947273c1888199c64306d8c6"
+  },
+  {
+    "path": "2026/10/industry-landscaping-v1.png",
+    "bytes": 3208716,
+    "sha256": "c173869b4ec7516a52447a62564199670a707094fc2656582ee8e13160ac323d"
+  },
+  {
+    "path": "2026/10/industry-snow-removal-v1-1024x683.png",
+    "bytes": 1369042,
+    "sha256": "5a02becf11de84d8adc978b7e616d191861e209e60df114fd6a1e548d33b5f2d"
+  },
+  {
+    "path": "2026/10/industry-snow-removal-v1-150x150.png",
+    "bytes": 55071,
+    "sha256": "8dae902b6cb61a41cc0369f3e9cced0f98db3c9a49300abd1a7f21df3dacd0e7"
+  },
+  {
+    "path": "2026/10/industry-snow-removal-v1-300x200.png",
+    "bytes": 140059,
+    "sha256": "9e55e57b5a9e8ae77e8d6a681dd37ebcf7303710fd92e63378e68e6313910715"
+  },
+  {
+    "path": "2026/10/industry-snow-removal-v1-768x512.png",
+    "bytes": 834587,
+    "sha256": "9f085df5b260a7c06fb8334937b722baefa5bade6b961f928ba2700f84d6044e"
+  },
+  {
+    "path": "2026/10/industry-snow-removal-v1.png",
+    "bytes": 2892328,
+    "sha256": "7a324f276ed827b82b867d07a6483378cd6f6eabbd9f5d22e158b04e6eddaa15"
+  },
+  {
+    "path": "2026/10/industry-utility-work-v1-1024x683.png",
+    "bytes": 1408583,
+    "sha256": "c3b8ea0c4274309c7ca1dcf0df24422d906ca135f76671ed6089ecc50c1d7c38"
+  },
+  {
+    "path": "2026/10/industry-utility-work-v1-150x150.png",
+    "bytes": 57340,
+    "sha256": "768dbc09cab1f46fafacc1eb3e82a3ddc0d4ff2630544b218f5132b56b790af4"
+  },
+  {
+    "path": "2026/10/industry-utility-work-v1-300x200.png",
+    "bytes": 145614,
+    "sha256": "c3da325cd625d80ab46ff5e8ded2ec6fc5047e3e607481777df5a3eb88b37866"
+  },
+  {
+    "path": "2026/10/industry-utility-work-v1-768x512.png",
+    "bytes": 855236,
+    "sha256": "bd6365061746a86f4c1d9647abf2d8d6f6ec6f6496d9527c57b5e78c921feccc"
+  },
+  {
+    "path": "2026/10/industry-utility-work-v1.png",
+    "bytes": 2986279,
+    "sha256": "365f39ad7b9767101f75fa93795fd2f2a324c78cc09e5139de9c615b843293da"
+  },
+  {
+    "path": "2026/10/industry-waste-solutions-v1-1024x683.png",
+    "bytes": 1508824,
+    "sha256": "2cb38746eecae61a5b51e863449578db12fe3ae1300db84b8643c172657c2553"
+  },
+  {
+    "path": "2026/10/industry-waste-solutions-v1-150x150.png",
+    "bytes": 55216,
+    "sha256": "f089d7d30ea9184e0bca4ae584dcf64ea6023c2bb315e8fde460bcd713c4988a"
+  },
+  {
+    "path": "2026/10/industry-waste-solutions-v1-300x200.png",
+    "bytes": 146826,
+    "sha256": "ee0b68f8982cf333bf19f184c3014fc0e383d25cbd8475b8ee263802c7576655"
+  },
+  {
+    "path": "2026/10/industry-waste-solutions-v1-768x512.png",
+    "bytes": 908172,
+    "sha256": "d9b73305efc27a114d08d7e9ade0dcaac2fe174610912ad8c19a8c107648ae05"
+  },
+  {
+    "path": "2026/10/industry-waste-solutions-v1.png",
+    "bytes": 3249376,
+    "sha256": "16699b6d9b2f32451c3a37cec9b5c40029dca3f3c9f7c56c4d4dbacb5066024c"
+  },
+  {
+    "path": "2026/10/loader-maneuver-quarry-v1-1024x576.png",
+    "bytes": 1264320,
+    "sha256": "144611a53e71f2c23a0770785cb6028ea00cebdba78fe2790dc27de030ff5125"
+  },
+  {
+    "path": "2026/10/loader-maneuver-quarry-v1-150x150.png",
+    "bytes": 56116,
+    "sha256": "99bddd929ef918e36fcf6ce225136fc0a471714728e2a775b10d9e9233115910"
+  },
+  {
+    "path": "2026/10/loader-maneuver-quarry-v1-1536x864.png",
+    "bytes": 2617251,
+    "sha256": "8ac66efd544f0afdaac66eafc140b8770e6fc249eafd9aef81a80301ac78f392"
+  },
+  {
+    "path": "2026/10/loader-maneuver-quarry-v1-300x169.png",
+    "bytes": 126245,
+    "sha256": "f8c6c3e357ed1d1adf91e4e52c9c7e7f341da14fedc4d82949b9bd5d9bc13eb0"
+  },
+  {
+    "path": "2026/10/loader-maneuver-quarry-v1-768x432.png",
+    "bytes": 743672,
+    "sha256": "732006ef7c4163d2ecd335089ef62ce58a877b87d03c709e37241345ae1b0200"
+  },
+  {
+    "path": "2026/10/loader-maneuver-quarry-v1.png",
+    "bytes": 3108728,
+    "sha256": "8bedaa157499c968a4b056649fcbb7d7b756b547dfb90bc76644a7be4cbe6b3a"
+  },
+  {
+    "path": "2026/10/loader-quarry-operation-v1-1024x576.png",
+    "bytes": 1255312,
+    "sha256": "d998f51694641435fa78843c3ccdbc2c0d957e21340449ec431fbfd306f02774"
+  },
+  {
+    "path": "2026/10/loader-quarry-operation-v1-150x150.png",
+    "bytes": 54044,
+    "sha256": "2a05367a6d1bfd265f171bef105f7d1b3dd5e40bc5afbae693236b1dee51e35c"
+  },
+  {
+    "path": "2026/10/loader-quarry-operation-v1-1536x864.png",
+    "bytes": 2597784,
+    "sha256": "ded093e9b60374ef4c2b63f088ff6b63922d7cdff034eb4e42e756e33bbb0a0b"
+  },
+  {
+    "path": "2026/10/loader-quarry-operation-v1-300x169.png",
+    "bytes": 123977,
+    "sha256": "8b652ee726f5639d3cf68d742dfd6d4894ffae70d23ecba026aaa4b6e5b6a2c6"
+  },
+  {
+    "path": "2026/10/loader-quarry-operation-v1-768x432.png",
+    "bytes": 737210,
+    "sha256": "568fbe5ec285f93452e2eecd7b03e0e15864f013ab29cd518496932b7393ace0"
+  },
+  {
+    "path": "2026/10/loader-quarry-operation-v1.png",
+    "bytes": 3115640,
+    "sha256": "666c735f62cdeb3d42d4d172a732699f2911b2961e4a9e4cca83c27722445075"
+  },
+  {
+    "path": "2026/10/loader-unloading-quarry-v1-1024x576.png",
+    "bytes": 1200870,
+    "sha256": "d62052addf5662482ac684577c630fcf8444b67aaa7ad4e73822d0f4d9a08969"
+  },
+  {
+    "path": "2026/10/loader-unloading-quarry-v1-150x150.png",
+    "bytes": 56038,
+    "sha256": "7f30f25cf929aa8bcbd1690604208e3e0e785a85b0935bd5cbb97cfb822d17ff"
+  },
+  {
+    "path": "2026/10/loader-unloading-quarry-v1-1536x864.png",
+    "bytes": 2455381,
+    "sha256": "59ce65d130daa2fdade4e3e4071489f4fc291184ccca3dcb3eaa20ea36162df9"
+  },
+  {
+    "path": "2026/10/loader-unloading-quarry-v1-300x169.png",
+    "bytes": 125486,
+    "sha256": "e36ba7044ca55e097a219b7ce66788075fc8e0fb1a5e2a2f22a97ac82a063c2c"
+  },
+  {
+    "path": "2026/10/loader-unloading-quarry-v1-768x432.png",
+    "bytes": 714331,
+    "sha256": "2c6d20dc0821c4d35565d4bd202a8a339f2cae7a2fddfd0278b225bf2c9dcaef"
+  },
+  {
+    "path": "2026/10/loader-unloading-quarry-v1.png",
+    "bytes": 2873202,
+    "sha256": "5f9eb35c1b8c0b11d844c7ee8951e54168343886406b9485312c0b36bf1b9f8f"
+  },
+  {
+    "path": "2026/10/oem-engineering-review-v1-1024x576.png",
+    "bytes": 875939,
+    "sha256": "2e6f55cf61457b70e988b5299b0e0afe0a8dc53cbf853172c3d97634dc864f38"
+  },
+  {
+    "path": "2026/10/oem-engineering-review-v1-150x150.png",
+    "bytes": 48270,
+    "sha256": "8ad83eb1bb2c377d296a1117c3f78bf34e3c6b4b10c9aa2596cbb0f74df2eb16"
+  },
+  {
+    "path": "2026/10/oem-engineering-review-v1-1536x864.png",
+    "bytes": 1766930,
+    "sha256": "58cd14d34a40da00bf4cac40e77a86860f5162a79f0135188fb80858ebe69e6b"
+  },
+  {
+    "path": "2026/10/oem-engineering-review-v1-300x169.png",
+    "bytes": 103495,
+    "sha256": "dd6ddd5f25383eb48016f240a31fe613f3f52efc5e18f3a20acddd87e7c1b594"
+  },
+  {
+    "path": "2026/10/oem-engineering-review-v1-768x432.png",
+    "bytes": 529355,
+    "sha256": "4f5fad39fc695f96d50dd79119cf9e4d897870b0d4c4a3e66dc6a7f9b4ede7a2"
+  },
+  {
+    "path": "2026/10/oem-engineering-review-v1.png",
+    "bytes": 2047768,
+    "sha256": "2ddf30c59b9dcb4e8a03a0ea9b7ea55ef5c7dbff1a51f591d91c346600955d9c"
+  },
+  {
+    "path": "2026/10/qa-playback-sample.mp4",
+    "bytes": 180743,
+    "sha256": "f491d6908caad6ca1e8b03c2f6c8c8ba05dcb943f8cfc22859712c4be1757a91"
+  },
+  {
+    "path": "2026/10/service-inspection-v1-1024x768.png",
+    "bytes": 1210747,
+    "sha256": "82ba52a7b3679450300fa41cb3925d495cd6cc844cbf71cf03ac7fd65b7f4265"
+  },
+  {
+    "path": "2026/10/service-inspection-v1-150x150.png",
+    "bytes": 52251,
+    "sha256": "030b5acffaa3661e6f67b7c26572f684ef480bbafe3d781ebf479b377f2d9399"
+  },
+  {
+    "path": "2026/10/service-inspection-v1-300x225.png",
+    "bytes": 137364,
+    "sha256": "9449a847aefabd2d80da7b4bc42cb95ab49d2d48da943fed958b25ca93cd87f1"
+  },
+  {
+    "path": "2026/10/service-inspection-v1-768x576.png",
+    "bytes": 726154,
+    "sha256": "f57419cef17d31881651785c5b7d2f8bb8f2777736165d61ff9afd0166466487"
+  },
+  {
+    "path": "2026/10/service-inspection-v1.png",
+    "bytes": 2160408,
+    "sha256": "60a0db133b1c12edad8e1073558f5af5f82a3f43c9f9b309601de89132434e51"
+  },
+  {
+    "path": "2026/10/skid-steer-loader-v1-1024x768.png",
+    "bytes": 1008755,
+    "sha256": "6df06fe441d3526f813e8aaa437b28c00e8898c3456afa621663a4381f2f2177"
+  },
+  {
+    "path": "2026/10/skid-steer-loader-v1-150x150.png",
+    "bytes": 36998,
+    "sha256": "fbeeb9d86fe5e548866ffeb05da1ab80753b9458bf52da31b58e6d709c874d07"
+  },
+  {
+    "path": "2026/10/skid-steer-loader-v1-300x225.png",
+    "bytes": 96124,
+    "sha256": "e8de3d7c3645089f1b20606268b507bc6fb9a4f6e3ab5d4c065ef355d95ac691"
+  },
+  {
+    "path": "2026/10/skid-steer-loader-v1-768x576.png",
+    "bytes": 588438,
+    "sha256": "52b5db5e2ec93963c34a1638eb9e6c8411bbb59e9ecaf5da3c588ec3d8f69e8e"
+  },
+  {
+    "path": "2026/10/skid-steer-loader-v1.png",
+    "bytes": 1969943,
+    "sha256": "8e8a014d5bb05c2e4be93af27e768460779c110fdc3cfd755103681a6e55437f"
+  },
+  {
+    "path": "2026/10/starter-example-author-150x150.webp",
+    "bytes": 2826,
+    "sha256": "4d31cb98ad76fd34bc03150f7f54055a4be02a8d315156197c5342c5b092211e"
+  },
+  {
+    "path": "2026/10/starter-example-author-300x300.webp",
+    "bytes": 6602,
+    "sha256": "0373cf44795972f5f01967de8da2ae69986cce10dd3adc390fe9d438a2d437b7"
+  },
+  {
+    "path": "2026/10/starter-example-author.webp",
+    "bytes": 8760,
+    "sha256": "75d1c554ff4bd748e3c6b79dfa1e4aca22a19b7ff62714eb32891f14911a5086"
+  },
+  {
+    "path": "2026/10/wheel-loader-rear-v1-1024x768.png",
+    "bytes": 989101,
+    "sha256": "153cb1677926389dd0daf63319eace09ed84fe0f7e33c283d76a02ebcbec42b0"
+  },
+  {
+    "path": "2026/10/wheel-loader-rear-v1-150x150.png",
+    "bytes": 36522,
+    "sha256": "34c105b5df1895413747095d1f880be8248032c8cd59aaaf1a3623227761331b"
+  },
+  {
+    "path": "2026/10/wheel-loader-rear-v1-300x225.png",
+    "bytes": 93762,
+    "sha256": "a747612495a97a8a2e09c6ea0450f68c71eedb11ba1015544e3223d73526a748"
+  },
+  {
+    "path": "2026/10/wheel-loader-rear-v1-768x576.png",
+    "bytes": 576051,
+    "sha256": "ca2433721ac4d0a466a9b1038ca8f4e60c850ae533d379e71afa85f2b8d6ddd0"
+  },
+  {
+    "path": "2026/10/wheel-loader-rear-v1.png",
+    "bytes": 1960760,
+    "sha256": "1789e7df963e0fa925d62143e3ee52722fb4a77ce711ae38b3f4153e814228eb"
+  },
+  {
+    "path": "2026/10/wheel-loader-side-v1-1024x768.png",
+    "bytes": 918251,
+    "sha256": "03d31b3c3d2fc9d51a1ac077d8ea0e3a1486ace1e54af9befac67b7a96613a28"
+  },
+  {
+    "path": "2026/10/wheel-loader-side-v1-150x150.png",
+    "bytes": 33337,
+    "sha256": "35c387b6f5db56ceac3aa6af2c38a6ee2adafdbafb3da56c3e90678a2fc4e067"
+  },
+  {
+    "path": "2026/10/wheel-loader-side-v1-300x225.png",
+    "bytes": 87972,
+    "sha256": "7d2bdfdaffbe177b0337adac3deadda43161a3f8d5c5ca4a028ed4ee3ade0d09"
+  },
+  {
+    "path": "2026/10/wheel-loader-side-v1-768x576.png",
+    "bytes": 538180,
+    "sha256": "a8b78e96e40d6f703f3642713106b7a743da35b9d04a4fbe75a5ff5a02e5379d"
+  },
+  {
+    "path": "2026/10/wheel-loader-side-v1.png",
+    "bytes": 1828262,
+    "sha256": "cbb95184d21298f7d751d354f9a2f142f4b9437e4afbbd852b7c3e3282cff638"
+  },
+  {
+    "path": "2026/10/wheel-loader-v1-1024x768.png",
+    "bytes": 907264,
+    "sha256": "715ab8180285e19f50470b359678a26c92a2d8894561788b864a1db2b480c044"
+  },
+  {
+    "path": "2026/10/wheel-loader-v1-150x150.png",
+    "bytes": 35390,
+    "sha256": "d1b17b08be122c93231b9cecda7c78e3ae0d5006be6e3aeaba5b315a982a103d"
+  },
+  {
+    "path": "2026/10/wheel-loader-v1-300x225.png",
+    "bytes": 93636,
+    "sha256": "29daf484dfa952a332f13f75d375f899416590f0bf7ea44347254c145b58fd8b"
+  },
+  {
+    "path": "2026/10/wheel-loader-v1-768x576.png",
+    "bytes": 542442,
+    "sha256": "eeb8149491f80a8cdb917007960152af923ac7fe6eefe3b72543447595a547db"
+  },
+  {
+    "path": "2026/10/wheel-loader-v1.png",
+    "bytes": 1732209,
+    "sha256": "7b6c3a11d23e8e5ae48f8b365b06eff83cfab4908bfdc19e76426fa05c27979f"
+  }
+]

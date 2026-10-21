@@ -1,0 +1,35 @@
+/* Style the official control; its saved language list and behavior stay with GTranslate. */
+.site-language { display: none; flex: 0 0 auto; align-items: center; gap: 16px; }
+.site-language:has(.site-language-slot:not(:empty)) { display: flex; }
+.site-language-label { display: none; font-size: 14px; font-weight: 500; }
+.site-language-control { position: relative; min-width: 0; color: var(--ink, #202826); }
+.site-language-slot { display: block; }
+.site-language select.gt_selector {
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  width: 156px;
+  max-width: 100%;
+  min-height: 44px;
+  margin: 0;
+  padding: 10px 32px 10px 38px;
+  border: 1px solid var(--line, #dce2de);
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.site-language select.gt_selector:hover { background-color: var(--surface, #f7f7f7); }
+.site-language select.gt_selector:focus-visible { outline: 2px solid var(--accent, #215d50); outline-offset: 3px; }
+.site-language select.gt_selector option { color: #202826; background: #fff; }
+.site-language-icon, .site-language-arrow { display: none; position: absolute; top: 50%; transform: translateY(-50%); pointer-events: none; }
+.site-language-control:has(select.gt_selector) > svg { display: block; }
+.site-language-icon { left: 12px; width: 18px; height: 18px; }
+.site-language-arrow { right: 12px; width: 12px; height: 12px; }
+@media (forced-colors: active) {
+  .site-language select.gt_selector { appearance: auto; -webkit-appearance: auto; padding-right: 12px; }
+  .site-language-control:has(select.gt_selector) > .site-language-arrow { display: none; }
+}

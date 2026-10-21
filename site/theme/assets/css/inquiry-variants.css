@@ -1,0 +1,68 @@
+/* Native Fluent Forms fields keep their names, conditions and submission owner. */
+.equipment-configuration-layout{margin-top:32px;min-width:0}
+.equipment-configuration-layout.has-inquiry{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,.8fr);gap:32px;align-items:start}
+.equipment-configuration-layout .equipment-configurations{margin-top:0;min-width:0}
+.equipment-configuration-layout .product-inquiry-card{padding:0;border:0;box-shadow:none;background:transparent}
+.product-inquiry.inquiry-variant-product-compact{position:static;scroll-margin-top:170px;min-width:0;margin:0;align-self:start}
+.inquiry-variant-product-compact .product-inquiry-card>h2{font-size:30px;margin:0 0 8px}
+.inquiry-variant-product-compact .inquiry-introduction{font-size:12px;line-height:1.5;margin:0 0 16px}
+.inquiry-variant-product-compact .fluentform form>fieldset>.ff-el-group{margin-bottom:9px;min-width:0}
+.product-inquiry.inquiry-variant-product-compact .frm-fluent-form>fieldset{display:block}
+.product-inquiry.inquiry-variant-product-compact .frm-fluent-form>fieldset>.ff-el-group{grid-column:1/-1}
+.inquiry-variant-product-compact .fluentform form>fieldset>.ff-el-group:not(.ff_submit_btn_wrapper):not(.eq-field-note){display:grid;grid-template-columns:100px minmax(0,1fr);gap:10px;align-items:start}
+.product-inquiry.inquiry-variant-product-compact .fluentform .ff-el-input--label{grid-column:1;grid-row:1}
+.product-inquiry.inquiry-variant-product-compact .fluentform .ff-el-input--content{grid-column:2;grid-row:1;min-width:0}
+.inquiry-variant-product-compact .fluentform .ff-el-input--label{padding-top:7px;margin:0}
+.product-inquiry.inquiry-variant-product-compact .frm-fluent-form .ff-el-input--label label{font-size:11px}
+.equipment-product .inquiry-variant-product-compact .product-inquiry-card.form-panel .fluentform .ff-el-form-control{min-width:0;width:100%;min-height:34px;padding:7px 9px;font-size:12px;border-radius:0}
+.equipment-product .inquiry-variant-product-compact .product-inquiry-card.form-panel .fluentform textarea.ff-el-form-control{height:64px;min-height:64px}
+.inquiry-variant-product-compact .fluentform .eq-field-note{font-size:10px;line-height:1.5;margin:10px 0}
+.inquiry-variant-product-compact .fluentform .ff-btn.ff-btn-submit{min-height:42px;padding:10px 14px;width:100%;font-size:12px;font-weight:700;background:#f4b52a;color:#191c1d;border:0;border-radius:0}
+.inquiry-variant-product-compact .fluentform .ff-btn.ff-btn-submit:hover{background:#ffd15c;color:#191c1d}
+.inquiry-variant-product .fluentform form>fieldset>.ff-el-group{margin-bottom:13px}
+.inquiry-variant-product .fluentform .ff-el-form-control{min-height:38px;padding:8px 10px;font-size:13px}
+.inquiry-variant-product .fluentform textarea.ff-el-form-control{min-height:100px}
+.inquiry-variant-product .eq-field-note{font-size:10px;line-height:1.5}
+@media(max-width:1000px){.equipment-configuration-layout.has-inquiry{grid-template-columns:minmax(0,1fr)}.inquiry-variant-product-compact .product-inquiry-card{padding:24px;border:1px solid #dedfdb}.equipment-product .inquiry-variant-product-compact .product-inquiry-card.form-panel .fluentform .ff-el-form-control{font-size:16px;min-height:44px}}
+@media(max-width:650px){.inquiry-variant-product-compact .fluentform form>fieldset>.ff-el-group:not(.ff_submit_btn_wrapper):not(.eq-field-note){grid-template-columns:minmax(0,1fr);gap:5px}.product-inquiry.inquiry-variant-product-compact .fluentform .ff-el-input--content{grid-column:1;grid-row:2}.inquiry-variant-product-compact .fluentform .ff-el-input--label{padding-top:0}.product-inquiry.inquiry-variant-product-compact .frm-fluent-form .ff-el-input--label label{font-size:13px}}
+.product-inquiry:is(.inquiry-variant-documents,.inquiry-variant-parts,.inquiry-variant-oem,.inquiry-variant-dealer,.inquiry-variant-site,.inquiry-variant-consultation,.inquiry-variant-contact) .fluentform form>fieldset{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px 22px;min-width:0}
+.product-inquiry:is(.inquiry-variant-documents,.inquiry-variant-parts,.inquiry-variant-oem,.inquiry-variant-dealer,.inquiry-variant-site,.inquiry-variant-consultation,.inquiry-variant-contact) .fluentform form>fieldset>.ff-el-group{grid-column:span 6;min-width:0;margin:0}
+.product-inquiry .fluentform form>fieldset>.eq-field-note{font-size:11px;color:#737c80}
+.product-inquiry:is(.inquiry-variant-documents,.inquiry-variant-parts,.inquiry-variant-oem,.inquiry-variant-dealer,.inquiry-variant-site,.inquiry-variant-consultation,.inquiry-variant-contact) .fluentform form>fieldset>:is(.eq-field-note,.ff-errors-in-stack){grid-column:1/-1}
+.product-inquiry:is(.inquiry-variant-documents,.inquiry-variant-contact) .fluentform form>fieldset>:is(.eq-field-message,.eq-field-files,.ff_submit_btn_wrapper){grid-column:1/-1}
+.product-inquiry.inquiry-variant-contact .fluentform form>fieldset>:is(.eq-field-country,.eq-field-product,.eq-field-marketing){grid-column:1/-1}
+.inquiry-variant-contact .eq-field-marketing .ff-el-input--label{display:none}
+.inquiry-variant-contact .eq-field-marketing .ff-el-form-check-label{display:flex;align-items:flex-start;gap:10px;font-size:12px;line-height:1.5;font-weight:400}
+.inquiry-variant-contact .eq-field-marketing input[type=checkbox]{flex:0 0 auto;margin-top:3px}
+.product-inquiry .fluentform .ff-el-input--label label{font-size:13px;font-weight:600}
+.product-inquiry .fluentform select{max-width:100%;width:100%;min-width:0}
+.eq-business-inquiry .product-inquiry-card{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px;align-items:start}
+.eq-business-inquiry .product-inquiry-card>h2{margin:0;font-size:36px}
+.eq-business-inquiry .product-inquiry-card>.inquiry-introduction{margin:0 0 18px}
+.eq-business-inquiry .product-inquiry-card>.fluentform{grid-column:1/-1}
+.product-inquiry.inquiry-variant-oem .fluentform form>fieldset>:is(.eq-field-product-family,.eq-field-target-market,.eq-field-quantity-range){grid-column:span 4}
+.product-inquiry.inquiry-variant-oem .fluentform form>fieldset>.eq-field-message{grid-column:span 9}
+.product-inquiry.inquiry-variant-oem .fluentform form>fieldset>.ff_submit_btn_wrapper{grid-column:10/13;grid-row:3;align-self:center;max-width:none}
+.product-inquiry.inquiry-variant-oem .fluentform form>fieldset>.eq-field-files{grid-column:1/-1}
+.product-inquiry.inquiry-variant-dealer .fluentform form>fieldset>.ff_submit_btn_wrapper{grid-column:1/7;grid-row:4}
+.product-inquiry.inquiry-variant-dealer .fluentform form>fieldset>.eq-field-message{grid-column:7/13;grid-row:3/5}
+.product-inquiry.inquiry-variant-dealer .eq-field-message textarea{min-height:130px}
+.product-inquiry.inquiry-variant-parts .fluentform form>fieldset>.eq-field-equipment-type{grid-column:1/9;grid-row:2}
+.product-inquiry.inquiry-variant-parts .fluentform form>fieldset>.eq-field-machine-model{grid-column:1/5;grid-row:3}
+.product-inquiry.inquiry-variant-parts .fluentform form>fieldset>.eq-field-serial-number{grid-column:5/9;grid-row:3}
+.product-inquiry.inquiry-variant-parts .fluentform form>fieldset>.eq-field-part-reference{grid-column:1/9;grid-row:4}
+.product-inquiry.inquiry-variant-parts .fluentform form>fieldset>.eq-field-message{grid-column:1/9;grid-row:5}
+.product-inquiry.inquiry-variant-parts .fluentform form>fieldset>.eq-field-files{grid-column:9/13;grid-row:2/6}
+.product-inquiry.inquiry-variant-parts .fluentform form>fieldset>.ff_submit_btn_wrapper{grid-column:1/9;grid-row:6}
+.product-inquiry.inquiry-variant-parts .fluentform form>fieldset>.eq-field-note{grid-row:7}
+.product-inquiry.inquiry-variant-parts .wb-file-control{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:230px;width:100%;border:1px dashed #c5cdcf;background:#fafbf9;text-align:center}
+.product-inquiry.inquiry-variant-parts .wb-file-control:before{content:"＋";font-size:38px;font-weight:300;line-height:1;color:#8c989d}
+.product-inquiry.inquiry-variant-parts .wb-file-selection{display:block;font-size:11px}
+.product-inquiry.inquiry-variant-site .fluentform form>fieldset>.eq-field-access-width,.product-inquiry.inquiry-variant-site .fluentform form>fieldset>.eq-field-ground-conditions{grid-column:span 3}
+.product-inquiry.inquiry-variant-site .fluentform form>fieldset>.eq-field-message{grid-column:7/11;grid-row:2}
+.product-inquiry.inquiry-variant-site .fluentform form>fieldset>.ff_submit_btn_wrapper{grid-column:11/13;grid-row:2;align-self:center;max-width:none}
+.product-inquiry.inquiry-variant-site .fluentform textarea{min-height:74px}
+.product-inquiry.inquiry-variant-consultation .fluentform form>fieldset>.ff_submit_btn_wrapper{grid-column:1/-1}
+.product-inquiry.inquiry-variant-consultation .eq-field-note{font-size:11px}
+@media(max-width:1000px){.product-inquiry.inquiry-variant-parts .fluentform form>fieldset>.eq-field-files{grid-column:1/-1;grid-row:auto}.product-inquiry.inquiry-variant-parts .fluentform form>fieldset>:is(.eq-field-equipment-type,.eq-field-part-reference,.eq-field-message,.ff_submit_btn_wrapper){grid-column:1/-1}.product-inquiry.inquiry-variant-parts .fluentform form>fieldset>.eq-field-machine-model{grid-column:1/7}.product-inquiry.inquiry-variant-parts .fluentform form>fieldset>.eq-field-serial-number{grid-column:7/13}.product-inquiry.inquiry-variant-parts .wb-file-control{min-height:120px}.product-inquiry.inquiry-variant-site .fluentform form>fieldset>.ff_submit_btn_wrapper{grid-column:1/-1;grid-row:auto}}
+@media(max-width:650px){.product-inquiry:is(.inquiry-variant-documents,.inquiry-variant-parts,.inquiry-variant-oem,.inquiry-variant-dealer,.inquiry-variant-site,.inquiry-variant-consultation,.inquiry-variant-contact) .fluentform form>fieldset{grid-template-columns:minmax(0,1fr);gap:16px}.product-inquiry:is(.inquiry-variant-documents,.inquiry-variant-parts,.inquiry-variant-oem,.inquiry-variant-dealer,.inquiry-variant-site,.inquiry-variant-consultation,.inquiry-variant-contact) .fluentform form>fieldset>.ff-el-group{grid-column:1/-1;grid-row:auto}.eq-business-inquiry .product-inquiry-card{grid-template-columns:1fr;gap:12px}.eq-business-inquiry .product-inquiry-card>h2{font-size:30px}.product-inquiry.inquiry-variant-parts .wb-file-control{min-height:130px}.product-inquiry.inquiry-variant-dealer .eq-field-message textarea{min-height:110px}}

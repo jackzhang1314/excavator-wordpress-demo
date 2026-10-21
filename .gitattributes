@@ -1,0 +1,8 @@
+# Preserve the original website, media and licenses byte for byte on every OS.
+* -text
+*.pdf binary
+*.zip binary
+*.png binary
+*.webp binary
+*.woff2 binary
+*.mp4 binary
