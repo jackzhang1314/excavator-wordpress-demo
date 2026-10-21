@@ -1,0 +1,85 @@
+{
+  "verifiedAt": "2026-10-21T14:20:41.861Z",
+  "testedCodeCommit": "fa4e56e1528b90d1aa54619fcf6fa0eaba656061",
+  "repository": "https://github.com/jackzhang1314/excavator-wordpress-demo",
+  "visibility": "public",
+  "environment": {
+    "os": "macOS",
+    "architecture": "arm64",
+    "node": [
+      "22.20.0",
+      "24.7.0"
+    ],
+    "wordpress": "6.9.10",
+    "php": "8.3",
+    "playground": "3.1.52",
+    "otherOperatingSystems": "launchers provided; not executed on physical Windows/Linux hosts"
+  },
+  "preservation": {
+    "contentRecords": 198,
+    "postMetaRecords": 8601,
+    "publishedProducts": 20,
+    "categoryPages": 15,
+    "primaryProductCategories": 5,
+    "secondaryProductCategories": 10,
+    "industryPages": 11,
+    "articles": 9,
+    "fullRichDescriptions": 35,
+    "originalMediaFiles": 236,
+    "unchangedThemeAndBusinessPluginFiles": 124,
+    "ownedSourceSha256": "f970bf4658acd4ee74015939597702b9f3ab5142cff29bf484998f156fccde1f",
+    "originalProtectedFilesChecked": 361,
+    "originalProtectedFilesChanged": 0,
+    "readbackValuesCompared": 39977,
+    "contentValueDifferences": 0,
+    "normalizedAutoloadPolicyFlags": 5
+  },
+  "checks": {
+    "anonymousClone": "PASS",
+    "freshPortableNodeBootstrap": "PASS",
+    "freshCloneRoutes": {
+      "passed": 75,
+      "expected": 75
+    },
+    "freshCloneResources": {
+      "passed": 119,
+      "expected": 119
+    },
+    "nativeAdminLogin": "PASS",
+    "nativeRichTextSaveReopenAndPublicReadback": "PASS",
+    "restartPersistence": "PASS",
+    "visualAndTextEditor": "PASS",
+    "nativeImageUpload": "PASS",
+    "localInquirySameEntry": "PASS",
+    "savedAttributionFields": 8,
+    "authenticatedAttachmentBytes": 698,
+    "attachmentByteEquality": "PASS",
+    "anonymousAttachmentDenied": "PASS",
+    "sqliteAndPrivatePathsDenied": "PASS",
+    "mountedSourceEditAndRestore": "PASS",
+    "portMigrationAndReturn": "PASS",
+    "mobile390NoOverflow": "PASS",
+    "automaticRegressionTests": 5,
+    "syntaxChecked": {
+      "javascript": 18,
+      "php": 91
+    },
+    "privatePatternScan": {
+      "patterns": 25,
+      "matches": 0
+    }
+  },
+  "exclusions": [
+    "original account passwords and sessions",
+    "enterprise email and SMTP configuration",
+    "hosting credentials and Hostinger connection data",
+    "plugin license keys",
+    "historical inquiries and mail logs",
+    "WordPress Build Skill / Harness"
+  ],
+  "outboundMail": "blocked in local demo",
+  "remaining": [
+    "Windows/Linux physical-host verification not performed",
+    "real business branding, product facts and formal public website release are outside this local demo delivery"
+  ]
+}
