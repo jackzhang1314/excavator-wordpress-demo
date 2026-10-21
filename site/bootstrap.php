@@ -3,6 +3,7 @@
 require '/wordpress/wp-load.php';
 require_once '/wordpress/wp-admin/includes/plugin.php';
 require '/demo-source/relocate.php';
+require '/demo-source/user-defaults.php';
 
 global $wpdb;
 if (!get_option('excavator_demo_seed_version')) {
@@ -32,7 +33,7 @@ if (!get_option('excavator_demo_seed_version')) {
             if ($wpdb->insert($wpdb->users, $user) === false) throw new RuntimeException('Could not create demo user');
             clean_user_cache($user['ID']);
             (new WP_User($user['ID']))->set_role($role);
-            update_user_meta($user['ID'], 'show_admin_bar_front', 'false');
+            update_user_meta($user['ID'], 'show_admin_bar_front', 'true');
             update_user_meta($user['ID'], 'rich_editing', 'true');
             update_user_meta($user['ID'], 'syntax_highlighting', 'true');
         }
@@ -49,6 +50,9 @@ if (!get_option('excavator_demo_seed_version')) {
     }
     wp_cache_flush();
 }
+excavator_demo_migrate_toolbar_default();
+excavator_demo_migrate_profile_defaults();
+
 // Preserve the original header language selector in existing demo copies too.
 // Existing user-edited translation settings take precedence over the seed.
 if (!get_option('excavator_demo_language_schema')) {

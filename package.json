@@ -1,6 +1,6 @@
 {
   "name": "excavator-wordpress-demo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "type": "module",
   "description": "A complete local WordPress equipment B2B demo with editable admin content.",

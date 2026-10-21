@@ -143,5 +143,74 @@
       "390px mobile layout and language selector"
     ],
     "note": "Retained at their original tested versions; not relabeled as the final independent session."
+  },
+  "uiFixes103": {
+    "verifiedAt": "2026-10-22T01:53:37+08:00",
+    "version": "1.0.3",
+    "status": "PASS_BOUNDED",
+    "baseCommit": "53ed1e6f532b5ca1598456636e0f9a4b95440c00",
+    "scopes": [
+      "existing local demo upgrade",
+      "empty independent runtime directory in same session",
+      "native toolbar preference save/restart/restore/logout",
+      "navigation active states",
+      "inquiry select spacing"
+    ],
+    "freshCodexSessionThisRevision": false,
+    "harnessUsed": false,
+    "toolbar": {
+      "existingDemoAccounts": "enabled once",
+      "newDatabaseDefault": "enabled",
+      "laterOptOutPreservedAfterRestart": true,
+      "missingNicknameFilledOnlyForBundledAccounts": true,
+      "editLinks": {
+        "home": 7,
+        "product": 34,
+        "category": 19,
+        "industry": 55,
+        "article": 83
+      },
+      "productNativeEditorOpened": true,
+      "anonymousToolbar": false
+    },
+    "forms": {
+      "representativeRoutes": 8,
+      "viewportWidths": [
+        1440,
+        390
+      ],
+      "visibleSelectsPerWidth": 14,
+      "arrowRightInsetPx": 16,
+      "textRightPaddingPx": 44,
+      "horizontalOverflow": false,
+      "nativeOptionSelectionAndClear": "PASS",
+      "inquiriesSubmitted": 0
+    },
+    "regressionTests": 9,
+    "syntax": {
+      "javascriptFiles": 20,
+      "phpFiles": 92
+    },
+    "routeChecks": {
+      "pages": 75,
+      "resources": 120,
+      "failures": 0
+    },
+    "preservation": {
+      "seedContentFileUnchanged": true,
+      "existingRuntimeContentRowsUnchanged": 127,
+      "descriptionRowsUnchanged": 36,
+      "mediaFilesUnchanged": 236,
+      "changedOwnedThemeFiles": 3,
+      "otherThemeAndBusinessPluginChanges": 0
+    },
+    "hostingerDeployed": false,
+    "original9478DatabaseWritten": false,
+    "limitations": [
+      "same macOS host; no new Codex session for 1.0.3",
+      "no physical Windows/Linux run",
+      "not full SEO schema editor acceptance; existing Rank Math usermeta query warning observed in failed profile request",
+      "native auto-drafts in runtime preserved; not included in distribution"
+    ]
   }
 }
