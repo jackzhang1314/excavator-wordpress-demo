@@ -7,7 +7,7 @@ require '/demo-source/relocate.php';
 global $wpdb;
 if (!get_option('excavator_demo_seed_version')) {
     $data = json_decode(file_get_contents('/demo-source/content.json'), true, 512, JSON_THROW_ON_ERROR);
-    foreach (['advanced-custom-fields-pro/acf.php', 'classic-editor/classic-editor.php', 'fluentform/fluentform.php', 'seo-by-rank-math/rank-math.php', 'starter-model/starter-model.php'] as $plugin) {
+    foreach (['advanced-custom-fields-pro/acf.php', 'classic-editor/classic-editor.php', 'fluentform/fluentform.php', 'seo-by-rank-math/rank-math.php', 'gtranslate/gtranslate.php', 'starter-model/starter-model.php'] as $plugin) {
         $result = activate_plugin($plugin);
         if (is_wp_error($result)) throw new RuntimeException($plugin . ': ' . $result->get_error_message());
     }
@@ -37,7 +37,7 @@ if (!get_option('excavator_demo_seed_version')) {
             update_user_meta($user['ID'], 'syntax_highlighting', 'true');
         }
         foreach ($data['authorMeta'] ?? [] as $row) update_user_meta((int) $row['user_id'], $row['meta_key'], maybe_unserialize($row['meta_value']));
-        update_option('active_plugins', ['advanced-custom-fields-pro/acf.php', 'classic-editor/classic-editor.php', 'fluentform/fluentform.php', 'seo-by-rank-math/rank-math.php', 'starter-model/starter-model.php']);
+        update_option('active_plugins', ['advanced-custom-fields-pro/acf.php', 'classic-editor/classic-editor.php', 'fluentform/fluentform.php', 'seo-by-rank-math/rank-math.php', 'gtranslate/gtranslate.php', 'starter-model/starter-model.php']);
         update_option('admin_email', 'demo@example.invalid');
         update_option('users_can_register', '0');
         update_option('cron', []);
@@ -48,6 +48,19 @@ if (!get_option('excavator_demo_seed_version')) {
         throw $error;
     }
     wp_cache_flush();
+}
+// Preserve the original header language selector in existing demo copies too.
+// Existing user-edited translation settings take precedence over the seed.
+if (!get_option('excavator_demo_language_schema')) {
+    if (get_option('GTranslate', null) === null) {
+        $seed = json_decode(file_get_contents('/demo-source/content.json'), true, 512, JSON_THROW_ON_ERROR);
+        foreach ($seed['tables']['options'] as $option) if ($option['option_name'] === 'GTranslate') update_option('GTranslate', maybe_unserialize($option['option_value']));
+    }
+    if (!is_plugin_active('gtranslate/gtranslate.php')) {
+        $result = activate_plugin('gtranslate/gtranslate.php');
+        if (is_wp_error($result)) throw new RuntimeException($result->get_error_message());
+    }
+    update_option('excavator_demo_language_schema', 1, false);
 }
 // Apply native editor defaults to an older demo that was initialized without them.
 foreach ([1, 2] as $id) {

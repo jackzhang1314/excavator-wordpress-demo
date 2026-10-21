@@ -30,6 +30,11 @@
       "file": "wordpress-6.9.10.zip",
       "bytes": 28694357,
       "sha256": "4f18b9e25bd253b0c39009eafb651911e8de29465d6f62397369ff75a36fdb0e"
+    },
+    {
+      "file": "gtranslate.zip",
+      "bytes": 730131,
+      "sha256": "be07ebe92477e86ce125dc90f8595368a7abf84ee526439307a5c2962ffc0c82"
     }
   ]
 }

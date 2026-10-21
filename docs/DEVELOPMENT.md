@@ -6,7 +6,7 @@
 | --- | --- |
 | `site/theme/` | 页面模板、布局、CSS、JS、本地字体 |
 | `site/plugin/` | 产品 / 类目 / 行业内容模型、ACF 字段、询盘及私有附件 |
-| `site/mu-plugins/local-demo.php` | 仅供本地演示的邮件与外部服务隔离 |
+| `site/mu-plugins/local-demo.php` | 演示发信拦截、自动升级控制和 SQLite 日期兼容 |
 | `site/content.json` | 原本地站点脱敏后的内容与字段快照 |
 | `site/uploads/` | 初始媒体，包含 WordPress 的各尺寸图片 |
 | `site/bootstrap.php` | 首次导入和专用演示账号初始化 |

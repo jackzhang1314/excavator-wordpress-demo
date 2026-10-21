@@ -4,7 +4,7 @@ $node = Get-Command node -ErrorAction SilentlyContinue
 $usable = $false
 if ($node) {
     & $node.Source -e 'const [a,b]=process.versions.node.split(".").map(Number); process.exit(a>22||(a===22&&b>=13)?0:1)'
-    $usable = $LASTEXITCODE -eq 0
+    $usable = ($LASTEXITCODE -eq 0) -and [bool](Get-Command npm.cmd -ErrorAction SilentlyContinue)
 }
 if (-not $usable -or $env:DEMO_USE_PORTABLE_NODE -eq '1') {
     $arch = if ($env:PROCESSOR_ARCHITECTURE -eq 'ARM64') { 'arm64' } elseif ($env:PROCESSOR_ARCHITECTURE -eq 'AMD64') { 'x64' } else { throw 'This launcher supports Windows x64 and ARM64.' }

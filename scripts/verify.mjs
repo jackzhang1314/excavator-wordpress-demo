@@ -16,6 +16,9 @@ for (const path of seed.routes) {
   const html = await response.text();
   if (!response.ok || !/<h1\b/i.test(html) || /Fatal error|Critical error/i.test(html)) failures.push({ path, status: response.status });
   else pages++;
+  if (!html.includes('class="site-language-slot"')) failures.push({ path, missing: 'original header language selector' });
+  if (html.includes('https://demo.invalid')) failures.push({ path, stale: 'unresolved fixture origin' });
+  for (const match of html.matchAll(/http:\/\/127\.0\.0\.1:\d+/g)) if (match[0] !== origin) failures.push({ path, stale: match[0] });
   for (const match of html.matchAll(/\b(?:src|href)=["']([^"']+)["']/gi)) {
     const url = new URL(match[1].replaceAll('&amp;', '&'), origin + path);
     if (url.origin === origin && /\.(?:css|js|png|jpe?g|webp|svg|woff2?|mp4|pdf)$/i.test(url.pathname)) assets.add(url.href);

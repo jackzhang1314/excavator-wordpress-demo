@@ -58157,6 +58157,12 @@
         "option_name": "starter_rfq_form_id",
         "option_value": "3",
         "autoload": "auto"
+      },
+      {
+        "option_id": 161,
+        "option_name": "GTranslate",
+        "option_value": "a:14:{s:16:\"default_language\";s:2:\"en\";s:10:\"incl_langs\";a:7:{i:0;s:5:\"zh-CN\";i:1;s:2:\"en\";i:2;s:2:\"de\";i:3;s:2:\"fr\";i:4;s:2:\"ja\";i:5;s:2:\"it\";i:6;s:2:\"es\";}s:11:\"fincl_langs\";a:7:{i:0;s:5:\"zh-CN\";i:1;s:2:\"en\";i:2;s:2:\"de\";i:3;s:2:\"fr\";i:4;s:2:\"ja\";i:5;s:2:\"it\";i:6;s:2:\"es\";}s:11:\"widget_look\";s:8:\"dropdown\";s:26:\"floating_language_selector\";s:2:\"no\";s:21:\"native_language_names\";i:1;s:16:\"wrapper_selector\";s:19:\".site-language-slot\";s:12:\"show_in_menu\";s:0:\"\";s:23:\"detect_browser_language\";s:0:\"\";s:11:\"pro_version\";s:0:\"\";s:18:\"enterprise_version\";s:0:\"\";s:15:\"url_translation\";s:0:\"\";s:14:\"custom_domains\";s:0:\"\";s:17:\"email_translation\";s:0:\"\";}",
+        "autoload": "auto"
       }
     ],
     "fluentform_forms": [
@@ -58279,7 +58285,8 @@
     "advanced-custom-fields-pro": "6.8.9",
     "classic-editor": "1.7.0",
     "fluentform": "6.2.14",
-    "seo-by-rank-math": "1.0.279"
+    "seo-by-rank-math": "1.0.279",
+    "gtranslate": "5.0.1"
   },
   "authors": [
     {

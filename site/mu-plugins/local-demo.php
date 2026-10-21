@@ -7,7 +7,6 @@ add_filter('pre_wp_mail', static function () {
     update_option('excavator_demo_blocked_mail_count', (int) get_option('excavator_demo_blocked_mail_count', 0) + 1, false);
     return true;
 }, PHP_INT_MAX);
-add_filter('pre_http_request', static fn() => new WP_Error('local_demo_offline', 'External WordPress services are disabled in this local demo.'), PHP_INT_MAX);
 add_filter('automatic_updater_disabled', '__return_true');
 add_filter('auto_update_plugin', '__return_false');
 add_filter('auto_update_theme', '__return_false');
@@ -35,5 +34,5 @@ add_filter('get_avatar_url', static function ($url, $identity) {
 
 add_action('admin_notices', static function () {
     if (!current_user_can('manage_options')) return;
-    echo '<div class="notice notice-info"><p><strong>Local demo:</strong> Content changes are saved on this computer. Inquiries stay in Fluent Forms → Entries. Outgoing email, remote accounts and telemetry are disabled.</p></div>';
+    echo '<div class="notice notice-info"><p><strong>Local demo:</strong> Content changes are saved on this computer. Inquiries stay in Fluent Forms → Entries. Outgoing email and business account integrations are disabled. The original language selector is included; online translation requires internet.</p></div>';
 });

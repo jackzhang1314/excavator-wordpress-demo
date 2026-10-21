@@ -11,6 +11,7 @@
 | Classic Editor | 1.7.0 | WordPress 插件，GPL v2 or later |
 | Fluent Forms | 6.2.14 | WordPress 插件，GPL v2 or later |
 | Rank Math SEO | 1.0.279 | WordPress 插件，GPL v2 or later |
+| GTranslate | 5.0.1 | 原站免费语言切换插件，保留其 GPL 代码和原有配置；不附带付费服务账号 |
 | fflate | 0.8.3 | MIT，npm 包内保留许可证 |
 | Anton / Inter 字体 | 随主题本地字体 | SIL Open Font License，见 `site/theme/assets/fonts/` |
 

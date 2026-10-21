@@ -82,10 +82,18 @@ export async function startDemo({ port = defaultPort, runtimeRoot = join(project
     await mkdir(wordpressRoot, { recursive: true });
     await mkdir(privateRoot, { recursive: true, mode: 0o700 });
     const installed = await stat(join(wordpressRoot, 'wp-load.php')).then(() => true, error => { if (error.code === 'ENOENT') return false; throw error; });
+    const bundledPlugins = [
+      ['advanced-custom-fields-pro.zip', 'advanced-custom-fields-pro/acf.php'],
+      ['classic-editor.zip', 'classic-editor/classic-editor.php'],
+      ['fluentform.zip', 'fluentform/fluentform.php'],
+      ['seo-by-rank-math.zip', 'seo-by-rank-math/rank-math.php'],
+      ['gtranslate.zip', 'gtranslate/gtranslate.php'],
+    ];
+    for (const [file, entry] of bundledPlugins) {
+      const exists = await stat(join(wordpressRoot, 'wp-content/plugins', entry)).then(() => true, error => { if (error.code === 'ENOENT') return false; throw error; });
+      if (!exists) await unpackArchive(await readFile(join(projectRoot, 'packages', file)), join(wordpressRoot, 'wp-content/plugins'));
+    }
     if (!installed) {
-      for (const file of ['advanced-custom-fields-pro.zip', 'classic-editor.zip', 'fluentform.zip', 'seo-by-rank-math.zip']) {
-        await unpackArchive(await readFile(join(projectRoot, 'packages', file)), join(wordpressRoot, 'wp-content/plugins'));
-      }
       await cp(join(projectRoot, 'site/uploads'), join(wordpressRoot, 'wp-content/uploads'), { recursive: true });
     }
     await mkdir(join(wordpressRoot, 'wp-content/mu-plugins'), { recursive: true });

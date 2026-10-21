@@ -1,11 +1,13 @@
 {
   "name": "excavator-wordpress-demo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "description": "A complete local WordPress equipment B2B demo with editable admin content.",
   "license": "GPL-2.0-or-later",
-  "engines": { "node": ">=22.13.0" },
+  "engines": {
+    "node": ">=22.13.0"
+  },
   "scripts": {
     "start": "node scripts/start.mjs",
     "lint": "node scripts/lint.mjs",

@@ -5,7 +5,7 @@ set -euo pipefail
 export LC_ALL=C
 cd "$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 
-node_ok() { command -v node >/dev/null 2>&1 && node -e 'const [a,b]=process.versions.node.split(".").map(Number); process.exit(a>22||(a===22&&b>=13)?0:1)' >/dev/null 2>&1; }
+node_ok() { command -v node >/dev/null 2>&1 && command -v npm >/dev/null 2>&1 && node -e 'const [a,b]=process.versions.node.split(".").map(Number); process.exit(a>22||(a===22&&b>=13)?0:1)' >/dev/null 2>&1; }
 if [[ "${DEMO_USE_PORTABLE_NODE:-0}" == 1 ]] || ! node_ok; then
   case "$(uname -s)-$(uname -m)" in
     Darwin-arm64) platform=darwin-arm64; checksum=cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949 ;;
