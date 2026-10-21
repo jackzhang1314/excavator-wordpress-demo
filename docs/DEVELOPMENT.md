@@ -10,6 +10,7 @@
 | `site/content.json` | 原本地站点脱敏后的内容与字段快照 |
 | `site/uploads/` | 初始媒体，包含 WordPress 的各尺寸图片 |
 | `site/bootstrap.php` | 首次导入和专用演示账号初始化 |
+| `site/category-layouts.php` | 一次性把旧类目布局保存为原生模板选择，保留后续用户选择 |
 | `site/relocate.php` | 换端口时保留序列化 / JSON 数据并改写本机网址 |
 | `scripts/` | 独立的 Playground 启动与检查代码 |
 | `packages/` | 固定版本 WordPress、SQLite 集成及所需插件包，含 SHA-256 校验清单 |
@@ -17,7 +18,9 @@
 
 ## 修改页面和内容
 
-普通内容通过后台修改。产品入口为 Products，类目图文落地页为 Product Category Pages，分类层级在 Products → Categories，行业入口为 Industry；原生 Pages、Posts、Media 和 Appearance → Menus 分别维护页面、文章、媒体与菜单。
+普通内容通过后台修改。产品入口为 Products，产品分类及图文页从 Products → Product Categories 统一管理，行业入口为 Industry；原生 Pages、Posts、Media 和 Appearance → Menus 分别维护页面、文章、媒体与菜单。
+
+类目层级只在 `product_collection` 中维护，内容是全状态一对一的 `starter_category` CPT；不要复制一棵 `post_parent` 树。原生 `_wp_page_template` 选择概览或选型，各自匹配完整 ACF 字段组，与 taxonomy 层级无关。开发入口、身份保护、创建失败续接和完整 Description 见 [类目管理](CATEGORIES.md)。
 
 页面模板在 `site/theme/page-templates/`；产品与类目的渲染同时依赖主题根模板和 `inc/` 中的组件。字段定义由 `site/plugin/` 注册，保留既有 field key、name 和模板绑定，先找实际调用再改。不要用静态占位文字替换已保存的 CMS 值。
 
@@ -35,9 +38,10 @@ Git 可提交主题、业务插件、运行脚本和文档。后台修改、用�
 npm test
 npm run lint
 npm run audit:package
+npm run test:categories
 npm run verify -- --url http://127.0.0.1:9400
 ```
 
-前两项可离线检查已安装的依赖；第三项需要先启动站点。验证脚本检查规划 URL 和页面资源，不能代替审美、所有字段组合或真实设备测试。
+依赖已经安装后，前三项不需要运行中的网站。`test:categories` 自动新建隔离运行库并停止自己的进程；最后一项需要先启动目标副本。验证脚本检查规划 URL 和页面资源，不能代替审美、所有字段组合或真实设备测试。
 
 ACF 字段定义通过 PHP 随业务插件提供。包内没有 ACF 许可证密钥；编辑已经提供的内容字段不需要原作者账号。新建受官方授权限制的 PRO 字段组或使用官方自动更新时，需要自己的有效许可证。

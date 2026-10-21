@@ -19,7 +19,7 @@ Products 下原有 **Product Category Pages** 内容列表继续保留，兼容�
 
 ## 页面样式由原生 Template 决定
 
-打开内容页，在 **Page Attributes → Template** 选择：
+打开内容页，在 **Page Template → Template** 原生面板选择：
 
 | 模板 | 用途 | 与层级的关系 |
 | --- | --- | --- |

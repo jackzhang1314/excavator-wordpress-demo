@@ -1,6 +1,5 @@
 {
-  "verifiedAt": "2026-10-21T23:30:38+08:00",
-  "testedCodeCommit": "bf38dd6584cb83723dd6be30e798ee9c9f64ddf0",
+  "verifiedAt": "2026-10-22T03:37:52.077541+08:00",
   "repository": "https://github.com/jackzhang1314/excavator-wordpress-demo",
   "visibility": "public",
   "environment": {
@@ -91,7 +90,7 @@
     "real business branding, product facts and formal public website release are outside this local demo delivery",
     "Online translation quality and in-app plugin-catalogue navigation not fully verified; no new plugin installed during that UI probe."
   ],
-  "releaseVersion": "1.0.2",
+  "releaseVersion": "1.1.0",
   "previousTestedCodeCommit": "dac4e2d1ba8b13b90edeb2b46e9962c8474303e5",
   "independentNewSession": {
     "initialCommit": "2a53ab73faa190c6a0db5a74a21f7cdbb84e1efb",
@@ -212,5 +211,39 @@
       "not full SEO schema editor acceptance; existing Rank Math usermeta query warning observed in failed profile request",
       "native auto-drafts in runtime preserved; not included in distribution"
     ]
+  },
+  "checksVersion": "1.0.2 (historical independent-session evidence)",
+  "previousIndependentTestedCodeCommit": "bf38dd6584cb83723dd6be30e798ee9c9f64ddf0",
+  "testedSourceSha256": "6ed111ed9b17b8f52800dc126daca95c7c4d0094bb493f971047212191503377",
+  "categoryManagement110": {
+    "status": "PASS_BOUNDED",
+    "report": "category-verification.json",
+    "integrationChecks": 37,
+    "runtimeTests": 9,
+    "syntax": {
+      "javascriptFiles": 21,
+      "phpFiles": 96,
+      "failures": 0
+    },
+    "routes": {
+      "pages": 75,
+      "resources": 120,
+      "failures": 0
+    },
+    "preservedExistingContent": {
+      "posts": 198,
+      "metadataRows": 8578,
+      "descriptions": 36,
+      "runtimeMedia": 239,
+      "seedMedia": 236
+    },
+    "templates": {
+      "overview": 5,
+      "selection": 10
+    },
+    "freshCodexSessionThisRevision": false,
+    "harnessUsed": false,
+    "hostingerDeployed": false,
+    "original9478Written": false
   }
 }

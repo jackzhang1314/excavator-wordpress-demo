@@ -1,6 +1,6 @@
 {
-  "status": "PASS",
-  "verifiedAt": "2026-10-21T19:25:38.487Z",
+  "status": "PASS_BOUNDED",
+  "verifiedAt": "2026-10-21T19:36:13.320Z",
   "version": "1.1.0",
   "upgradeBaseline": "1.0.3",
   "scope": "actual WordPress in an isolated newly seeded database; API and HTTP checks, not native browser acceptance",
@@ -154,6 +154,13 @@
       "status": "PASS"
     }
   ],
+  "verifiedAtLocal": "2026-10-22T03:37:52.077541+08:00",
+  "featureBaselineCommit": "284bd0b",
+  "testedSourceSha256": "6ed111ed9b17b8f52800dc126daca95c7c4d0094bb493f971047212191503377",
+  "sourceFingerprintRecipe": "SHA256 of sorted relative-path SPACE file-SHA256 lines, ending newline; package/lock, scripts/*.mjs, site PHP and theme JS/CSS",
+  "harnessUsed": false,
+  "freshCodexSessionThisRevision": false,
+  "host": "macOS arm64",
   "nativeBrowser": {
     "nativeLevels": [
       {
@@ -205,8 +212,149 @@
       "sameDescriptionChars": 4499
     }
   },
-  "harnessUsed": false,
-  "freshCodexSessionThisRevision": false,
-  "host": "macOS arm64",
-  "upgrade9400": "pending, to be appended after guarded upgrade"
+  "upgrade9400": {
+    "status": "PASS",
+    "at": "2026-10-22T03:30:38.162603+08:00",
+    "protectedPosts": 198,
+    "protectedMetadata": 8578,
+    "mediaFiles": 239,
+    "seedUnchanged": true,
+    "termsAndRelationshipsUnchanged": true,
+    "categoryTemplates": [
+      {
+        "ID": 19,
+        "post_name": "general-excavator",
+        "template": "default",
+        "parent": 0
+      },
+      {
+        "ID": 20,
+        "post_name": "construction-digger",
+        "template": "default",
+        "parent": 0
+      },
+      {
+        "ID": 21,
+        "post_name": "small-digger",
+        "template": "page-templates/category-selection.php",
+        "parent": 3
+      },
+      {
+        "ID": 22,
+        "post_name": "medium-digger",
+        "template": "page-templates/category-selection.php",
+        "parent": 3
+      },
+      {
+        "ID": 23,
+        "post_name": "large-digger",
+        "template": "page-templates/category-selection.php",
+        "parent": 3
+      },
+      {
+        "ID": 24,
+        "post_name": "wheel-loader",
+        "template": "default",
+        "parent": 0
+      },
+      {
+        "ID": 25,
+        "post_name": "mini-loader",
+        "template": "page-templates/category-selection.php",
+        "parent": 7
+      },
+      {
+        "ID": 26,
+        "post_name": "medium-loader",
+        "template": "page-templates/category-selection.php",
+        "parent": 7
+      },
+      {
+        "ID": 27,
+        "post_name": "large-loader",
+        "template": "page-templates/category-selection.php",
+        "parent": 7
+      },
+      {
+        "ID": 28,
+        "post_name": "backhoe-loader",
+        "template": "default",
+        "parent": 0
+      },
+      {
+        "ID": 29,
+        "post_name": "skid-steer-loader",
+        "template": "default",
+        "parent": 0
+      },
+      {
+        "ID": 30,
+        "post_name": "stand-on",
+        "template": "page-templates/category-selection.php",
+        "parent": 12
+      },
+      {
+        "ID": 31,
+        "post_name": "mini-skid-steer",
+        "template": "page-templates/category-selection.php",
+        "parent": 12
+      },
+      {
+        "ID": 32,
+        "post_name": "small-skid-steer",
+        "template": "page-templates/category-selection.php",
+        "parent": 12
+      },
+      {
+        "ID": 33,
+        "post_name": "large-skid-steer",
+        "template": "page-templates/category-selection.php",
+        "parent": 12
+      }
+    ],
+    "zeroProtectedValueChanges": true,
+    "descriptionsCompared": 36
+  },
+  "routes": {
+    "pages": 75,
+    "resources": 120,
+    "failures": 0
+  },
+  "syntax": {
+    "javascriptFiles": 21,
+    "phpFiles": 96,
+    "failures": 0
+  },
+  "runtimeRegressionTests": 9,
+  "packageAudit": "PASS",
+  "nativeExistingContentReadback": {
+    "constructionDigger": {
+      "page": 20,
+      "template": "default",
+      "layout": "overview",
+      "depth": 1
+    },
+    "smallDigger": {
+      "page": 21,
+      "template": "page-templates/category-selection.php",
+      "layout": "selection",
+      "depth": 2
+    },
+    "adminBarVisible": true,
+    "smallDiggerNoOverflowWidths": [
+      1440,
+      390
+    ],
+    "constructionDiggerNoOverflowWidths": [
+      1440
+    ],
+    "matchingAcfGroupOnly": true,
+    "emptyLegacyClassificationPanelRemoved": true
+  },
+  "limits": [
+    "same host and same Codex session for 1.1.0; independent research-chat retest pending",
+    "not physical Windows/Linux verification, long-running concurrency stress, every field combination or Google indexing acceptance",
+    "ordinary WordPress media remain public; no new email submitted or sent; Hostinger and original9478 unchanged",
+    "native navigation timeout recovered by completed-page readback; actual keyboard edits required for native ACF change events during unsaved preview test"
+  ]
 }

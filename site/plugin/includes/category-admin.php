@@ -153,6 +153,9 @@ add_filter('taxonomy_parent_dropdown_args', static function (array $args, string
 }, 10, 3);
 
 add_action('add_meta_boxes_starter_category', static function (\WP_Post $post): void {
+    if (get_term((int) get_post_meta($post->ID, 'category_collection', true), 'product_collection') instanceof \WP_Term) {
+        remove_meta_box('acf-group_category_classification', 'starter_category', 'side');
+    }
     add_meta_box('starter-category-context', 'Category identity and structure', static function (\WP_Post $post): void {
         $term = get_term((int) get_post_meta($post->ID, 'category_collection', true), 'product_collection');
         if (!$term instanceof \WP_Term) { echo '<p>Classification missing. Return to category management to resolve this page before publishing.</p>'; return; }
@@ -163,10 +166,4 @@ add_action('add_meta_boxes_starter_category', static function (\WP_Post $post): 
 add_filter('acf/prepare_field/key=field_category_collection', static function ($field) {
     $id = isset($_GET['post']) ? absint($_GET['post']) : 0;
     return $id && get_term((int) get_post_meta($id, 'category_collection', true), 'product_collection') instanceof \WP_Term ? false : $field;
-});
-add_action('admin_head-post.php', static function (): void {
-    $id = isset($_GET['post']) ? absint($_GET['post']) : 0;
-    if (get_post_type($id) === 'starter_category' && get_term((int) get_post_meta($id, 'category_collection', true), 'product_collection') instanceof \WP_Term) {
-        echo '<style>#acf-group_category_classification{display:none}</style>';
-    }
 });
