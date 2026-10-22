@@ -278,5 +278,94 @@
     "harnessSourceWritten": false,
     "hostingerWritten": false,
     "original9478Written": false
+  },
+  "independentFirstUser120": {
+    "version": "1.2.0",
+    "testedCodeCommit": "20aff23a010a3a28b9e502e9dc929f252fac23a0",
+    "verifiedAt": "2026-10-22T15:42:24+08:00",
+    "timezone": "Asia/Shanghai",
+    "status": "PASS_BOUNDED",
+    "scope": "Fresh independent Codex session using only the public repository; core local first-user and development flow",
+    "provenance": {
+      "freshSession": true,
+      "strictEmptyDirectoryBeforeDownload": true,
+      "anonymousGitWithoutGlobalSystemConfigurationOrCredentials": true,
+      "harnessReadInstalledOrCalled": false,
+      "borrowedRuntimeOrOriginalSiteData": false,
+      "sourceRepairsDuringTest": false,
+      "globalMachineToolsRemoved": false
+    },
+    "environment": {
+      "os": "macOS arm64",
+      "existingNode": "24.7.0",
+      "existingNpm": "11.5.1",
+      "firstStartupNode": "22.20.0 downloaded and checksum-verified by start.sh",
+      "firstStartupPathHadNoNode": true,
+      "restartUsedSystemNode": true,
+      "physicalCleanComputer": false
+    },
+    "checks": {
+      "runtimeTests": 9,
+      "categoryChecks": 38,
+      "routeChecks": 42,
+      "pages": 75,
+      "sameOriginResources": 120,
+      "javascriptSyntaxFiles": 23,
+      "phpSyntaxFiles": 98,
+      "allSixPublicCommandsExitCode": 0,
+      "nativeAdminLogin": true,
+      "completeTemplateGroupsSwitchSaveReopen": true,
+      "nativeNewPngAnd24ParagraphBodyPreview": true,
+      "clearSaveReopenPreviewWithoutOldContent": true,
+      "restoreAndNormalRestartPersistence": true,
+      "unsavedTemplateSwitchGuard": true,
+      "legacyCategory301": 15,
+      "newCategoryRoot200": true,
+      "toolbar": true,
+      "selectArrowInsetPx": 16,
+      "localInquiryEntriesAdded": 1,
+      "mailLocallyIntercepted": true,
+      "sourceMarkerEditAndExactRestore": true,
+      "observedHttp500": false,
+      "observedBlankSavePage": false
+    },
+    "preservation": {
+      "originalPostsCompared": 198,
+      "postDifferences": 0,
+      "completeDescriptionsCompared": 35,
+      "descriptionDifferences": 0,
+      "originalMediaFilesCompared": 236,
+      "mediaDifferences": 0,
+      "trackedFilesCompared": 424,
+      "trackedFileDifferences": 0,
+      "gitWorktreeClean": true,
+      "testChangesConfinedToRuntime": true
+    },
+    "knownIssues": [
+      {
+        "severity": "non-blocking visual",
+        "condition": "New category with no products",
+        "detail": "Empty result count and message occupy a narrow left column and wrap awkwardly; right side has excess empty space.",
+        "fixedDuringTest": false
+      }
+    ],
+    "retainedObservations": [
+      "First native admin navigation wait timed out; the actual login page subsequently loaded without an HTTP 500.",
+      "A collapsed ACF tab caused one locator wait; opening the native tab revealed the editor.",
+      "AX diffs and asynchronous field/entry updates were re-read after loading; saves and inquiries were not automatically repeated."
+    ],
+    "notTested": [
+      "Windows/Linux physical hosts",
+      "physical fresh operating system",
+      "no-Git ZIP route on this revision",
+      "fully offline first installation",
+      "all field/repeater combinations",
+      "long-running pressure or concurrency",
+      "cross-computer backup restore",
+      "translation quality",
+      "real email delivery",
+      "public deployment or indexing"
+    ],
+    "publicationScope": "This record changes documentation only; runtime, website source, seed, packages and startup entry remain identical to the tested code commit."
   }
 }
