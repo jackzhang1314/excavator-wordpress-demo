@@ -35,14 +35,14 @@ add_filter('default_page_template_title', static function (string $label): strin
     global $post;
     if (!$post instanceof \WP_Post) return $label;
     if ($post->post_type === 'starter_product') return __('Product: Standard', 'b2b-starter');
-    if ($post->post_type === 'starter_category') return __('Category: Overview', 'b2b-starter');
+    if ($post->post_type === 'starter_category') return __('一级类目页｜系列总览', 'b2b-starter');
     return $label;
 });
 
 function category_templates(): array {
     return [
-        'standard' => 'Category overview',
-        'selection' => 'Product selection',
+        'standard' => '一级类目页｜系列总览',
+        'selection' => '二级类目页｜产品选型',
     ];
 }
 

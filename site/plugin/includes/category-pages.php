@@ -68,7 +68,7 @@ add_action('template_redirect', static function (): void {
 function register_category_editors(array $library, callable $field): void {
     acf_add_local_field_group($library);
     acf_add_local_field_group([
-        'key' => 'group_category_page_standard', 'title' => 'Category overview content', 'position' => 'acf_after_title',
+        'key' => 'group_category_page_standard', 'title' => '一级类目页｜系列总览 · 内容编辑', 'position' => 'acf_after_title',
         'label_placement' => 'top', 'instruction_placement' => 'label', 'show_in_rest' => true,
         'fields' => [$field('field_category_standard_editor', 'category_standard_editor', '', 'clone', [
             'clone' => [
@@ -87,7 +87,7 @@ function register_category_editors(array $library, callable $field): void {
     ]);
     $overview = acf_get_local_field_group('group_category_page_standard');
     $overview['key'] = 'group_category_page_selection';
-    $overview['title'] = 'Product selection content';
+    $overview['title'] = '二级类目页｜产品选型 · 内容编辑';
     // Register the complete clone explicitly; do not copy an already registered field key.
     $overview['fields'] = [$field('field_category_selection_editor', 'category_selection_editor', '', 'clone', [
         'clone' => ['field_tc_tab_hero', 'field_tc_intro', 'field_tc_hero_image', 'field_tc_card_image', 'field_tc_card_description', 'field_tc_show_products',

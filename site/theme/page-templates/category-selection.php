@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Category: Product selection
+ * Template Name: 二级类目页｜产品选型
  * Template Post Type: starter_category
  * Template Content Source: ACF
  */

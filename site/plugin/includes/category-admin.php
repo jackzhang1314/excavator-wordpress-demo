@@ -18,7 +18,7 @@ function category_page_action_url(int $term_id): string {
 }
 function category_template_label(int $id): string {
     $template = get_page_template_slug($id);
-    return $template ? (wp_get_theme()->get_page_templates(get_post($id))[$template] ?? 'Unavailable template: ' . $template) : 'Category: Overview';
+    return $template ? (wp_get_theme()->get_page_templates(get_post($id))[$template] ?? 'Unavailable template: ' . $template) : '一级类目页｜系列总览';
 }
 
 add_filter('manage_edit-product_collection_columns', static function (array $columns): array {
@@ -167,7 +167,7 @@ add_action('add_meta_boxes_starter_category', static function (\WP_Post $post): 
         $term = get_term((int) get_post_meta($post->ID, 'category_collection', true), 'product_collection');
         if (!$term instanceof \WP_Term) { echo '<p>Classification missing. Return to category management to resolve this page before publishing.</p>'; return; }
         $context = category_tree_context($term);
-        echo '<p><strong>' . esc_html($context['path']) . '</strong></p><p>Level ' . (int) $context['depth'] . ' · Saved template: ' . esc_html(category_template_label($post->ID)) . '</p><p>Product range: this category and all descendants. The page template is independent of its level.</p><p><a href="' . esc_url(get_edit_term_link($term->term_id, 'product_collection', 'starter_product')) . '">Edit structure (takes effect immediately)</a> · <a href="' . esc_url(category_admin_url()) . '">Return to category management</a></p>';
+        echo '<p><strong>' . esc_html($context['path']) . '</strong></p><p>Level ' . (int) $context['depth'] . ' · Saved template: ' . esc_html(category_template_label($post->ID)) . '</p><p>产品范围包含当前分类及所有下级。一级、二级表示模板的推荐用途，可在任意层级选择；切换模板不会改变分类层级。系列总览用于介绍与子类导航，产品选型用于筛选与购买指南。</p><p><a href="' . esc_url(get_edit_term_link($term->term_id, 'product_collection', 'starter_product')) . '">Edit structure (takes effect immediately)</a> · <a href="' . esc_url(category_admin_url()) . '">Return to category management</a></p>';
     }, 'starter_category', 'normal', 'high');
 });
 add_filter('acf/prepare_field/key=field_category_collection', static function ($field) {
